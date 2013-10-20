@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					"css/styles.min.css": "less/styles.less"
 				}
 			}
-		}
+		},
 		uglify: {
 			options: {
 				mangle: false, //don't change variable and function names
@@ -41,6 +41,10 @@ module.exports = function(grunt) {
 			scripts: {
 				files: ['coffee/scripts.coffee'],
 				tasks: ['coffee']
+			},
+			html: {
+				files: ['pages/*.html', 'pages/partials/*.html'],
+				tasks: ['includes']
 			}
 		},
 		coffee: {
@@ -48,6 +52,14 @@ module.exports = function(grunt) {
 				files: {
 					'js/scripts.js': 'coffee/scripts.coffee'
 				}
+			}
+		},
+		includes: {
+			build: {
+				src: ['pages/*.html'],
+				dest: '.',
+				cwd: '.',
+				flatten: true
 			}
 		}
 	});
@@ -58,5 +70,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-combine-media-queries');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
+	grunt.loadNpmTasks('grunt-includes');
 	grunt.registerTask('scripts', ['coffee', 'uglify']); // compile and minify javascript for production
 }
