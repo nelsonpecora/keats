@@ -17,4 +17,5 @@ xcuserdata
 .svn
 CVS
 
-*.esproj
+*.sublime-project
+*.sublime-workspace
