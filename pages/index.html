@@ -1,5 +1,31 @@
-include "partials/head.html"
-	<body class="clearfix" ng-app="home">
-	    <h1>Homepage</h1>
+include "head"
+	<body ng-controller="HomePageCtrl">
+	    <header class="dark home-header">
+	    	<h1>Good Design needs a strong foundation</h1>
+	    </header>
+	    <section class="light home-blurb">
+	    	<h1>At Keats Heavy Industries, our clipboards are made of pig iron</h1>
+	    	<p>intro blurb about me</p>
+	    	<p>intro blurb about my current work status and projects</p>
+	    	<p class="cta">Check out my <a href="resume">resume</a> or <a href="#contact">get in touch</a>!</p>
+	    </section>
+	    <section class="medium home-excerpts">
+	    	<h2>Latest Work</h2>
+	    	<div class="gutter">
+	    		<article ng-repeat="project in projects" style="background: url({{project.img}})">
+	    			<p>{{project.title}}</p>
+	    		</article>
+	    	</div>
+
+	    	<h2>Hot off the Presses</h2>
+	    	<div class="gutter">
+	    		<article ng-repeat="blogpost in blogposts">
+	    			<h3>{{blogpost.title}}</h3>
+	    			<p>{{blogpost.excerpt}}</p>
+	    		</article>
+	    	</div>
+	    </section>
+	    include "contact"
+	include "foot"
 	</body>
 </html>

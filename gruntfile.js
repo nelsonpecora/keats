@@ -51,6 +51,9 @@ module.exports = function(grunt) {
 			compile: {
 				files: {
 					'js/scripts.js': 'coffee/scripts.coffee'
+				},
+				options: {
+					sourceMap: false
 				}
 			}
 		},
@@ -59,7 +62,11 @@ module.exports = function(grunt) {
 				src: ['pages/*.html'],
 				dest: '.',
 				cwd: '.',
-				flatten: true
+				flatten: true,
+				options: {
+					includePath: 'partials/',
+					filenameSuffix: '.html'
+				}
 			}
 		}
 	});

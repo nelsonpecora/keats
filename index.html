@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--[if lte IE 9]><html class="ie-old"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<!--[if lte IE 9]><html class="ie-old" ng-app="khi"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="en" ng-app="khi"><!--<![endif]-->
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
@@ -17,7 +17,55 @@
         <link rel="stylesheet" type="text/css" href="iconic/iconic_fill.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
-	<body class="clearfix" ng-app="home">
-	    <h1>Homepage</h1>
+	<body ng-controller="HomePageCtrl">
+	    <header class="dark home-header">
+	    	<h1>Good Design needs a strong foundation</h1>
+	    </header>
+	    <section class="light home-blurb">
+	    	<h1>At Keats Heavy Industries, our clipboards are made of pig iron</h1>
+	    	<p>intro blurb about me</p>
+	    	<p>intro blurb about my current work status and projects</p>
+	    	<p class="cta">Check out my <a href="resume">resume</a> or <a href="#contact">get in touch</a>!</p>
+	    </section>
+	    <section class="medium home-excerpts">
+	    	<h2>Latest Work</h2>
+	    	<div class="gutter">
+	    		<article ng-repeat="project in projects" style="background: url({{project.img}})">
+	    			<p>{{project.title}}</p>
+	    		</article>
+	    	</div>
+
+	    	<h2>Hot off the Presses</h2>
+	    	<div class="gutter">
+	    		<article ng-repeat="blogpost in blogposts">
+	    			<h3>{{blogpost.title}}</h3>
+	    			<p>{{blogpost.excerpt}}</p>
+	    		</article>
+	    	</div>
+	    </section>
+	    <section class="dark contact" id="Contact" ng-controller="ContactSectionCtrl">
+	    	<h1>Contact Me</h1>
+	    	<section class="around-town">
+	    		<article ng-repeat="s in socialButtons" class="iconic {{s.icon}}">
+	    			<a href="{{s.link}}" title="{{s.service}}"></a>
+	    			<div class="social-hover">
+	    				<p>{{s.service}}: {{s.name}}</p>
+	    			</div>
+	    		</article>
+	    	</section>
+	    	<section class="direct-line">
+	    		<div><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
+	    		<div><a href="tel:1-202-905-2592" target="_blank" title="Call Me">(202) 905-2592</a></div>
+	    	</section>
+	    </section>
+	<footer class="dark">
+		<p class="copyleft">&copy; Nelson Pecora, under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="Creative Commons licensing terms">(attribution noncommercial share-alike 3.0)</a> license</p>
+
+		<!-- external scripts -->
+		<script type="text/javascript" src="js/external/angular/angular.min.js"></script>
+
+		<!-- internal scripts -->
+		<script type="text/javascript" src="js/scripts.min.js"></script>
+	</footer>
 	</body>
 </html>
