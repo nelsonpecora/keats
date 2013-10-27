@@ -1,0 +1,140 @@
+/* Default Colors */
+
+@black: #111;
+@white: #fafafa;
+
+// grey
+
+@grey_light: #eee;
+@grey_light_offset: #ddd;
+@grey_medium_light: #aaa;
+@grey_medium_dark: #666;
+@grey_medium_black: #555;
+@grey_dark: #333;
+
+// blue for links
+
+@blue: #2892F2;
+@blue_medium: #206AAB;
+@blue_dark: #174771;
+
+// color blocking
+
+@purple: #A866F8;
+@red: #F86464;
+@navy: #81A0FF;
+@green: #5FE866;
+@yellow: #F1E05C;
+
+// colors for skills (and other color-blocked items)
+
+@color_1: @purple;
+@color_2: @red;
+@color_3: @navy;
+@color_4: @green;
+@color_5: @yellow;
+
+// alternate colors for resume
+
+@color_1_alt: @purple - 60%;
+@color_2_alt: @red - 60%;
+@color_3_alt: @navy - 60%;
+@color_4_alt: @green - 70%;
+@color_5_alt: @yellow - 70%;
+
+/* Default Responsive Breakpoints */
+
+@desktop_widescreen: ~"only screen and (min-width: 96.875em)"; //1550px
+@desktop_large: ~"only screen and (min-width: 75em)";         //1200px
+
+@tablet_large: ~"only screen and (max-width: 63.93em)";       //1023px
+@tablet_small: ~"only screen and (max-width: 47.93em)";       //767px
+
+@phone_large: ~"only screen and (max-width: 33.75em)";        //540px
+@phone_small: ~"only screen and (max-width: 30em)";           //480px
+@phone_landscape: ~"only screen and (max-height: 25em)";      //400px height
+
+/* Default Type, Selection, Image, Form, and Link Styles */
+
+::selection {
+	background: @blue;
+    color: @white;
+}
+::-moz-selection {
+    background: @blue;
+    color: @white;
+}
+
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
+body { -webkit-tap-highlight-color: @blue; overflow: scroll !important; -webkit-overflow-scrolling: touch !important; }
+
+/* ngCloak */
+
+*[ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+/* Typography Presets */
+
+h1, h2, h3, h4 {
+	text-rendering: optimizelegibility;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing: 1px;
+}
+
+.huge, h1 {
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 3rem;
+    text-align: center;
+    @media @phone_large {
+    	font-size: 2.25rem;
+    	line-height: 2.25rem;
+    }
+}
+
+.large, h2 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.3rem;
+	font-weight: 700;
+}
+
+.big, h4 {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+}
+
+body {
+	font: 18px/28px 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: @grey_dark;
+	font-weight: 400;
+	@media @phone_large {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+@txtwidth: 720px;
+
+.small, small {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 400;
+}
+
+/* Images */
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}

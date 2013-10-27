@@ -1,131 +1,144 @@
 include "head"
 	<body ng-controller="ResumePageCtrl">
 	    <header class="page-header sticky">
-	    	<div class="page-header-left"><a href="/">&lsaquo; home</a></div>
+	    	<div class="page-header-left page-header-link"><a href="/"><span class="lsaquo">&lsaquo;</span> home</a></div>
 	    	<h1 class="page-header-center">R&eacute;sum&eacute;</h1>
-	    	<div class="page-header-right"><a href="resume.pdf" title="Download R&eacute;sum&eacute; (pdf)" class="iconic document_alt_fill"></a></div>
+	    	<div class="page-header-right page-header-icon"><a href="resume.pdf" title="Download R&eacute;sum&eacute; (pdf)" class="iconic document_alt_fill"></a></div>
 	    </header>
-	    <section class="dark resume-header bslg">
+	    <section class="dark resume-header">
 	    	<h2>BRILLIANCY &middot; SPEED &middot; LIGHTNESS &middot; GLORY</h2>
 	    	<p>This is my mantra, what I&#8217;m all about. The phrase comes from Bruce Sterling&#8217;s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. In the book, those four words epitomize the ideals of startup culture.</p>
 
-	    	<h3 class="bslg-left">Brilliancy</h3>
-	    	<p class="bslg-right">Wit, lateral thinking, and epiphanies. The ability to solve an intractable problem with an ingenious solution.</p>
+	    	<div class="bslg">
+				<h3 class="bslg-left">Brilliancy</h3>
+		    	<p class="bslg-right">Wit, lateral thinking, and epiphanies. The ability to solve an intractable problem with an ingenious solution.</p>
 
-	    	<h3 class="bslg-left">Speed</h3>
-	    	<p class="bslg-right">Not just working quickly, but getting things done on time. Slow is smooth, smooth is fast.</p>
+		    	<h3 class="bslg-left">Speed</h3>
+		    	<p class="bslg-right">Not just working quickly, but getting things done on time. Slow is smooth, smooth is fast.</p>
 
-	    	<h3 class="bslg-left">Lightness</h3>
-	    	<p class="bslg-right">Iteration, modular architecture, and legible code. If you can work on a project and hand it to another developer without them wanting to stab you, you&#8217;re doing it right.</p>
+		    	<h3 class="bslg-left">Lightness</h3>
+		    	<p class="bslg-right">Iteration, modular architecture, and legible code. If you can work on a project and hand it to another developer without them wanting to stab you, you&#8217;re doing it right.</p>
 
-	    	<h3 class="bslg-left">Glory</h3>
-	    	<p class="bslg-right">This is the transcendent quality that separates the good from the amazing, the little touches that change the way we think about UIs, and the reason we describe some products as &#8220;magical and revolutionary.&#8221;</p>
+		    	<h3 class="bslg-left">Glory</h3>
+		    	<p class="bslg-right">This is the transcendent quality that separates the good from the amazing, the little touches that change the way we think about UIs, and the reason we describe some products as &#8220;magical and revolutionary.&#8221;</p>
+		    </div>
 	    </section>
 	    <section class="light">
-	    	<h2>Skills</h2>
-	    	<div class="skill-left">
-	    		<div class="skill-icon"><span class="iconic brush"></span></div>
-	    		<h3>Design</h3>
-	    	</div>
-	    	<div class="skill-right">
-	    		<ul>
-	    			<li>composition &amp; layout</li>
-	    			<li>typography</li>
-	    			<li>photoshop</li>
-	    			<li>illustrator</li>
-	    		</ul>
-	    	</div>
+	    	<div class="skills">
+		    	<h1>Skills</h1>
+		    	<div class="skill-left">
+		    		<div class="skill-icon iconic brush"></div>
+		    		<h3>Design</h3>
+		    	</div>
+		    	<div class="skill-right">
+		    		<ul>
+		    			<li>composition &amp; layout</li>
+		    			<li>typography</li>
+		    			<li>photoshop</li>
+		    			<li>illustrator</li>
+		    		</ul>
+		    	</div>
 
-	    	<div class="skill-left">
-	    		<div class="skill-icon"><span class="iconic list_nested"></span></div>
-	    		<h3>Development</h3>
-	    	</div>
-	    	<div class="skill-right">
-	    		<ul>
-	    			<li>html5</li>
-	    			<li>css3</li>
-	    			<li>angularjs</li>
-	    			<li>spinejs</li>
-	    			<li>jquery</li>
-	    			<li>nodejs</li>
-	    			<li>shopify</li>
-	    			<li>wordpress</li>
-	    		</ul>
-	    	</div>
+		    	<div class="skill-left">
+		    		<div class="skill-icon iconic list_nested"></div>
+		    		<h3>Development</h3>
+		    	</div>
+		    	<div class="skill-right">
+		    		<ul>
+		    			<li>html5</li>
+		    			<li>css3</li>
+		    			<li>angularjs</li>
+		    			<li>spinejs</li>
+		    			<li>jquery</li>
+		    			<li>nodejs</li>
+		    			<li>shopify</li>
+		    			<li>wordpress</li>
+		    		</ul>
+		    	</div>
 
-	    	<div class="skill-left">
-	    		<div class="skill-icon"><span class="iconic new_window"></span></div>
-	    		<h3>UX</h3>
-	    	</div>
-	    	<div class="skill-right">
-	    		<ul>
-	    			<li>mechanism design</li>
-	    			<li>user workflows</li>
-	    			<li>game design</li>
-	    			<li>data visualization</li>
-	    			<li>accessibility</li>
-	    		</ul>
-	    	</div>
+		    	<div class="skill-left">
+		    		<div class="skill-icon iconic new_window"></span></div>
+		    		<h3>UX</h3>
+		    	</div>
+		    	<div class="skill-right">
+		    		<ul>
+		    			<li>mechanism design</li>
+		    			<li>user workflows</li>
+		    			<li>game design</li>
+		    			<li>data visualization</li>
+		    			<li>accessibility</li>
+		    		</ul>
+		    	</div>
 
-	    	<div class="skill-left">
-	    		<div class="skill-icon"><span class="iconic iphone"></span></div>
-	    		<h3>Mobile</h3>
-	    	</div>
-	    	<div class="skill-right">
-	    		<ul>
-	    			<li>responsive design</li>
-	    			<li>responsive typography</li>
-	    			<li>emerging interfaces</li>
-	    			<li>graceful degradation</li>
-	    			<li>progressive enhancement</li>
-	    		</ul>
-	    	</div>
+		    	<div class="skill-left">
+		    		<div class="skill-icon iconic iphone"></div>
+		    		<h3>Mobile</h3>
+		    	</div>
+		    	<div class="skill-right">
+		    		<ul>
+		    			<li>responsive design</li>
+		    			<li>responsive typography</li>
+		    			<li>emerging interfaces</li>
+		    			<li>graceful degradation</li>
+		    			<li>progressive enhancement</li>
+		    		</ul>
+		    	</div>
+		    </div>
 	    </section>
 	    <section class="medium">
-	    	<h2>Experience</h2>
-	    	<div class="exp-1" ng-repeat="job in jobs">
-	    		<article class="exp-item">
-	    			<header>
-	    				<h3 class="span-half">{{job.start}} &mdash; {{job.end}}</h3>
-	    				<h3 class="span-half">{{job.place}}</h3>
-	    				<h3 class="span-half">{{job.role}}</h3>
-	    				<h3 class="span-half">{{job.company}}</h3>
-	    			</header>
-	    			<p>{{job.desc}}</p>
-	    		</article>
-	    		<article class="exp-item" ng-repeat="subjob in job.subjobs">
-	    			<header>
-	    				<h3 class="span-half">{{subjob.start}} &mdash; {{subjob.end}}</h3>
-	    				<h3 class="span-half">{{subjob.place}}</h3>
-	    				<h3 class="span-half">{{subjob.role}}</h3>
-	    				<h3 class="span-half">{{subjob.company}}</h3>
-	    			</header>
-	    			<p>{{subjob.desc}}</p>
-	    		</article>
-	    	</div>
+	    	<div class="experience">
+		    	<h1>Experience</h1>
+		    	<div class="exp-1" ng-repeat="job in jobs">
+		    		<article class="exp-item">
+		    			<header>
+		    				<h4 class="span-half exp-item-title">{{job.start}} &mdash; {{job.end}}</h4>
+		    				<h4 class="span-half exp-item-place">{{job.place}}</h4>
+		    				<h4 class="span-half">{{job.role}}</h4>
+		    				<h4 class="span-half">{{job.company}}</h4>
+		    			</header>
+		    			<p>{{job.desc}}</p>
+		    		</article>
+		    		<article class="exp-item subjob" ng-repeat="subjob in job.subjobs">
+		    			<header>
+		    				<h4 class="span-half exp-item-title">{{subjob.start}} &mdash; {{subjob.end}}</h4>
+		    				<h4 class="span-half exp-item-place">{{subjob.place}}</h4>
+		    				<h4 class="span-half">{{subjob.role}}</h4>
+		    				<h4 class="span-half">{{subjob.company}}</h4>
+		    			</header>
+		    			<p>{{subjob.desc}}</p>
+		    		</article>
+		    	</div>
+		    </div>
 	    </section>
 	    <section class="light">
-	    	<h2>Interests</h2>
-	    	<section>
-	    		<h3>Volunteering</h3>
-	    		<article class="img-box" ng-repeat="vol in volunteering">
-	    			<img ng-src="vol.img" alt="{{vol.imgAlt}}" />
-	    			<p>{{vol.title}}</p>
-	    			<p>{{vol.time}}</p>
-	    		</article>
-	    	</section>
-	    	<section>
-	    		<h3>Studying</h3>
-	    		<p>blurb about education + continuing education, touch on RIT, udacity + coursera, my library</p>
-	    	</section>
-	    	<section>
-	    		<h3>Having Fun!</h3>
-	    		<article class="img-box" ng-repeat="interest in interests">
-	    			<img ng-src="interest.img" alt="{{interest.imgAlt}}" />
-	    			<p>{{interest.desc}}</p>
-	    		</article>
-	    	</section>
+	    	<div class="interests">
+		    	<h1>Interests</h1>
+		    	<section>
+		    		<h3>Volunteering</h3>
+		    		<div class="img-box-wrap">
+			    		<article class="img-box" ng-repeat="vol in volunteering">
+			    			<img ng-src="images/{{vol.img}}" alt="{{vol.imgAlt}}" />
+			    			<p>{{vol.title}}</p>
+			    			<p>{{vol.time}}</p>
+			    		</article>
+			    	</div>
+		    	</section>
+		    	<section>
+		    		<h3>Studying</h3>
+		    		<p>blurb about education + continuing education, touch on RIT, udacity + coursera, my library</p>
+		    	</section>
+		    	<section>
+		    		<h3>Having Fun!</h3>
+		    		<div class="img-box-wrap">
+			    		<article class="img-box fun-box" ng-repeat="interest in interests">
+			    			<img ng-src="images/{{interest.img}}" alt="{{interest.imgAlt}}" />
+			    			<p>{{interest.desc}}</p>
+			    		</article>
+			    	</div>
+		    	</section>
+		    </div>
 	    </section>
+	    include "contact"
 	    include "foot"
 	</body>
 </html>

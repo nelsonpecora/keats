@@ -81,7 +81,7 @@ khi.controller 'ResumePageCtrl', ['$scope', ($scope) ->
 		role: 'IT Consultant'
 		company: 'Self Employed'
 		desc: 'Before shifting focus to web design and development, I worked as a freelance IT consultant for small and medium businesses in Rochester, NY and the Bay Area. I focused on networking, troubleshooting, and linux rollouts, and I\'m both Sonicwall and A+ certified.'
-		subJobs: [
+		subjobs: [
 			start: 'Jan. 2010'
 			end: 'May 2010'
 			place: 'Rochester, NY'
@@ -134,62 +134,73 @@ khi.controller 'ResumePageCtrl', ['$scope', ($scope) ->
 	]
 
 	$scope.volunteering = [
-		img: 'img.jpg'
+		img: 'pax_prime_logo.jpg'
 		imgAlt: 'Penny Arcade Expo'
 		title: 'Enforcer'
 		time: '3 years'
 	,
-		img: 'img.jpg'
+		img: 'pax_east_logo.jpg'
 		imgAlt: 'PAX East'
 		title: 'Enforcer'
 		time: '3 years'
 	,
-		img: 'img.jpg'
+		img: 'toracon_logo.jpg'
 		imgAlt: 'Tora Con'
 		title: 'Volunteer'
 		time: '2 years'
+	,
+		img: 'connecticon_logo.png'
+		imgAlt: 'Connecticon'
+		title: 'Volunteer'
+		time: '1 year'
 	]
 
 	$scope.interests = [
-		img: 'img.jpg'
+		img: 'shacktac_logo.png'
 		imgAlt: 'Shack Tactical'
-		desc: 'I play in the largest ArmA gaming group in the world (~170 members). We\'ve been featured in PC Gamer, Polygon, and other gaming news media.'
+		desc: 'I play in a large (~170 member) gaming group. We\'ve been featured in PC Gamer, Polygon, and other gaming news media.'
 	,
-		img: 'img.jpg'
+		img: 'eclipse.jpg'
 		imgAlt: 'Boardgames'
-		desc: 'I\'m really into "euro" boardgames, and am a fan of indie pen and paper RPGs.'
+		desc: 'I\'m really into European boardgames, and am a fan of indie pen and paper RPGs.'
+	]
 ]
 
 khi.controller 'ContactSectionCtrl', ['$scope', ($scope) ->
 	$scope.socialButtons = [
-		icon: 'img.jpg'
+		icon: 'twitter'
 		service: 'Twitter'
 		name: '@yoshokatana'
 		link: 'http://twitter.com/yoshokatana'
 	,
-		icon: 'img.jpg'
+		icon: 'appdotnet'
 		service: 'App.net'
 		name: '@keats'
 		link: 'http://alpha.app.net/keats'
 	,
-		icon: 'img.jpg'
+		icon: 'facebook'
 		service: 'Facebook'
 		name: 'Nelson Pecora'
 		link: 'http://facebook.com/yoshokatana'
 	,
-		icon: 'img.jpg'
+		icon: 'googleplus'
 		service: 'Google+'
 		name: 'Nelson Pecora'
 		link: 'https://plus.google.com/u/0/109071224160818281365/posts'
 	,
-		icon: 'img.jpg'
+		icon: 'stackoverflow'
 		service: 'Stack Overflow'
 		name: 'Yoshokatana'
 		link: 'http://stackoverflow.com/users/516719/yoshokatana'
 	,
-		icon: 'img.jpg'
+		icon: 'octocat'
 		service: 'Github'
 		name: 'Yoshokatana'
 		link: 'https://github.com/yoshokatana'
+	,
+		icon: 'pinboard'
+		service: 'Pinboard'
+		name: 'Yoshokatana'
+		link: 'http://pinboard.in/yoshokatana'
 	]
 ]

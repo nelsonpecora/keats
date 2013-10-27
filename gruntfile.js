@@ -3,6 +3,17 @@ module.exports = function(grunt) {
 	// configure grunt
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		modernizr: {
+			'devFile' : 'js/external/modernizr/modernizr.js',
+			'outputFile' : 'js/external/modernizr/build/modernizr.min.js',
+			tests: [		// manually adding tests until we can exclude folders from auto-detect. we really only need to test stuff in /dashboard/core_views, /dashboard/core_controllers, and /wp-content/themes/bolster
+				'flexbox',
+				'touch',
+				'css-calc',
+				'css-positionsticky'
+			],
+			parseFiles: false
+		},
 		less: {
 			dev: {
 				options: {
@@ -35,7 +46,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			styles: {
-				files: ['less/styles.less'],
+				files: ['less/*.less'],
 				tasks: ['less:dev']
 			},
 			scripts: {
@@ -43,7 +54,7 @@ module.exports = function(grunt) {
 				tasks: ['coffee']
 			},
 			html: {
-				files: ['pages/*.html', 'pages/partials/*.html'],
+				files: ['pages/*.html', 'partials/*.html'],
 				tasks: ['includes']
 			}
 		},
@@ -72,6 +83,7 @@ module.exports = function(grunt) {
 	});
 
 	// load the tasks
+	grunt.loadNpmTasks('grunt-modernizr');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');

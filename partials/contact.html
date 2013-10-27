@@ -1,7 +1,7 @@
 <section class="dark contact" id="Contact" ng-controller="ContactSectionCtrl">
 	<h1>Contact Me</h1>
 	<section class="around-town">
-		<article ng-repeat="s in socialButtons" class="iconic {{s.icon}}">
+		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
 			<a href="{{s.link}}" title="{{s.service}}"></a>
 			<div class="social-hover">
 				<p>{{s.service}}: {{s.name}}</p>
@@ -9,7 +9,7 @@
 		</article>
 	</section>
 	<section class="direct-line">
-		<div><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
-		<div><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
+		<div class="ss-mail"><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
+		<div class="ss-phone"><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
 	</section>
 </section>

@@ -15,17 +15,19 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
         <link rel="stylesheet" type="text/css" href="iconic/iconic_fill.css" />
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,600|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="webfonts/ss-social-regular.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
 	<body ng-controller="HomePageCtrl">
 	    <header class="dark home-header">
-	    	<h1>Good Design needs a strong foundation</h1>
+	    	<h1>Good Design Needs a Strong Foundation</h1>
 	    </header>
 	    <section class="light home-blurb">
-	    	<h1>At Keats Heavy Industries, our clipboards are made of pig iron</h1>
+	    	<h2>At Keats Heavy Industries, our clipboards are made of pig iron</h2>
 	    	<p>intro blurb about me</p>
 	    	<p>intro blurb about my current work status and projects</p>
-	    	<p class="cta">Check out my <a href="resume">resume</a> or <a href="#contact">get in touch</a>!</p>
+	    	<p class="cta">Check out my <a href="resume">resume</a> or <a href="#Contact">get in touch</a>!</p>
 	    </section>
 	    <section class="medium home-excerpts">
 	    	<h2>Latest Work</h2>
@@ -46,7 +48,7 @@
 	    <section class="dark contact" id="Contact" ng-controller="ContactSectionCtrl">
 	    	<h1>Contact Me</h1>
 	    	<section class="around-town">
-	    		<article ng-repeat="s in socialButtons" class="iconic {{s.icon}}">
+	    		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
 	    			<a href="{{s.link}}" title="{{s.service}}"></a>
 	    			<div class="social-hover">
 	    				<p>{{s.service}}: {{s.name}}</p>
@@ -54,14 +56,21 @@
 	    		</article>
 	    	</section>
 	    	<section class="direct-line">
-	    		<div><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
-	    		<div><a href="tel:1-202-905-2592" target="_blank" title="Call Me">(202) 905-2592</a></div>
+	    		<div class="ss-mail"><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
+	    		<div class="ss-phone"><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
 	    	</section>
 	    </section>
 	<footer class="dark">
+		<nav class="footer-nav"><ul>
+			<li><a href="/">home</a></li>
+			<li><a href="/work">work</a></li>
+			<li><a href="/resume">resume</a></li>
+			<li><a href="http://blog.keats.me">blog</a></li>
+		</ul></nav>
 		<p class="copyleft">&copy; Nelson Pecora, under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="Creative Commons licensing terms">(attribution noncommercial share-alike 3.0)</a> license</p>
 
 		<!-- external scripts -->
+		<script type="text/javascript" src="js/external/modernizr/build/modernizr.min.js"></script>
 		<script type="text/javascript" src="js/external/angular/angular.min.js"></script>
 
 		<!-- internal scripts -->
