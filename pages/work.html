@@ -7,7 +7,7 @@ include "head"
 	    </header>
 	    <section class="light">
 	    	<article class="project" ng-repeat="project in projects">
-	    		<img ng-src="project.img" alt="Project Screenshot" />
+	    		<img ng-src="images/{{project.img}}" alt="Project Screenshot" />
 	    		<h2>{{project.title}}</h2>
 	    		<p>{{project.desc}}</p>
 	    		<p ng-if="project.github"><a href="{{project.github}}" title="View this project on Github">View this project on Github &rsaquo;</a></p>

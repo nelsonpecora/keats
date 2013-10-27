@@ -8,12 +8,12 @@ khi.factory 'Projects', ->
 	[
 		title: 'Sample'
 		desc: 'This is a sample project'
-		img: 'img.png'
+		img: 'code.png'
 		link: 'http://google.com'
 	,
 		title: 'Sample Github'
 		desc: 'This is a sample github project'
-		img: 'img.png'
+		img: 'code.png'
 		github: 'http://github.com'
 	]
 
