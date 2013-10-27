@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['coffee/scripts.coffee'],
-				tasks: ['coffee']
+				tasks: ['scripts']
 			},
 			html: {
 				files: ['pages/*.html', 'partials/*.html'],
