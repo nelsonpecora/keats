@@ -178,16 +178,6 @@ khi.controller 'ContactSectionCtrl', ['$scope', ($scope) ->
 		name: '@keats'
 		link: 'http://alpha.app.net/keats'
 	,
-		icon: 'facebook'
-		service: 'Facebook'
-		name: 'Nelson Pecora'
-		link: 'http://facebook.com/yoshokatana'
-	,
-		icon: 'googleplus'
-		service: 'Google+'
-		name: 'Nelson Pecora'
-		link: 'https://plus.google.com/u/0/109071224160818281365/posts'
-	,
 		icon: 'stackoverflow'
 		service: 'Stack Overflow'
 		name: 'Yoshokatana'
