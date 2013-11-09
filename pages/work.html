@@ -1,19 +1,22 @@
 include "head"
 	<body ng-controller="WorkPageCtrl">
 	    <header class="page-header sticky">
-	    	<div class="page-header-left"><a href="/">&lsaquo; home</a></div>
+	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
 	    	<h1 class="page-header-center">Latest Work</h1>
-	    	<div class="page-header-right"><a href="resume" title="R&eacute;sum&eacute;">r&eacute;sum&eacute; &rsaquo;</a></div>
+	    	<div class="page-header-right page-header-link"><a href="resume" title="R&eacute;sum&eacute;">r&eacute;sum&eacute; <span class="angle">&rsaquo;</span></a></div>
 	    </header>
 	    <section class="light">
 	    	<article class="project" ng-repeat="project in projects">
 	    		<img ng-src="images/{{project.img}}" alt="Project Screenshot" />
-	    		<h2>{{project.title}}</h2>
-	    		<p>{{project.desc}}</p>
-	    		<p ng-if="project.github"><a href="{{project.github}}" title="View this project on Github">View this project on Github &rsaquo;</a></p>
-	    		<p ng-if="project.link"><a href="{{project.link}}" title="{{project.title}}">View this project &rsaquo;</a></p>
+	    		<div class="project-box">
+		    		<h2>{{project.title}}</h2>
+		    		<p>{{project.desc}}</p>
+		    		<p ng-if="project.github"><a href="{{project.github}}" title="View this project on Github">View this project on Github &rsaquo;</a></p>
+		    		<p ng-if="project.link"><a href="{{project.link}}" title="{{project.title}}">View this project &rsaquo;</a></p>
+		    	</div>
 	    	</article>
 	    </section>
+	include "contact"
 	include "foot"
 	</body>
 </html>

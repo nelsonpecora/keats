@@ -142,10 +142,53 @@
 	}
 }
 
-.flex() {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+// containing element
+.flexbox(@display: flex) {
+	display: ~"-webkit-box";		// OLD - iOS 6-, Safari 3.1-6
+	display: ~"-moz-box";			// OLD - Firefox 19- (buggy but mostly works)
+	display: ~"-ms-@{display}box";	// TWEENER - IE 10
+	display: ~"-ms-@{display}"; 	// TWEENER - IE 11
+	display: ~"-webkit-@{display}";	// TWEENER - Chrome
+	display: @display;				// NEW, Spec - Opera 12.1, Firefox 20+
+}
+
+// flex-wrap
+.flex-flow(@flow: row wrap) {
+    -webkit-flex-flow: @flow;
+    -moz-flex-flow: @flow;
+    -ms-flex-flow: @flow;
+    flex-flow: @flow;
+}
+
+// justify content
+.justify-content(@justify: flex-start) {
+    -webkit-justify-content: @justify;
+    -moz-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+}
+
+// align-content
+.align-content(@align: stretch) {
+    -webkit-align-content: @align;
+    -moz-align-content: @align;
+    -ms-align-content: @align;
+    align-content: @align;
+}
+
+// align-items
+.align-items(@align: stretch) {
+    -webkit-align-items: @align;
+    -moz-align-items: @align;
+    -ms-align-items: @align;
+    align-items: @align;
+}
+
+// flex item
+.flex(@grow: 0, @shrink: 1, @size: auto) {
+	-webkit-box-flex: @grow; // old
+	box-flex: @grow; // safari 6
+	-ms-flex: @grow @shrink @size;
+	-webkit-flex: @grow @shrink @size;
+	flex: @grow @shrink @size;
 }

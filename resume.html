@@ -21,11 +21,11 @@
     </head>
 	<body ng-controller="ResumePageCtrl">
 	    <header class="page-header sticky">
-	    	<div class="page-header-left page-header-link"><a href="/"><span class="lsaquo">&lsaquo;</span> home</a></div>
+	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
 	    	<h1 class="page-header-center">R&eacute;sum&eacute;</h1>
 	    	<div class="page-header-right page-header-icon"><a href="resume.pdf" title="Download R&eacute;sum&eacute; (pdf)" class="iconic document_alt_fill"></a></div>
 	    </header>
-	    <section class="dark resume-header">
+	    <section class="dark triangle-down resume-header">
 	    	<h2>BRILLIANCY &middot; SPEED &middot; LIGHTNESS &middot; GLORY</h2>
 	    	<p>This is my mantra, what I&#8217;m all about. The phrase comes from Bruce Sterling&#8217;s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. In the book, those four words epitomize the ideals of startup culture.</p>
 
@@ -105,7 +105,7 @@
 		    	</div>
 		    </div>
 	    </section>
-	    <section class="medium">
+	    <section class="medium triangle-up triangle-down">
 	    	<div class="experience">
 		    	<h1>Experience</h1>
 		    	<div class="exp-1" ng-repeat="job in jobs">
@@ -158,7 +158,7 @@
 		    	</section>
 		    </div>
 	    </section>
-	    <section class="dark contact" id="Contact" ng-controller="ContactSectionCtrl">
+	    <section class="dark triangle-up contact" id="Contact" ng-controller="ContactSectionCtrl">
 	    	<h1>Contact Me</h1>
 	    	<section class="around-town">
 	    		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">

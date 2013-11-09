@@ -21,19 +21,36 @@
     </head>
 	<body ng-controller="WorkPageCtrl">
 	    <header class="page-header sticky">
-	    	<div class="page-header-left"><a href="/">&lsaquo; home</a></div>
+	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
 	    	<h1 class="page-header-center">Latest Work</h1>
-	    	<div class="page-header-right"><a href="resume" title="R&eacute;sum&eacute;">r&eacute;sum&eacute; &rsaquo;</a></div>
+	    	<div class="page-header-right page-header-link"><a href="resume" title="R&eacute;sum&eacute;">r&eacute;sum&eacute; <span class="angle">&rsaquo;</span></a></div>
 	    </header>
 	    <section class="light">
 	    	<article class="project" ng-repeat="project in projects">
 	    		<img ng-src="images/{{project.img}}" alt="Project Screenshot" />
-	    		<h2>{{project.title}}</h2>
-	    		<p>{{project.desc}}</p>
-	    		<p ng-if="project.github"><a href="{{project.github}}" title="View this project on Github">View this project on Github &rsaquo;</a></p>
-	    		<p ng-if="project.link"><a href="{{project.link}}" title="{{project.title}}">View this project &rsaquo;</a></p>
+	    		<div class="project-box">
+		    		<h2>{{project.title}}</h2>
+		    		<p>{{project.desc}}</p>
+		    		<p ng-if="project.github"><a href="{{project.github}}" title="View this project on Github">View this project on Github &rsaquo;</a></p>
+		    		<p ng-if="project.link"><a href="{{project.link}}" title="{{project.title}}">View this project &rsaquo;</a></p>
+		    	</div>
 	    	</article>
 	    </section>
+	<section class="dark triangle-up contact" id="Contact" ng-controller="ContactSectionCtrl">
+		<h1>Contact Me</h1>
+		<section class="around-town">
+			<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
+				<a href="{{s.link}}" title="{{s.service}}"></a>
+				<div class="social-hover">
+					<p>{{s.service}}: {{s.name}}</p>
+				</div>
+			</article>
+		</section>
+		<section class="direct-line">
+			<div class="ss-mail"><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
+			<div class="ss-phone"><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
+		</section>
+	</section>
 	<footer class="dark">
 		<nav class="footer-nav"><ul>
 			<li><a href="/">home</a></li>
