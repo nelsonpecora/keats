@@ -1788,3 +1788,65 @@ a:visited {
 .project .project-box p {
   z-index: 1;
 }
+/* 404 Page */
+.404-header {
+  height: 100%;
+  width: 100%;
+}
+.404-header h1 {
+  width: 70%;
+  max-width: 720px;
+  margin: 0 auto;
+  margin: 30px auto;
+  font-size: 5.75rem;
+  line-height: 7.5rem;
+  letter-spacing: 3px;
+}
+@media only screen and (min-width: 96.875em) {
+  .404-header h1 {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .404-header h1 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 63.93em) {
+  .404-header h1 {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 47.93em) {
+  .404-header h1 {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 33.75em) {
+  .404-header h1 {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .404-header h1 {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 47.93em) {
+  .404-header h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+@media only screen and (max-width: 33.75em) {
+  .404-header h1 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .404-header h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
