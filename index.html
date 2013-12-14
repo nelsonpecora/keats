@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="iconic/iconic_fill.css" />
         <link href='//fonts.googleapis.com/css?family=Raleway:400,600|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="webfonts/ss-social-regular.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
     </head>
 	<body ng-controller="HomePageCtrl">
 	    <header class="dark triangle-down home-header">
@@ -51,12 +51,12 @@
 	    		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
 	    			<a href="{{s.link}}" title="{{s.service}}"></a>
 	    			<div class="social-hover">
-	    				<p>{{s.service}}: {{s.name}}</p>
+	    				<p>{{s.service}}<br />{{s.name}}</p>
 	    			</div>
 	    		</article>
 	    	</section>
 	    	<section class="direct-line">
-	    		<div class="ss-mail"><a href="mailto:nelson@keats.me" target="_blank" title="Email Me">nelson@keats.me</a></div>
+	    		<div class="ss-mail"><a href="mailto:nelson@keats.me" title="Email Me">nelson@keats.me</a></div>
 	    		<div class="ss-phone"><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
 	    	</section>
 	    </section>

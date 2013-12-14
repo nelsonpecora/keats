@@ -140,6 +140,9 @@ a {
 			padding: 10px;
 			background-color: transparent;
 			.transition(150ms all);
+			&:nth-of-type(4n + 1) {
+				clear: both;
+			}
 			a {
 				position: absolute;
 				width: 100%;
@@ -177,7 +180,7 @@ a {
 			}
 			@media @phone_large {
 				float: left;
-				.flex(1, 0, auto);
+				.flex(0, 0, auto);
 				.social-hover {
 					display: none;
 				}
@@ -186,28 +189,36 @@ a {
 		@media @phone_large {
 			width: 90%;
 			margin: 0 5% 10px;
-			display: flex;
+			.flexbox();
+			.flex-flow();
+			.justify-content(center);
 		}
 	}
 	.direct-line {
 		float: right;
 		width: 40%;
 		margin-right: 5%;
-		-webkit-flex-flow: row wrap;
-		justify-content: space-around;
 		div {
 			margin: 10px 20px;
 			float: left;
+			clear: left;
 			a {
 				padding-left: 10px;
 				line-height: 20px;
 				vertical-align: top;
 			}
+			@media @phone_large {
+				float: left;
+				margin-bottom: 0;
+				.flex(0, 0, auto);
+			}
 		}
 		@media @phone_large {
 			width: 90%;
 			margin: 0 5%;
-			display: flex;
+			.flexbox();
+			.flex-flow();
+			.justify-content(center);
 		}
 	}
 	@media @phone_large {
@@ -635,26 +646,22 @@ a {
 
 /* 404 Page */
 
-.404-header {
-	height: 100%;
+#Page404 {
+	header { min-height: 70%; }
+	footer { min-height: 30%; }
+	@media @phone_large {
+		.header-404 {
+			padding-bottom: 20px;
+		}
+		footer { padding-top: 0; }
+	}
+}
+
+.header-404 {
 	width: 100%;
 	h1 {
 		.wrapper();
-		margin: 30px auto;
-		font-size: 5.75rem;
-		line-height: 7.5rem;
-		letter-spacing: 3px;
-		@media @tablet_small {
-			font-size: 4rem;
-			line-height: 6rem;
-		}
-		@media @phone_large {
-			font-size: 3.5rem;
-			line-height: 5rem;
-		}
-		@media @phone_small {
-			font-size: 3rem;
-			line-height: 4rem;
-		}
+		margin: 10% auto 30px;
+		line-height: 1.5em;
 	}
 }

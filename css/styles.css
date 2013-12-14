@@ -301,6 +301,12 @@ img {
   vertical-align: middle;
   border: 0;
 }
+/* Default structural stuff */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 /* This file contains LESS mixins and functions compiled from various sources */
 /* .rounded(VALUE); */
 /* .border-radius(VALUE,VALUE,VALUE,VALUE); */
@@ -1789,8 +1795,13 @@ a:visited {
   z-index: 1;
 }
 /* 404 Page */
+.404-page header {
+  height: 70%;
+}
+.404-page footer {
+  height: 30%;
+}
 .404-header {
-  height: 100%;
   width: 100%;
 }
 .404-header h1 {

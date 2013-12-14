@@ -168,25 +168,40 @@ khi.controller 'ResumePageCtrl', ['$scope', ($scope) ->
 
 khi.controller 'ContactSectionCtrl', ['$scope', ($scope) ->
 	$scope.socialButtons = [
-		icon: 'twitter'
-		service: 'Twitter'
-		name: '@yoshokatana'
-		link: 'http://twitter.com/yoshokatana'
-	,
 		icon: 'appdotnet'
 		service: 'App.net'
 		name: '@keats'
 		link: 'http://alpha.app.net/keats'
 	,
-		icon: 'stackoverflow'
-		service: 'Stack Overflow'
-		name: 'Yoshokatana'
-		link: 'http://stackoverflow.com/users/516719/yoshokatana'
+		icon: 'googleplus'
+		service: 'G+'
+		name: 'Nelson Pecora'
+		link: 'https://plus.google.com/+NelsonPecora/about'
 	,
 		icon: 'octocat'
 		service: 'Github'
 		name: 'Yoshokatana'
 		link: 'https://github.com/yoshokatana'
+	,
+		icon: 'tumblr'
+		service: 'Blog'
+		name: 'blog.keats.me'
+		link: 'http://blog.keats.me'
+	,
+		icon: 'twitter'
+		service: 'Twitter'
+		name: '@yoshokatana'
+		link: 'http://twitter.com/yoshokatana'
+	,
+		icon: 'facebook'
+		service: 'Facebook'
+		name: 'Yoshokatana'
+		link: 'http://facebook.com/yoshokatana'
+	,
+		icon: 'stackoverflow'
+		service: 'Stack Overflow'
+		name: 'Yoshokatana'
+		link: 'http://stackoverflow.com/users/516719/yoshokatana'
 	,
 		icon: 'pinboard'
 		service: 'Pinboard'
