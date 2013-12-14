@@ -35,7 +35,7 @@ a {
 }
 
 .medium {
-	background-color: @grey_medium_light;
+	background-color: @grey_light_offset;
 	color: @grey_dark;
 }
 
@@ -439,9 +439,9 @@ a {
 		}
 		ul {
 			.clearfix();
-			display: flex;
-			-webkit-flex-flow: row wrap;
-			justify-content: center;
+			.flexbox();
+			.flex-flow();
+			.justify-content();
 		}
 		li {
 			float: left;
