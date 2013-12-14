@@ -60,14 +60,11 @@
     }
   ]);
 
-  khi.filter('trusthtml', [
-    '$sce', function($sce) {
-      return function(t) {
-        t = t.replace(/<br>/g, '');
-        return $sce.trustAsHtml(t);
-      };
-    }
-  ]);
+  khi.filter('backgroundimage', function() {
+    return function(t) {
+      return t = t.split('"')[1];
+    };
+  });
 
   khi.controller('HomePageCtrl', [
     '$scope', 'Projects', 'FeedService', function($scope, Projects, FeedService) {

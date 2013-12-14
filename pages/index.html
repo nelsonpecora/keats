@@ -10,20 +10,24 @@ include "head"
 	    	<p class="cta">Check out my <a href="resume">resume</a> or <a href="#Contact">get in touch</a>!</p>
 	    </section>
 	    <section class="medium home-excerpts">
-	    	<h2>Latest Work</h2>
+	    	<h2><a href="/work" title="Latest Work">Latest Work</a></h2>
 	    	<div class="gutter">
-		    	<article class="home-excerpt-item" ng-repeat="project in projects" style="background: white url('images/{{project.img}}') no-repeat center top;">
+		    	<article class="home-excerpt-item home-excerpt-item-project" ng-repeat="project in projects" style="background: white url('images/{{project.img}}') no-repeat center top;">
 		    		<h3>{{project.title}}</h3>
+		    		<a href="/work#{{project.title}}" title="{{project.title}}" class="link-box"></a>
 		    	</article>
 		    </div>
 
-	    	<h2>Hot off the Presses</h2>
+	    	<h2><a href="http://blog.keats.me" title="Blog">Hot off the Presses</a></h2>
 	    	<div class="gutter">
 		    	<article class="home-excerpt-item" ng-repeat="blogpost in blogposts">
-		    		<h3 ng-hide="blogpost.contentSnippet">{{blogpost.title}}</h3>
-		    		<p ng-hide="blogpost.contentSnippet" ng-bind-html="blogpost.content | trusthtml"></p>
-		    		<h4 ng-show="blogpost.contentSnippet">{{blogpost.title}}</h4>
-		    		<p ng-show="blogpost.contentSnippet">{{blogpost.contentSnippet}}</p>
+		    		<div ng-if="!blogpost.contentSnippet" class="home-excerpt-item-inner home-excerpt-item-img" style="background: url('{{blogpost.content | backgroundimage }}') no-repeat center top">
+		    		</div>
+		    		<div ng-if="blogpost.contentSnippet" class="home-excerpt-item-inner home-excerpt-item-textpost">
+		    			<h4>{{blogpost.title}}</h4>
+		    			<p>{{blogpost.contentSnippet}}</p>
+		    		</div>
+		    		<a href="{{blogpost.link}}" title="{{blogpost.title}}" class="link-box"></a>
 		    	</article>
 		    </div>
 	    </section>

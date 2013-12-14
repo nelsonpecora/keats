@@ -50,11 +50,9 @@ khi.factory 'FeedService', ['$http', '$rootScope', ($http, $rootScope) ->
 
 # directives
 
-khi.filter 'trusthtml', ['$sce', ($sce) ->
+khi.filter 'backgroundimage', ->
     (t) ->
-        t = t.replace /<br>/g, ''
-        $sce.trustAsHtml t
-]
+        t = t.split('"')[1]
 
 # controllers
 
