@@ -3,6 +3,24 @@
 
   khi = angular.module('khi', []);
 
+  khi.config([
+    '$provide', function($provide) {
+      return $provide.decorator('$rootScope', [
+        '$delegate', function($delegate) {
+          Object.defineProperty($delegate.constructor.prototype, '$onRootScope', {
+            value: function(name, listener) {
+              var unsubscribe;
+              unsubscribe = $delegate.$on(name, listener);
+              return this.$on('$destroy', unsubscribe);
+            },
+            enumerable: false
+          });
+          return $delegate;
+        }
+      ]);
+    }
+  ]);
+
   khi.factory('Projects', function() {
     var defaultImg;
     defaultImg = 'code.png';
@@ -10,6 +28,11 @@
       {
         title: 'Sample',
         desc: 'This is a sample project',
+        img: 'code.png',
+        link: 'http://google.com'
+      }, {
+        title: 'Sample 2',
+        desc: 'This is another sample project',
         img: 'code.png',
         link: 'http://google.com'
       }, {
@@ -21,10 +44,39 @@
     ];
   });
 
+  khi.factory('FeedService', [
+    '$http', '$rootScope', function($http, $rootScope) {
+      return {
+        posts: null,
+        get: function() {
+          var me;
+          me = this;
+          return $http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=3&callback=JSON_CALLBACK&q=http://blog.keats.me/rss').then(function(res) {
+            me.posts = res.data.responseData.feed.entries;
+            return $rootScope.$emit('posts.updated');
+          });
+        }
+      };
+    }
+  ]);
+
+  khi.filter('trusthtml', [
+    '$sce', function($sce) {
+      return function(t) {
+        t = t.replace(/<br>/g, '');
+        return $sce.trustAsHtml(t);
+      };
+    }
+  ]);
+
   khi.controller('HomePageCtrl', [
-    '$scope', 'Projects', function($scope, Projects) {
+    '$scope', 'Projects', 'FeedService', function($scope, Projects, FeedService) {
       $scope.projects = Projects;
-      return $scope.blogposts = [];
+      FeedService.get();
+      $scope.blogposts = FeedService.posts;
+      return $scope.$onRootScope('posts.updated', function() {
+        return $scope.blogposts = FeedService.posts;
+      });
     }
   ]);
 

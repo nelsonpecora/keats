@@ -12,18 +12,20 @@ include "head"
 	    <section class="medium home-excerpts">
 	    	<h2>Latest Work</h2>
 	    	<div class="gutter">
-	    		<article ng-repeat="project in projects" style="background: url({{project.img}})">
-	    			<p>{{project.title}}</p>
-	    		</article>
-	    	</div>
+		    	<article class="home-excerpt-item" ng-repeat="project in projects" style="background: white url('images/{{project.img}}') no-repeat center top;">
+		    		<h3>{{project.title}}</h3>
+		    	</article>
+		    </div>
 
 	    	<h2>Hot off the Presses</h2>
 	    	<div class="gutter">
-	    		<article ng-repeat="blogpost in blogposts">
-	    			<h3>{{blogpost.title}}</h3>
-	    			<p>{{blogpost.excerpt}}</p>
-	    		</article>
-	    	</div>
+		    	<article class="home-excerpt-item" ng-repeat="blogpost in blogposts">
+		    		<h3 ng-hide="blogpost.contentSnippet">{{blogpost.title}}</h3>
+		    		<p ng-hide="blogpost.contentSnippet" ng-bind-html="blogpost.content | trusthtml"></p>
+		    		<h4 ng-show="blogpost.contentSnippet">{{blogpost.title}}</h4>
+		    		<p ng-show="blogpost.contentSnippet">{{blogpost.contentSnippet}}</p>
+		    	</article>
+		    </div>
 	    </section>
 	    include "contact"
 	include "foot"
