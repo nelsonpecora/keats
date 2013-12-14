@@ -51,7 +51,7 @@
         get: function() {
           var me;
           me = this;
-          return $http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=3&callback=JSON_CALLBACK&q=http://blog.keats.me/rss').then(function(res) {
+          return $http.jsonp('https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=3&callback=JSON_CALLBACK&q=http://blog.keats.me/rss').then(function(res) {
             me.posts = res.data.responseData.feed.entries;
             return $rootScope.$emit('posts.updated');
           });
