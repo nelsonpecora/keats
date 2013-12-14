@@ -213,7 +213,7 @@ khi.controller 'ContactSectionCtrl', ['$scope', ($scope) ->
         link: 'http://alpha.app.net/keats'
     ,
         icon: 'googleplus'
-        service: 'G+'
+        service: 'Google Plus'
         name: 'Nelson Pecora'
         link: 'https://plus.google.com/+NelsonPecora/about'
     ,
