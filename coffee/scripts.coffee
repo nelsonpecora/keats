@@ -53,6 +53,7 @@ khi.factory 'FeedService', ['$http', '$rootScope', ($http, $rootScope) ->
 khi.filter 'backgroundimage', ->
     (t) ->
         t = t.split('"')[1]
+        t = t.replace /http/g, 'https'
 
 # controllers
 

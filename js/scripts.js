@@ -62,7 +62,8 @@
 
   khi.filter('backgroundimage', function() {
     return function(t) {
-      return t = t.split('"')[1];
+      t = t.split('"')[1];
+      return t = t.replace(/http/g, 'https');
     };
   });
 
