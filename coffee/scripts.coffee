@@ -55,6 +55,11 @@ khi.filter 'backgroundimage', ->
         t = t.split('"')[1]
         t = t.replace /http/g, 'https'
 
+khi.filter 'trusthtml', ['$sce', ($sce) ->
+    (t) ->
+        $sce.trustAsHtml t
+]
+
 # controllers
 
 khi.controller 'HomePageCtrl', ['$scope', 'Projects', 'FeedService', ($scope, Projects, FeedService) ->

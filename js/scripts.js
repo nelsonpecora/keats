@@ -67,6 +67,14 @@
     };
   });
 
+  khi.filter('trusthtml', [
+    '$sce', function($sce) {
+      return function(t) {
+        return $sce.trustAsHtml(t);
+      };
+    }
+  ]);
+
   khi.controller('HomePageCtrl', [
     '$scope', 'Projects', 'FeedService', function($scope, Projects, FeedService) {
       $scope.projects = Projects;
