@@ -606,6 +606,21 @@ a:focus,
 	background-size: cover !important;
 }
 
+.home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost {
+	border: 1px solid #c2c2c2;
+	padding: 20px;
+}
+
+.home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost:before,
+.home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost:after {
+	content: " ";
+	display: table;
+}
+
+.home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost:after {
+	clear: both;
+}
+
 .home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost h4,
 .home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost p {
 	float: left;
@@ -1636,7 +1651,7 @@ body {
 .home-excerpt-item {
 	width: 400px;
 	height: 300px;
-	margin: 10px;
+	margin: 0 20px 20px;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 400px;
 	-ms-flex: 1 1 400px;

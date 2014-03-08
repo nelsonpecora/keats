@@ -151,7 +151,7 @@
 	@media @tablet_small {
 		width: 400px;
 		height: 300px;
-		margin: 10px;
+		margin: 0 20px 20px;
 		flex: 1 1 400px;
 	}
 
@@ -178,6 +178,10 @@
 		}
 
 		&.home-excerpt-item-textpost {
+			border: 1px solid @grey_medium_light;
+			padding: 20px;
+			.clearfix;
+
 			h4, p {
 				float: left;
 				transition: color 200ms ease-out;
