@@ -38,7 +38,7 @@
 	    	<div class="page-header-right page-header-icon"><a href="resume.pdf" title="Download R&eacute;sum&eacute; (pdf)" class="iconic document_alt_fill"></a></div>
 	    </header>
 	    <section class="dark triangle-down resume-header">
-	    	<h2>BRILLIANCY &middot; SPEED &middot; LIGHTNESS &middot; GLORY</h2>
+	    	<h2>BRILLIANCY<span class="middot-break"> &middot; </span>SPEED<span class="middot-break"> &middot; </span><span class="flow-break"><br /></span>LIGHTNESS<span class="middot-break"> &middot; </span>GLORY</h2>
 	    	<p>This is my mantra, what I&#8217;m all about. The phrase comes from Bruce Sterling&#8217;s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. In the book, those four words epitomize the ideals of startup culture.</p>
 
 	    	<div class="bslg">
@@ -146,25 +146,12 @@
 	    	<div class="interests">
 		    	<h1>Interests</h1>
 		    	<section>
-		    		<h3>Volunteering</h3>
 		    		<div class="img-box-wrap">
-			    		<article class="img-box" ng-repeat="vol in volunteering">
-			    			<img ng-src="images/{{vol.img}}" alt="{{vol.imgAlt}}" />
-			    			<p>{{vol.title}}</p>
-			    			<p>{{vol.time}}</p>
-			    		</article>
-			    	</div>
-		    	</section>
-		    	<section>
-		    		<h3>Studying</h3>
-		    		<p>blurb about education + continuing education, touch on RIT, udacity + coursera, my library</p>
-		    	</section>
-		    	<section>
-		    		<h3>Having Fun!</h3>
-		    		<div class="img-box-wrap">
-			    		<article class="img-box fun-box" ng-repeat="interest in interests">
+			    		<article class="img-box" ng-repeat="interest in interests">
 			    			<img ng-src="images/{{interest.img}}" alt="{{interest.imgAlt}}" />
-			    			<p>{{interest.desc}}</p>
+			    			<p ng-if="interest.title">{{interest.title}}</p>
+			    			<p ng-if="interest.desc">{{interest.desc}}</p>
+			    			<p ng-if="interest.time">{{interest.time}}</p>
 			    		</article>
 			    	</div>
 		    	</section>

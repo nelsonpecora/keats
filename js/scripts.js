@@ -201,31 +201,12 @@
           desc: 'Though I\'ve been helping out around the family jewelry store since I was a kid, my first full-time job was at 14. To this day I have no idea how I managed to convince them to let a 14 year old work in a hardware store full of heavy equipment, sharp object, and power tools.'
         }
       ];
-      $scope.volunteering = [
+      return $scope.interests = [
         {
           img: 'pax_prime_logo.jpg',
           imgAlt: 'Penny Arcade Expo',
-          title: 'Enforcer',
-          time: '3 years'
+          desc: 'I volunteer for about a week, two times a year, at the Penny Arcade Expo. It\'s the largest video- and board-gaming convention in the United States.'
         }, {
-          img: 'pax_east_logo.jpg',
-          imgAlt: 'PAX East',
-          title: 'Enforcer',
-          time: '3 years'
-        }, {
-          img: 'toracon_logo.jpg',
-          imgAlt: 'Tora Con',
-          title: 'Volunteer',
-          time: '2 years'
-        }, {
-          img: 'connecticon_logo.png',
-          imgAlt: 'Connecticon',
-          title: 'Volunteer',
-          time: '1 year'
-        }
-      ];
-      return $scope.interests = [
-        {
           img: 'shacktac_logo.png',
           imgAlt: 'Shack Tactical',
           desc: 'I play in a large (~170 member) gaming group. We\'ve been featured in PC Gamer, Polygon, and other gaming news media.'

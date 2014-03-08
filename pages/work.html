@@ -2,12 +2,12 @@ include "head"
 	<body ng-controller="WorkPageCtrl">
 	    <header class="page-header sticky">
 	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
-	    	<h1 class="page-header-center">Latest Work</h1>
+	    	<h1 class="page-header-center">Work</h1>
 	    	<div class="page-header-right page-header-link"><a href="http://github.com/yoshokatana" title="Github">Github <span class="angle">&rsaquo;</span></a></div>
 	    </header>
 	    <section class="light">
 	    	<article id="{{project.title}}" class="project" ng-repeat="project in projects">
-	    		<img ng-src="images/{{project.img}}" alt="Project Screenshot" />
+	    		<img ng-src="{{project.img}}" alt="Project Screenshot" />
 	    		<div class="project-box">
 		    		<h2>{{project.title}}</h2>
 		    		<p>{{project.desc}}</p>
