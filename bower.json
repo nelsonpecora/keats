@@ -1,0 +1,22 @@
+{
+  "name": "keats.me",
+  "homepage": "https://github.com/yoshokatana/keats",
+  "authors": [
+    "Nelson Pecora"
+  ],
+  "license": "Copyright",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/external",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "modernizr": "~2.7.1",
+    "angular": "~1.2.14",
+    "angular-mocks": "~1.2.14"
+  }
+}
