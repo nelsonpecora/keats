@@ -2,20 +2,16 @@
 .DS_Store
 profile
 
-# xcode noise
-build/*
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata
-
 # svn & cvs
 .svn
 CVS
 
 *.sublime-project
 *.sublime-workspace
+
+# Unit Testing Mid-tier files
+*/tests/*.js
+
+# Grunt build process interstitial files
+js/scripts.js
+css/styles.css

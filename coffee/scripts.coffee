@@ -17,22 +17,22 @@ khi.config ['$provide', ($provide) ->
 # services
 
 khi.factory 'Projects', ->
-    defaultImg = 'code.png'
+    defaultImg = '/images/code.png'
 
     [
         title: 'Sample'
         desc: 'This is a sample project'
-        img: 'code.png'
+        img: defaultImg
         link: 'http://google.com'
     ,
         title: 'Sample 2'
         desc: 'This is another sample project'
-        img: 'code.png'
+        img: defaultImg
         link: 'http://google.com'
     ,
         title: 'Sample Github'
         desc: 'This is a sample github project'
-        img: 'code.png'
+        img: defaultImg
         github: 'http://github.com'
     ]
 
@@ -217,35 +217,35 @@ khi.controller 'ContactSectionCtrl', ['$scope', ($scope) ->
         name: '@keats'
         link: 'http://alpha.app.net/keats'
     ,
-        icon: 'googleplus'
-        service: 'Google Plus'
-        name: 'Nelson Pecora'
-        link: 'https://plus.google.com/+NelsonPecora/about'
-    ,
-        icon: 'octocat'
-        service: 'Github'
-        name: 'Yoshokatana'
-        link: 'https://github.com/yoshokatana'
-    ,
-        icon: 'tumblr'
-        service: 'Blog'
-        name: 'blog.keats.me'
-        link: 'http://blog.keats.me'
-    ,
         icon: 'twitter'
         service: 'Twitter'
         name: '@yoshokatana'
         link: 'http://twitter.com/yoshokatana'
+    ,
+        icon: 'googleplus'
+        service: 'Google Plus'
+        name: 'Nelson Pecora'
+        link: 'https://plus.google.com/+NelsonPecora/about'
     ,
         icon: 'facebook'
         service: 'Facebook'
         name: 'Yoshokatana'
         link: 'http://facebook.com/yoshokatana'
     ,
+        icon: 'octocat'
+        service: 'Github'
+        name: 'Yoshokatana'
+        link: 'https://github.com/yoshokatana'
+    ,
         icon: 'stackoverflow'
         service: 'Stack Overflow'
         name: 'Yoshokatana'
         link: 'http://stackoverflow.com/users/516719/yoshokatana'
+    ,
+        icon: 'tumblr'
+        service: 'Blog'
+        name: 'blog.keats.me'
+        link: 'http://blog.keats.me'
     ,
         icon: 'pinboard'
         service: 'Pinboard'

@@ -2,6 +2,7 @@
 
 @black: #111;
 @white: #fafafa;
+@selectcolor: 	#94C8FF;
 
 // grey
 
@@ -12,11 +13,11 @@
 @grey_medium_black: #555;
 @grey_dark: #333;
 
-// blue for links
+// link colors
 
-@blue: #2892F2;
-@blue_medium: #206AAB;
-@blue_dark: #174771;
+@link_color: 	#2E93FF;
+@link_hover:	#2576CC;
+@link_active:	#123B66;
 
 // color blocking
 
@@ -42,32 +43,38 @@
 @color_4_alt: @green - 70%;
 @color_5_alt: @yellow - 70%;
 
-/* Default Responsive Breakpoints */
+/* Breakpoints */
 
-@desktop_widescreen: ~"only screen and (min-width: 96.875em)"; //1550px
-@desktop_large: ~"only screen and (min-width: 75em)";         //1200px
+// note: breakpoints are mobile-first
+@phone_large: 		~"only screen and (min-width: 20em)";	// 320px+
+@phone_tall:  		~"only screen and (min-height: 25em)";	// 400px+ height
 
-@tablet_large: ~"only screen and (max-width: 63.93em)";       //1023px
-@tablet_small: ~"only screen and (max-width: 47.93em)";       //767px
+@tablet_small:  	~"only screen and (min-width: 30em)";	// 480px+
+@tablet_large:  	~"only screen and (min-width: 48em)";	// 768px+
 
-@phone_large: ~"only screen and (max-width: 33.75em)";        //540px
-@phone_small: ~"only screen and (max-width: 30em)";           //480px
-@phone_landscape: ~"only screen and (max-height: 25em)";      //400px height
+@monitor_small:  	~"only screen and (min-width: 64em)";	// 1024px+
+@monitor_medium:  	~"only screen and (min-width: 75em)";   // 1200px+
+@monitor_large:  	~"only screen and (min-width: 96em)"; 	// 1536px+
+
+// reusable standard measurements
+
+@fingerheight: 		44px;
+@maxwidth: 			1200px;
 
 /* Default Type, Selection, Image, Form, and Link Styles */
 
 ::selection {
-	background: @blue;
+	background: @selectcolor;
     color: @white;
 }
 ::-moz-selection {
-    background: @blue;
+    background: @selectcolor;
     color: @white;
 }
 
 img::selection { background: transparent; }
 img::-moz-selection { background: transparent; }
-body { -webkit-tap-highlight-color: @blue; overflow: scroll !important; -webkit-overflow-scrolling: touch !important; }
+body { -webkit-tap-highlight-color: @selectcolor; overflow: scroll !important; -webkit-overflow-scrolling: touch !important; }
 
 /* ngCloak */
 
@@ -84,50 +91,100 @@ h1, h2, h3, h4 {
 }
 
 .huge, h1 {
-	font-weight: 700;
-	font-size: 3rem;
-	line-height: 3rem;
-    text-align: center;
-    @media @phone_large {
-    	font-size: 2.25rem;
-    	line-height: 2.25rem;
-    }
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: 200;
+
+	@media @tablet_small {
+		font-size: 2.5em;
+		line-height: 1.125em;
+	}
+	@media @tablet_large {
+		font-size: 3em;
+		line-height: 1.05em;
+	}
+	@media only print {
+		font-size: 36pt;
+		line-height: 1.25em;
+	}
 }
 
 .large, h2 {
-	font-size: 2rem;
-	line-height: 2.5rem;
-	font-weight: 700;
+	font-size: 1.625em;
+	line-height: 1.15384615em;
+	font-weight: 200;
+
+	@media @tablet_small {
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+	@media @tablet_large {
+		font-size: 2.25em;
+	}
+	@media only print {
+		font-size: 24pt;
+		line-height: 1.25em;
+	}
 }
 
-h3 {
-	font-size: 1.5rem;
-	line-height: 1.3rem;
-	font-weight: 700;
+.bigger, h3 {
+	font-size: 1.375em;
+	line-height: 1.15384615em;
+	font-weight: 500;
+
+	@media @tablet_small {
+		font-size: 1.5em;
+		line-height: 1.25em;
+	}
+	@media @tablet_large {
+		font-size: 1.75em;
+	}
+	@media only print {
+		font-size: 18pt;
+		line-height: 1.25em;
+	}
 }
 
 .big, h4 {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
-	font-weight: 700;
+	font-size: 1.125em;
+	line-height: 1.375em;
+	font-weight: 500;
+    @media @monitor_small {
+        font-size: 1.25em;
+        line-height: 1.25em;
+    }
+	@media only print {
+		font-size: 14pt;
+		line-height: 1.25em;
+	}
 }
 
 body {
 	font: 18px/28px 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: @grey_dark;
 	font-weight: 400;
-	@media @phone_large {
-		font-size: 16px;
-		line-height: 24px;
+	font-size: 100%; // changing this changes all of the font sizes
+	line-height: 1.25em;
+
+	// font scale
+	@media @tablet_small {
+		line-height: 1.375em;
+	}
+    @media @monitor_small {
+        font-size: 1.125em;
+        line-height: 1.4em;
+    }
+	@media only print {
+		font-size: 12pt;
+		line-height: 1.25em;
 	}
 }
 
 @txtwidth: 720px;
 
 .small, small {
-	font-size: 0.875rem;
-	line-height: 1.25rem;
-	font-weight: 400;
+	font-size: 0.8em;
+	line-height: 1.25em;
 }
 
 /* Images */
@@ -144,4 +201,31 @@ img {
 html, body {
 	width: 100%;
 	height: 100%;
+}
+
+/* links */
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	color: @link_color;
+	transition: color 200ms ease-out;
+
+	// visited links
+	&:visited {
+		color: @link_color;
+	}
+	.no-touch &:hover {
+		color: @link_hover;
+		transition: color 200ms;
+	}
+
+	&:active,
+	&:focus,
+	.no-touch &:active,
+	.no-touch &:focus {
+		color: @link_active;
+		transition: color 200ms;
+	}
 }
