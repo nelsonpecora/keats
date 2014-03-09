@@ -303,8 +303,6 @@ img::-moz-selection {
 
 body {
 	-webkit-tap-highlight-color: #94c8ff;
-	overflow: scroll !important;
-	-webkit-overflow-scrolling: touch !important;
 }
 
 /* ngCloak */
@@ -421,6 +419,12 @@ a:focus,
 /* circle */
 
 /* styles */
+
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
 
 .dark,
 .medium,
