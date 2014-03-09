@@ -12,8 +12,10 @@ include "head"
 	    <section class="medium home-excerpts">
 	    	<h2><a href="/work" title="Latest Work">Latest Work</a></h2>
 	    	<div class="gutter">
-		    	<article class="home-excerpt-item home-excerpt-item-project" ng-repeat="project in projects">
-		    		<img class="project-img" ng-src="{{project.img}}" />
+		    	<article class="home-excerpt-item home-excerpt-item-project" ng-repeat="project in projects|limitTo:3">
+		    		<div class="home-excerpt-img">
+		    			<img class="project-img" ng-src="{{project.img}}" />
+		    		</div>
 		    		<h3>{{project.title}}</h3>
 		    		<a href="/work#{{project.title}}" title="{{project.title}}" class="link-box"></a>
 		    	</article>
