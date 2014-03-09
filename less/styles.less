@@ -405,11 +405,15 @@
 		padding: 10px 0;
 		.clearfix;
 		a {
-			padding: 5px 10px 5px 0;
+			padding-right: 5px;
 			font-size: 40px;
 			color: @grey_dark;
 			@media @tablet_small {
 				padding: 10px;
+			}
+			.iconic {
+				width: 40px;
+				height: 40px;
 			}
 		}
 	}
@@ -456,7 +460,7 @@
 			float: left;
 			margin-top: 30px;
 			&:first-child {
-				margin-top: 40px;
+				margin-top: 30px;
 			}
 		}
 		.bslg-left {
@@ -510,6 +514,37 @@
 			background-color: @grey_medium_light;
 			.circle(100px);
 			border: 5px solid @white;
+			position: relative;
+
+			.iconic {
+				width: 50%;
+				height: 50%;
+				top: 25%;
+				left: 25%;
+				position: absolute;
+			}
+
+			.android { visibility: hidden }
+			.tablet  { visibility: hidden }
+			.desktop { visibility: hidden }
+
+			// android
+			.android & {
+				.iphone  { visibility: hidden }
+				.android { visibility: visible }
+			}
+
+			@media @tablet_small {
+				.iphone { visibility: hidden }
+				.tablet { visibility: visible }
+			}
+
+			@media @monitor_medium {
+				.tablet { visibility: hidden }
+				.desktop { visibility: visible }
+			}
+
+
 		}
 
 		@media @tablet_small {
@@ -557,6 +592,11 @@
 			.no-touch &:hover {
 				background-color: @grey_light_offset;
 				transition: 250ms all ease-out;
+			}
+
+			@media @tablet_small {
+				flex: 1 0 auto;
+				text-align: center;
 			}
 		}
 	}

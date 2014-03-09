@@ -14,10 +14,9 @@
 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-        <link rel="stylesheet" type="text/css" href="iconic/iconic_fill.css" />
-        <link href='//fonts.googleapis.com/css?family=Raleway:400,600|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="webfonts/ss-social-regular.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,600|Roboto+Slab:400,700">
+        <link rel="stylesheet" href="/webfonts/ss-social-regular.css" />
+        <link rel="stylesheet" href="/css/styles.min.css" />
 
         <!-- google analytics -->
         <script>
@@ -35,7 +34,7 @@
 	    <header class="page-header sticky">
 	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
 	    	<h1 class="page-header-center">R&eacute;sum&eacute;</h1>
-	    	<div class="page-header-right page-header-icon"><a href="resume.pdf" title="Download R&eacute;sum&eacute; (pdf)" class="iconic document_alt_fill"></a></div>
+	    	<div class="page-header-right page-header-icon"><a href="resume.pdf" title="Download R&eacute;sum&eacute; (pdf)"><img class="iconic" data-src="iconic/smart/file.svg" data-file-extension="pdf" alt="file" /></a></div>
 	    </header>
 	    <section class="dark triangle-down resume-header">
 	    	<h2>BRILLIANCY<span class="middot-break"> &middot; </span>SPEED<span class="middot-break"> &middot; </span><span class="flow-break"><br /></span>LIGHTNESS<span class="middot-break"> &middot; </span>GLORY</h2>
@@ -59,37 +58,42 @@
 	    	<div class="skills">
 		    	<h1>Skills</h1>
 		    	<div class="skill-left">
-		    		<div class="skill-icon iconic brush"></div>
-		    		<h3>Design</h3>
+		    		<div class="skill-icon">
+		    			<img class="iconic mobile iphone" data-src="iconic/smart/iphone.svg" />
+		    			<img class="iconic mobile android" data-src="iconic/smart/nexus.svg" />
+		    			<img class="iconic tablet" data-src="iconic/smart/tablet.svg" />
+		    			<img class="iconic desktop" data-src="iconic/smart/monitor.svg" />
+		    		</div>
+		    		<h3>Responsive Design</h3>
 		    	</div>
 		    	<div class="skill-right">
 		    		<ul>
 		    			<li>composition &amp; layout</li>
 		    			<li>typography</li>
-		    			<li>photoshop</li>
-		    			<li>illustrator</li>
+		    			<li>responsive iconography</li>
+		    			<li>ui animation</li>
+		    			<li>mobile first</li>
+		    			<li>emerging interfaces</li>
 		    		</ul>
 		    	</div>
 
 		    	<div class="skill-left">
-		    		<div class="skill-icon iconic list_nested"></div>
+		    		<div class="skill-icon"><img class="iconic" data-src="iconic/smart/terminal.svg" /></div>
 		    		<h3>Development</h3>
 		    	</div>
 		    	<div class="skill-right">
 		    		<ul>
-		    			<li>html5</li>
-		    			<li>css3</li>
+		    			<li>html5 &amp; css3</li>
 		    			<li>angularjs</li>
-		    			<li>spinejs</li>
-		    			<li>jquery</li>
+		    			<li>javascript</li>
+		    			<li>coffeescript</li>
 		    			<li>nodejs</li>
-		    			<li>shopify</li>
-		    			<li>wordpress</li>
+		    			<li>shopify &amp; wordpress</li>
 		    		</ul>
 		    	</div>
 
 		    	<div class="skill-left">
-		    		<div class="skill-icon iconic new_window"></span></div>
+		    		<div class="skill-icon"><img class="iconic" data-src="iconic/smart/browser.svg" /></div>
 		    		<h3>UX</h3>
 		    	</div>
 		    	<div class="skill-right">
@@ -99,20 +103,22 @@
 		    			<li>game design</li>
 		    			<li>data visualization</li>
 		    			<li>accessibility</li>
+		    			<li>information architecture</li>
 		    		</ul>
 		    	</div>
 
 		    	<div class="skill-left">
-		    		<div class="skill-icon iconic iphone"></div>
-		    		<h3>Mobile</h3>
+		    		<div class="skill-icon"><img class="iconic" data-src="iconic/smart/calculator.svg" /></div>
+		    		<h3>DevOps</h3>
 		    	</div>
 		    	<div class="skill-right">
 		    		<ul>
-		    			<li>responsive design</li>
-		    			<li>responsive typography</li>
-		    			<li>emerging interfaces</li>
-		    			<li>graceful degradation</li>
-		    			<li>progressive enhancement</li>
+		    			<li>automated build workflows</li>
+		    			<li>version control</li>
+		    			<li>agile development</li>
+		    			<li>unit &amp; end-to-end testing</li>
+		    			<li>readable documentation</li>
+		    			<li>software architecture</li>
 		    		</ul>
 		    	</div>
 		    </div>
@@ -182,11 +188,12 @@
 	    	<p class="copyleft">&copy; Nelson Pecora, under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="Creative Commons licensing terms">(attribution noncommercial share-alike 3.0)</a> license</p>
 
 	    	<!-- external scripts -->
-	    	<script type="text/javascript" src="js/external/modernizr-custom.min.js"></script>
-	    	<script type="text/javascript" src="js/external/angular/angular.min.js"></script>
+	    	<script src="/js/external/modernizr-custom.min.js"></script>
+	    	<script src="/js/external/angular/angular.min.js"></script>
+	    	<script src="/iconic/iconic.min.js"></script>
 
 	    	<!-- internal scripts -->
-	    	<script type="text/javascript" src="js/scripts.min.js"></script>
+	    	<script src="/js/scripts.min.js"></script>
 	    </footer>
 	</body>
 </html>

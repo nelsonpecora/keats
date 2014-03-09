@@ -1,3 +1,6 @@
+# android phone easter egg
+document.documentElement.className += " android" if navigator.userAgent.toLowerCase().indexOf('android') > -1
+
 khi = angular.module 'khi', []
 
 khi.config ['$provide', ($provide) ->

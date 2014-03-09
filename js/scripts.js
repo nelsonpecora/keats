@@ -1,6 +1,10 @@
 (function() {
   var khi;
 
+  if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+    document.documentElement.className += " android";
+  }
+
   khi = angular.module('khi', []);
 
   khi.config([
