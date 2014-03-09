@@ -893,6 +893,7 @@ a:focus,
 .page-header .page-header-icon a .iconic {
 	width: 40px;
 	height: 40px;
+	fill: #23292d;
 }
 
 /* Resume Page */
@@ -1572,14 +1573,14 @@ a:focus,
 
 .project img {
 	width: 100%;
-	border: 1px solid #111111;
+	border: 1px solid #23292d;
 	position: relative;
 }
 
 .project .project-box {
 	width: 100%;
 	padding: 20px 20px 30px;
-	background-color: #111111;
+	background-color: #23292d;
 	color: #fafafa;
 	position: relative;
 }
@@ -1591,7 +1592,7 @@ a:focus,
 	left: 0;
 	width: 0;
 	height: 0;
-	border-top: 30px solid #111111;
+	border-top: 30px solid #23292d;
 	border-left: 30px solid #fafafa;
 	z-index: 0;
 }
@@ -1603,7 +1604,7 @@ a:focus,
 	right: 0;
 	width: 0;
 	height: 0;
-	border-top: 30px solid #111111;
+	border-top: 30px solid #23292d;
 	border-right: 30px solid #fafafa;
 	z-index: 0;
 }
