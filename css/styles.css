@@ -1013,6 +1013,7 @@ a:focus,
 	top: 25%;
 	left: 25%;
 	position: absolute;
+	fill: #23292d;
 }
 
 .skills .skill-left .skill-icon .android {
@@ -1105,7 +1106,7 @@ a:focus,
 
 .skills .skill-right li {
 	float: left;
-	background-color: #a9b1ba;
+	background-color: #eee;
 	padding: 10px 20px;
 	margin: 10px;
 	-webkit-transition: 300ms all ease-out;
