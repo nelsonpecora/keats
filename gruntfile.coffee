@@ -52,14 +52,14 @@ module.exports = ->
                     jpegMini: false
                     imageAlpha: false
                     quitAfter: true
-                src: ['images/*.gif']
+                src: ['images/**/*.gif']
 
             png: # requires ImageOptim and ImageAlpha
                 options:
                     jpegMini: false
                     imageAlpha: true
                     quitAfter: true
-                src: ['images/*.png']
+                src: ['images/**/*.png']
 
             jpeg: # requires ImageOptim and JPEGMini
                 options:
@@ -67,8 +67,8 @@ module.exports = ->
                     imageAlpha: false
                     quitAfter: true
                 src: [
-                    'images/*.jpg'
-                    'images/*.jpeg'
+                    'images/**/*.jpg'
+                    'images/**/*.jpeg'
                 ]
 
         less:

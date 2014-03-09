@@ -21,22 +21,48 @@ khi.config ['$provide', ($provide) ->
 
 khi.factory 'Projects', ->
     defaultImg = '/images/code.png'
+    portPath = '/images/portfolio/'
 
     [
-        title: 'Sample'
-        desc: 'This is a sample project'
-        img: defaultImg
-        link: 'http://google.com'
+        title: 'Bolster'
+        desc: 'Worked with a designer and back-end developer on multiple revisions of the Bolster site and web app.'
+        img: portPath + 'bolster.png'
+        link: 'http://getbolster.com'
     ,
-        title: 'Sample 2'
-        desc: 'This is another sample project'
+        title: 'Keats.me'
+        desc: 'My personal website is an ongoing project, where I get to try out cool new technologies without dealing with legacy browsers or client requirements.'
         img: defaultImg
-        link: 'http://google.com'
+        github: 'https://github.com/yoshokatana/keats'
     ,
-        title: 'Sample Github'
-        desc: 'This is a sample github project'
-        img: defaultImg
-        github: 'http://github.com'
+        title: 'Github Postcommit Shinies'
+        desc: 'A little ruby/sinatra project I\'m working on. This app gives you the ability to change labels, add milestones, and reassign github issues via commit message.'
+        img: portPath + 'postcommit.png'
+        github: 'https://github.com/yoshokatana/github-postcommit-shinies'
+    ,
+        title: 'Busker'
+        desc: 'Worked with a ruby developer on an independent music webapp. The frontend is built with SpineJS and some cool web audio tech.'
+        img: portPath + 'busker.png'
+        link: 'http://busker.fm'
+    ,
+        title: 'Ringadoc'
+        desc: 'Worked with a designer to redesign Ringadoc\'s homepage. Uses some cool css3 hacks on the buttons, and is 100% responsive.'
+        img: portPath + 'ringadoc.png'
+        link: 'http://www.ringadoc.com/'
+    ,
+        title: 'Armenian General Benevolent Union'
+        desc: 'Worked with a designer at Barrel to build this responsive wordpress-based website for AGBU. It makes use of multiple feeds, custom post types, and structured templates.'
+        img: portPath + 'agbu.png'
+        link: 'http://agbu.org/'
+    ,
+        title: 'LESS Framework'
+        desc: 'Adapted Joni Korpi\'s lessframework with reusable LESS mixins. A little out of date now, but still pretty cool.'
+        img: portPath + 'lessframework.png'
+        github: 'https://github.com/yoshokatana/LESS-Framework'
+    ,
+        title: 'jQuery Geolocation Plugin'
+        desc: 'A little plugin I developed to make native geolocation easier. Plugs into Google Maps\' reverse-geocode API and falls back to IP-based lookup on unsupported browsers.'
+        img: portPath + 'geolocation.png'
+        github: 'https://github.com/yoshokatana/jquery.geolocation'
     ]
 
 khi.factory 'FeedService', ['$http', '$rootScope', ($http, $rootScope) ->
