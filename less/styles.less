@@ -104,6 +104,14 @@ body {
 		.wrapper();
 		margin: 40px auto;
 		text-align: center;
+
+		.no-flexbox & {
+			text-align: left;
+
+			@media @tablet_large {
+				text-align: center;
+			}
+		}
 	}
 	.gutter {
 		width: 90%;
@@ -111,6 +119,15 @@ body {
 		display: flex;
 		justify-content: center;
 		flex-flow: row wrap;
+
+		.no-flexbox & {
+			display: block;
+			.clearfix;
+
+			@media @tablet_large {
+				display: flex;
+			}
+		}
 	}
 }
 
@@ -122,6 +139,15 @@ body {
 	position: relative;
 	flex: 1 1 auto;
 	margin-top: 30px;
+
+	.no-flexbox & {
+		display: block;
+		float: left;
+		clear: left;
+		margin: 20px auto;
+		left: 50%;
+		margin-left: -125px;
+	}
 
 	&:first-child {
 		margin-top: 0;
@@ -144,6 +170,14 @@ body {
 		justify-content: center;
 		align-items: center;
 		position: relative;
+
+		.no-flexbox & {
+			display: block;
+
+			@media @tablet_large {
+				display: flex;
+			}
+		}
 
 		.home-excerpt-img {
 			position: absolute;
@@ -168,11 +202,24 @@ body {
 		height: 300px;
 		margin: 0 20px 20px;
 		flex: 1 1 400px;
+
+		.no-flexbox & {
+			flex: none;
+			margin-left: -200px;
+		}
 	}
 
 	@media @tablet_large {
 		height: 175px;
 		&:last-child { display: none !important; }
+
+		.no-flexbox & {
+			display: flex;
+			clear: none;
+			float: none;
+			margin: 20px auto;
+			left: 0;
+		}
 	}
 
 	@media @monitor_small { height: 150px; }
@@ -605,6 +652,10 @@ body {
 			@media @tablet_small {
 				justify-content: flex-start;
 			}
+
+			.no-flexbox & {
+				display: block;
+			}
 		}
 		li {
 			float: left;
@@ -617,9 +668,20 @@ body {
 				transition: 250ms all ease-out;
 			}
 
+			.no-flexbox & {
+				margin: 20px auto 0;
+				width: 100%;
+				text-align: center;
+			}
+
 			@media @tablet_small {
 				flex: 1 0 auto;
 				text-align: center;
+
+				.no-flexbox & {
+					margin: 10px;
+					width: auto;
+				}
 			}
 		}
 	}
@@ -742,6 +804,11 @@ body {
 		justify-content: space-around;
 		width: 100%;
 
+		.no-flexbox & {
+			display: block;
+			.clearfix;
+		}
+
 		.img-box {
 			width: 80%;
 			margin: 30px auto;
@@ -759,10 +826,23 @@ body {
 
 			@media @tablet_small {
 				width: 40%;
+
+				.no-flexbox & {
+					float: left;
+					margin: 2%;
+					&:nth-of-type(2n+1) {
+						clear: left;
+					}
+				}
 			}
 
 			@media @tablet_large {
 				width: 44%;
+
+				.no-flexbox & {
+					float: left;
+					margin: 3%;
+				}
 			}
 		}
 	}
