@@ -355,7 +355,7 @@ h4 {
 
 body {
 	font: 18px/28px 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #333333;
+	color: #363f47;
 	font-weight: 400;
 	font-size: 100%;
 	line-height: 1.25em;
@@ -431,18 +431,18 @@ a:focus,
 }
 
 .dark {
-	background-color: #111111;
+	background-color: #23292d;
 	color: #fafafa;
 }
 
 .medium {
-	background-color: #dddddd;
-	color: #333333;
+	background-color: #d3dae0;
+	color: #363f47;
 }
 
 .light {
 	background-color: #fafafa;
-	color: #333333;
+	color: #363f47;
 }
 
 /* Section Borders */
@@ -607,7 +607,7 @@ a:focus,
 }
 
 .home-excerpt-item .home-excerpt-item-inner.home-excerpt-item-textpost {
-	border: 1px solid #c2c2c2;
+	border: 1px solid #a9b1ba;
 	padding: 20px;
 }
 
@@ -773,7 +773,7 @@ a:focus,
 	content: "|";
 	position: absolute;
 	right: -10px;
-	color: #333333;
+	color: #363f47;
 }
 
 .footer-nav ul li:last-of-type:after {
@@ -796,7 +796,7 @@ a:focus,
 .page-header {
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.97);
-	color: #333333;
+	color: #363f47;
 	width: 100%;
 	margin: 0;
 	top: 0;
@@ -858,7 +858,7 @@ a:focus,
 	padding: 10px;
 	display: block;
 	vertical-align: middle;
-	color: #333333;
+	color: #363f47;
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 22px;
@@ -887,7 +887,7 @@ a:focus,
 .page-header .page-header-icon a {
 	padding-right: 5px;
 	font-size: 40px;
-	color: #333333;
+	color: #363f47;
 }
 
 .page-header .page-header-icon a .iconic {
@@ -998,7 +998,7 @@ a:focus,
 	font-size: 60px;
 	text-align: center;
 	line-height: 100px;
-	background-color: #c2c2c2;
+	background-color: #a9b1ba;
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
@@ -1104,7 +1104,7 @@ a:focus,
 
 .skills .skill-right li {
 	float: left;
-	background-color: #eeeeee;
+	background-color: #a9b1ba;
 	padding: 10px 20px;
 	margin: 10px;
 	-webkit-transition: 300ms all ease-out;
@@ -1112,7 +1112,7 @@ a:focus,
 }
 
 .no-touch .skills .skill-right li:hover {
-	background-color: #dddddd;
+	background-color: #d3dae0;
 	-webkit-transition: 250ms all ease-out;
 	transition: 250ms all ease-out;
 }
@@ -1323,7 +1323,7 @@ a:focus,
 }
 
 .experience .exp-1 .exp-item header .span-half.exp-item-place {
-	color: #666666;
+	color: #606f80;
 }
 
 .experience .exp-1 .exp-item p {
@@ -1735,7 +1735,7 @@ body {
 }
 
 .contact .around-town article .social-hover p {
-	color: #c2c2c2;
+	color: #a9b1ba;
 }
 
 .no-touch .contact .around-town article:hover {
