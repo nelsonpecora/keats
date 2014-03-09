@@ -63,6 +63,11 @@ khi.factory 'Projects', ->
         desc: 'A little plugin I developed to make native geolocation easier. Plugs into Google Maps\' reverse-geocode API and falls back to IP-based lookup on unsupported browsers.'
         img: portPath + 'geolocation.png'
         github: 'https://github.com/yoshokatana/jquery.geolocation'
+    ,
+        title: 'Immupure'
+        desc: 'Updated the wordpress site of Immupure, redesigning elements and adding new functionality.'
+        img: portPath + 'immupure.png'
+        link: 'http://www.immupure.com/'
     ]
 
 khi.factory 'FeedService', ['$http', '$rootScope', ($http, $rootScope) ->
