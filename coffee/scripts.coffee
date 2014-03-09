@@ -183,15 +183,23 @@ khi.controller 'ResumePageCtrl', ['$scope', ($scope) ->
     $scope.interests = [
         img: 'pax_prime_logo.jpg'
         imgAlt: 'Penny Arcade Expo'
-        desc: 'I volunteer for about a week, two times a year, at the Penny Arcade Expo. It\'s the largest video- and board-gaming convention in the United States.'
+        desc: 'I volunteer two times a year at the Penny Arcade Expo. It\'s the largest video- and board-gaming convention in the United States.'
+        url: 'http://prime.paxsite.com/what-is-pax'
     ,
         img: 'shacktac_logo.png'
         imgAlt: 'Shack Tactical'
         desc: 'I play in a large (~170 member) gaming group. We\'ve been featured in PC Gamer, Polygon, and other gaming news media.'
+        url: 'http://dslyecxi.com/shacktac_wp/'
+    ,
+        img: 'fnpl.png'
+        imgAlt: 'Friday Night Party Line'
+        desc: 'I\'m a frequent guest on Friday Night Party Line, a monthly roundtable podcast where we discuss news and culture.'
+        url: 'http://www.fridaynightpartyline.com/'
     ,
         img: 'eclipse.jpg'
         imgAlt: 'Boardgames'
         desc: 'I\'m really into European boardgames, and am a fan of indie pen and paper RPGs.'
+        url: 'http://www.popsci.com/gadgets/article/2012-02/popsci-qampa-primer-german-style-board-game-revolution'
     ]
 ]
 

@@ -124,7 +124,9 @@ include "head"
 		    	<section>
 		    		<div class="img-box-wrap">
 			    		<article class="img-box" ng-repeat="interest in interests">
-			    			<img ng-src="images/{{interest.img}}" alt="{{interest.imgAlt}}" />
+			    			<a href="{{interest.url}}" title="interest.imgAlt">
+			    				<img ng-src="images/{{interest.img}}" alt="{{interest.imgAlt}}" />
+			    			</a>
 			    			<p ng-if="interest.title">{{interest.title}}</p>
 			    			<p ng-if="interest.desc">{{interest.desc}}</p>
 			    			<p ng-if="interest.time">{{interest.time}}</p>
