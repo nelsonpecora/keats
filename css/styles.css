@@ -303,7 +303,7 @@ img::-moz-selection {
 
 body {
 	-webkit-tap-highlight-color: #94c8ff;
-	-webkit-overflow-y-scrolling: touch !important;
+	-webkit-overflow-scrolling: touch !important;
 }
 
 /* ngCloak */
