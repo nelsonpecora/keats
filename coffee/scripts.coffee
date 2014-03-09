@@ -208,7 +208,7 @@ khi.controller 'ResumePageCtrl', ['$scope', ($scope) ->
         place: 'Providence, RI'
         role: 'Stock Clerk'
         company: 'Adler\'s Hardware'
-        desc: 'Though I\'ve been helping out around the family jewelry store since I was a kid, my first full-time job was at 14. To this day I have no idea how I managed to convince them to let a 14 year old work in a hardware store full of heavy equipment, sharp object, and power tools.'
+        desc: 'Though I\'ve been helping out around the family jewelry store since I was a kid, my first full-time job was at 14. To this day I have no idea how I managed to convince them to let a 14 year old work in a hardware store full of heavy equipment, sharp objects, and power tools.'
     ]
 
     $scope.interests = [
