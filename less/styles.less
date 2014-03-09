@@ -526,6 +526,7 @@
 
 			.android { visibility: hidden }
 			.tablet  { visibility: hidden }
+			.laptop  { visibility: hidden }
 			.desktop { visibility: hidden }
 
 			// android
@@ -539,8 +540,13 @@
 				.tablet { visibility: visible }
 			}
 
-			@media @monitor_medium {
+			@media @monitor_small {
 				.tablet { visibility: hidden }
+				.laptop { visibility: visible }
+			}
+
+			@media @monitor_large {
+				.laptop  { visibility: hidden }
 				.desktop { visibility: visible }
 			}
 
@@ -548,7 +554,7 @@
 		}
 
 		@media @tablet_small {
-			width: 200px;
+			width: 230px;
 			clear: left;
 		}
 
@@ -570,7 +576,7 @@
 		.clearfix;
 
 		@media @tablet_small {
-			width: ~'calc(100% - 200px)';
+			width: ~'calc(100% - 230px)';
 			margin-top: 40px;
 		}
 

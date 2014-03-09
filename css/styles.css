@@ -1022,6 +1022,10 @@ a:focus,
 	visibility: hidden;
 }
 
+.skills .skill-left .skill-icon .laptop {
+	visibility: hidden;
+}
+
 .skills .skill-left .skill-icon .desktop {
 	visibility: hidden;
 }
@@ -1824,13 +1828,13 @@ body {
 }
 
 .skills .skill-left {
-	width: 200px;
+	width: 230px;
 	clear: left;
 }
 
 .skills .skill-right {
-	width: -webkit-calc(100% - 200px);
-	width: calc(100% - 200px);
+	width: -webkit-calc(100% - 230px);
+	width: calc(100% - 230px);
 	margin-top: 40px;
 }
 
@@ -2078,6 +2082,14 @@ body {
 	width: 65%;
 }
 
+.skills .skill-left .skill-icon .tablet {
+	visibility: hidden;
+}
+
+.skills .skill-left .skill-icon .laptop {
+	visibility: visible;
+}
+
 .experience {
 	width: 65%;
 }
@@ -2158,14 +2170,6 @@ body {
 	width: 70%;
 }
 
-.skills .skill-left .skill-icon .tablet {
-	visibility: hidden;
-}
-
-.skills .skill-left .skill-icon .desktop {
-	visibility: visible;
-}
-
 .experience {
 	width: 70%;
 }
@@ -2232,6 +2236,14 @@ body {
 
 .skills {
 	width: 60%;
+}
+
+.skills .skill-left .skill-icon .laptop {
+	visibility: hidden;
+}
+
+.skills .skill-left .skill-icon .desktop {
+	visibility: visible;
 }
 
 .experience {
