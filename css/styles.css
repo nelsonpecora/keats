@@ -2304,6 +2304,10 @@ body {
 	width: 70%;
 }
 
+.skills {
+	max-width: 1200px;
+}
+
 .experience {
 	width: 70%;
 }
