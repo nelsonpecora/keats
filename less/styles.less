@@ -415,10 +415,18 @@ body {
 	width: 100%;
 	margin: 0;
 	top: 0;
+	left: 0;
 	box-shadow: 0 4px 10px -6px rgba(0,0,0,0.4);
 	z-index: 99;
 	display: flex;
 	align-items: center;
+
+	@media @monitor_medium {
+		max-width: @maxwidth;
+		left: 50%;
+		margin-left: -600px;
+	}
+
 	.no-touch &.sticky {
 		position: fixed;
 		//.sticky();
@@ -548,6 +556,10 @@ body {
 	.wrapper();
 	.clearfix;
 	padding-bottom: 30px;
+
+	@media @monitor_large {
+
+	}
 
 	h1 {
 		text-align: center;

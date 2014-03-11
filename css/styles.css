@@ -845,6 +845,7 @@ body {
 	width: 100%;
 	margin: 0;
 	top: 0;
+	left: 0;
 	box-shadow: 0 4px 10px -6px rgba(0, 0, 0, 0.4);
 	z-index: 99;
 	display: -webkit-box;
@@ -2267,6 +2268,12 @@ body {
 
 .copyleft {
 	width: 70%;
+}
+
+.page-header {
+	max-width: 1200px;
+	left: 50%;
+	margin-left: -600px;
 }
 
 .resume-header > h2 {
