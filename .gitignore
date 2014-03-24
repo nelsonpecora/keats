@@ -15,3 +15,6 @@ CVS
 # Grunt build process interstitial files
 js/scripts.js
 css/styles.css
+
+# iconic source svgs
+iconic/smart
