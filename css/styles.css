@@ -2273,7 +2273,7 @@ body {
 .page-header {
 	max-width: 1200px;
 	left: 50%;
-	margin-left: -600px;
+	margin-left: -40%;
 }
 
 .resume-header > h2 {
@@ -2358,6 +2358,11 @@ body {
 
 .copyleft {
 	width: 60%;
+}
+
+.page-header {
+	margin-left: -600px;
+	width: 1200px;
 }
 
 .resume-header > h2 {
