@@ -9,12 +9,9 @@ CVS
 *.sublime-project
 *.sublime-workspace
 
-# Unit Testing Mid-tier files
-*/tests/*.js
-
-# Grunt build process interstitial files
-js/scripts.js
-css/styles.css
-
 # iconic source svgs
 iconic/smart
+
+# external dependencies
+external
+node_modules
