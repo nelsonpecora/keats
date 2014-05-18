@@ -19,6 +19,7 @@ ngmin        = require 'gulp-ngmin'
 
 # styles
 stylus       = require 'gulp-stylus'
+csslint      = require 'gulp-csslint'
 prefix       = require 'gulp-autoprefixer'
 cmq          = require 'gulp-combine-media-queries'
 cssmin       = require 'gulp-cssmin'
@@ -35,17 +36,24 @@ html         = require 'gulp-file-include'
 # scripts
 
 vendorScripts = [
-    'dist/js/modernizr.min.js' # compiled
-    'dist/js/fastclick.min.js' # compiled
+    'dist/modernizr.min.js' # compiled
+    'dist/fastclick.min.js' # compiled
+    'webfonts/ss-social.js'
     'external/angular/angular.min.js'
     'external/angular-animate/angular-animate.min.js'
     'external/angular-touch/angular-touch.min.js'
+    'iconic/iconic.min.js'
 ]
 
 scripts = ['coffee/*.coffee']
 
 # styles
-styles = ['stylus/*.styl']
+vendorStyles = [
+    'external/normalize-css/normalize.css'
+    'webfonts/ss-social-regular.css'
+]
+
+styles = ['stylus/styles.styl']
 
 # tasks
 
@@ -66,21 +74,21 @@ gulp.task 'modernizr', ->
         matchCommunityTests: true
     .pipe uglify()
     .pipe rename 'modernizr.min.js'
-    .pipe gulp.dest 'dist/js'
+    .pipe gulp.dest 'dist'
 
 # minifies the vendor files that aren't minified by default
 gulp.task 'vendorminfastclick', ->
     gulp.src 'external/fastclick/lib/fastclick.js'
         .pipe uglify()
         .pipe rename 'fastclick.min.js'
-        .pipe gulp.dest 'dist/js'
+        .pipe gulp.dest 'dist'
 
 # concats vendor scripts into single file that's served
-gulp.task 'vendor', ['modernizr', 'vendorminfastclick'], ->
+gulp.task 'vendor', ['vendorminfastclick'], ->
     gulp.src vendorScripts
     .pipe concat 'vendor.min.js'
     .pipe uglify { mangle: false }
-    .pipe gulp.dest 'dist/js'
+    .pipe gulp.dest 'dist'
 
 gulp.task 'scripts', ->
     gulp.src scripts
@@ -90,7 +98,7 @@ gulp.task 'scripts', ->
         .pipe concat 'scripts.min.js'
         .pipe ngmin()
         .pipe uglify { mangle: false }
-        .pipe gulp.dest 'dist/js'
+        .pipe gulp.dest 'dist'
 
 # build stylesheet
 gulp.task 'styles', ->
@@ -100,38 +108,67 @@ gulp.task 'styles', ->
         .pipe stylus()
         .on 'error', gutil.log
         .on 'error', gutil.beep
+        .pipe csslint
+            'box-sizing': false
+            'compatible-vendor-prefixes': false
+            'adjoining-classes': false
+            'universal-selector': false
+            'important': false
+            'unique-headings': false
+            'outline-none': false
+            'unqualified-attributes': false
+            'known-properties': false
+            'qualified-headings': false
+            'box-model': false
+            'duplicate-properties': false
+            'overqualified-elements': false
+            'ids': false
+            'font-sizes': false
+            'floats': false
+            'fallback-colors': false
+        .pipe csslint.reporter()
         .pipe stylusFilter.restore()
         .pipe concat 'styles.min.css'
         .pipe prefix 'last 2 versions', 'ie 9'
         .pipe cmq()
         .pipe cssmin()
-        .pipe gulp.dest 'dist/css'
+        .pipe gulp.dest 'dist'
 
 # build html pages
-gulp.task 'allhtml', ->
+gulp.task 'html', ->
     gulp.src 'pages/*.html'
-        .pipe .html { basepath: '@root' }
-        .pipe gulp.dest './'
+        .pipe html { basepath: '@file' }
+        .on 'error', gutil.log
+        .on 'error', gutil.beep
+        .pipe gulp.dest '.'
 
 gulp.task '404html', ->
     gulp.src 'pages/404.html'
-        .pipe .html { basepath: '@root' }
-        .pipe gulp.dest './'
+        .pipe html { basepath: '@file' }
+        .on 'error', gutil.log
+        .on 'error', gutil.beep
+        .pipe gulp.dest '.'
 
 gulp.task 'indexhtml', ->
     gulp.src 'pages/index.html'
-        .pipe .html { basepath: '@root' }
-        .pipe gulp.dest './'
+        .pipe html { basepath: '@file' }
+        .on 'error', gutil.log
+        .on 'error', gutil.beep
+        .pipe gulp.dest '.'
 
 gulp.task 'resumehtml', ->
     gulp.src 'pages/resume.html'
-        .pipe .html { basepath: '@root' }
-        .pipe gulp.dest './'
+        .pipe html { basepath: '@file' }
+        .on 'error', gutil.log
+        .on 'error', gutil.beep
+        .pipe gulp.dest '.'
 
 gulp.task 'workhtml', ->
     gulp.src 'pages/work.html'
-        .pipe .html { basepath: '@root' }
-        .pipe gulp.dest './'
+        .pipe html { basepath: '@file' }
+        .on 'error', gutil.log
+        .on 'error', gutil.beep
+        .pipe gulp.dest '.'
 
 # compress images
 gulp.task 'images', ->
@@ -146,10 +183,10 @@ gulp.task 'watch', ->
     gulp.watch scripts, ['scripts']
 
     # recompile styles when they change
-    gulp.watch styles, ['styles']
+    gulp.watch 'stylus/*.styl', ['styles']
 
     # recompile all html if partials change
-    gulp.watch 'partials/*', ['allhtml']
+    gulp.watch 'partials/*', ['html']
 
     gulp.watch 'pages/404.html', ['404html']
 
@@ -163,4 +200,4 @@ gulp.task 'watch', ->
     gulp.watch 'images/**/*', ['images']
 
 # default
-gulp.task 'default', ['vendor', 'allhtml', 'scripts', 'styles', 'watch']
+gulp.task 'default', ['modernizr', 'vendor', 'html', 'scripts', 'styles', 'watch']

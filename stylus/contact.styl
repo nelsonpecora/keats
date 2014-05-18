@@ -1,0 +1,97 @@
+/* Contact Section */
+
+.contact
+    clearfix()
+    padding-bottom: 0
+    h1
+        wrapper()
+        margin 30px auto 20px
+        text-align center
+
+    .around-town
+        width 90%
+        margin 0 5% 10px
+        display flex
+        flex-flow row wrap
+        justify-content center
+
+        article
+            margin 10px
+            width 44px
+            height 44px
+            position relative
+            font-size 26px
+            padding 10px
+            background-color transparent
+            transition 150ms all
+            float left
+            flex 0 0 auto
+
+            @media tablet-small
+                margin 5px
+
+            a
+                position absolute
+                width 100%
+                height 100%
+                display block
+                top 0
+                left 0
+
+            .social-hover
+                display none
+
+            @media tablet-small
+                float right
+                flex none
+
+                .social-hover
+                    display block
+                    opacity 0
+                    top 44px
+                    left 0
+                    position absolute
+                    font-size 0.8rem
+                    line-height 1.2em
+                    padding 10px 20px
+                    background-color rgba(25,25,25,0.92)
+                    z-index 1
+                    width 140px
+                    pointer-events none
+                    border-radius 0 4px 4px 4px
+                    transition 150ms all
+
+                    p
+                        margin 0
+                        color grey-medium-light
+
+                +hover()
+                    background-color rgba(25,25,25,0.92)
+                    border-radius 4px 4px 0 0
+                    transition 250ms all
+
+                    .social-hover
+                        opacity 1
+                        transition 250ms all
+
+    .direct-line
+        width 90%
+        margin 0 5%
+        display flex
+        flex-flow row wrap
+        justify-content center
+
+        div
+            float left
+            margin 10px 20px 0 20px
+            flex 0 0 auto
+
+            a
+                padding-left 10px
+                line-height 20px
+                vertical-align top
+
+            @media tablet-small
+                margin 10px 20px
+                flex none
+                clear left

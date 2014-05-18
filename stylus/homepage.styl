@@ -1,0 +1,176 @@
+/* Homepage */
+
+.home-header
+    h1
+        wrapper()
+        margin 0 auto
+        letter-spacing 3px
+        font-weight 700
+        font-size 3rem
+        line-height 4rem
+        text-align center
+
+        @media tablet-small
+            font-size 3.5rem
+            line-height 5rem
+
+        @media tablet-large
+            font-size 4rem
+            line-height 6rem
+
+        @media monitor-small
+            font-size 5.75rem
+            line-height 7.5rem
+
+.home-blurb
+    h2
+        wrapper()
+        margin 30px auto 20px
+    p
+        wrapper()
+        margin 20px auto 0
+
+        &.cta
+            font-size 1.25rem
+
+.home-excerpts
+    padding-bottom 140px
+
+    h2
+        wrapper()
+        margin 40px auto
+        text-align center
+
+        .no-flexbox &
+            text-align left
+
+            @media tablet-large
+                text-align center
+
+    .gutter
+        width 90%
+        margin 0 5%
+        display flex
+        justify-content center
+        flex-flow row wrap
+
+        .no-flexbox &
+            display block
+            clearfix()
+
+            @media tablet-large
+                display flex
+
+.home-excerpt-item
+    width 250px
+    height 200px
+    margin 0 10px
+    background-size cover !important
+    position relative
+    flex 1 1 auto
+    margin-top 30px
+
+    .no-flexbox &
+        display block
+        float left
+        clear left
+        margin 20px auto
+        left 50%
+        margin-left -125px
+
+    &:first-child
+        margin-top 0
+
+    h3
+        text-align center
+        width 75%
+        line-height 1.4em
+
+    .no-touch &:hover
+        h3
+        h4
+        p
+            color link-hover
+
+    &.home-excerpt-item-project
+        display flex
+        justify-content center
+        align-items center
+        position relative
+
+        .no-flexbox &
+            display block
+
+            @media tablet-large
+                display flex
+
+        .home-excerpt-img
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            overflow hidden
+
+        .project-img
+            position absolute
+            top 0
+            left 0
+            min-width 100%
+            min-height 100%
+
+    @media tablet-small
+        width 400px
+        height 300px
+        margin 0 20px 20px
+        flex 1 1 400px
+
+        .no-flexbox &
+            flex none
+            margin-left -200px
+
+    @media tablet-large
+        height 175px
+        &:last-child
+            display none !important
+
+        .no-flexbox &
+            display flex
+            clear none
+            float none
+            margin 20px auto
+            left 0
+
+    @media monitor-small    { height 150px }
+    @media monitor-medium   { height 300px }
+    @media monitor-large    { height 250px }
+
+    .home-excerpt-item-inner
+        position absolute
+        width 100%
+        height 100%
+        display flex
+        justify-content center
+        align-content center
+        flex-flow row wrap
+
+        &.home-excerpt-item-img
+            background-size cover !important
+
+        &.home-excerpt-item-textpost
+            border 1px solid @grey_medium_light
+            padding 20px
+            clearfix()
+
+            h4
+            p
+                float left
+                transition color 200ms ease-out
+
+.link-box
+    display block
+    position absolute
+    width 100%
+    height 100%
+    top 0
+    left 0

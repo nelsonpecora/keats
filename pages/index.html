@@ -1,4 +1,4 @@
-include "head"
+@@include("../partials/head.html")
 	<body ng-controller="HomePageCtrl">
 	    <header class="dark triangle-down home-header">
 	    	<h1>Good Design Needs a Strong Foundation</h1>
@@ -33,7 +33,7 @@ include "head"
 		    	</article>
 		    </div>
 	    </section>
-	    include "contact"
-	include "foot"
+	    @@include("../partials/contact.html")
+	@@include("../partials/foot.html")
 	</body>
 </html>

@@ -1,0 +1,341 @@
+/* Resume Page */
+
+.resume-header
+    padding-top 120px
+    padding-bottom 30px
+
+    & > h2
+        wrapper()
+        margin-bottom 20px
+        text-align center
+
+        @media monitor-medium
+            font-size 1.8em
+
+        span
+            // middot
+            &:nth-of-type(2)
+                display none
+
+            @media monitor-medium
+
+                &:nth-of-type(2)
+                    display inline
+
+                &.flow-break
+                    display none
+
+    & > p
+        wrapper()
+
+    .bslg
+        wrapper()
+        clearfix()
+        padding-bottom 30px
+
+        .bslg-left
+        .bslg-right
+            clear left
+            width 100%
+            float left
+            margin-top 30px
+
+            &:first-child
+                margin-top 30px
+
+        .bslg-left
+            text-align center
+
+        @media tablet-small
+            .bslg-left
+            .bslg-right
+                clear none
+
+            .bslg-left
+                width 32%
+                clear left
+                text-align left
+
+            .bslg-right
+                width 68%
+
+.skills
+    wrapper()
+    clearfix()
+    padding-bottom 30px
+
+    @media monitor-medium
+        max-width maxwidth
+
+    h1
+        text-align center
+        margin-top 30px
+        margin-bottom 10px
+
+    .skill-left
+    .skill-right
+        float left
+        margin-top 40px
+
+        &:first-child
+            margin-top 50px
+
+    .skill-left
+        width 100%
+
+        .skill-icon
+            display block
+            margin 0 auto
+            width 100px
+            height 100px
+            font-size 60px
+            text-align center
+            line-height 100px
+            background-color grey-medium-light
+            circle(100px)
+            border 5px solid white
+            position relative
+
+            .iconic
+                width 50%
+                height 50%
+                top 25%
+                left 25%
+                position absolute
+                fill grey-darkest
+
+            .android
+                visibility hidden
+
+            .tablet
+                visibility hidden
+
+            .laptop
+                visibility hidden
+
+            .desktop
+                visibility hidden
+
+            // android
+            .android &
+                .iphone
+                    visibility hidden
+
+                .android
+                    visibility visible
+
+            @media tablet-small
+                .iphone
+                    visibility hidden
+
+                .tablet
+                    visibility visible
+
+            @media monitor-small
+                .tablet
+                    visibility hidden
+
+                .laptop
+                    visibility visible
+
+            @media monitor-large
+                .laptop
+                    visibility hidden
+
+                .desktop
+                    visibility visible
+
+        @media tablet-small
+            width 230px
+            clear left
+
+        h3
+            margin 20px auto
+            text-align center
+
+        for key, val in skillcolors
+            &:nth-of-type({key})
+                .skill-icon
+                    background-color val
+
+    .skill-right
+        width 100%
+        margin 0
+        clearfix()
+
+        @media tablet-small
+            width calc(100% \- 230px)
+            margin-top 40px
+
+        ul
+            clearfix()
+            display flex
+            flex-flow row wrap
+            justify-content center
+            list-style none
+
+            @media tablet-small
+                justify-content flex-start
+
+            .no-flexbox &
+                display block
+
+        li
+            float left
+            background-color #eee
+            padding 10px 20px
+            margin 10px
+            transition 300ms all ease-out
+
+            +hover()
+                background-color grey-lighter
+                transition 250ms all ease-out
+
+            .no-flexbox &
+                margin 20px auto 0
+                width 100%
+                text-align center
+
+            @media tablet-small
+                flex 1 0 auto
+                text-align center
+
+                .no-flexbox &
+                    margin 10px
+                    width auto
+
+.experience
+    wrapper()
+    clearfix()
+    padding-bottom 30px
+
+    h1
+        text-align center
+        width 95%
+        margin 30px auto 40px
+
+        @media tablet-small
+            width auto
+            margin-bottom 50px
+
+    .exp-1
+        float left
+        width 100%
+        margin-left -3%
+        margin-bottom 50px
+        border-left-colors()
+
+        .exp-item
+            float left
+            width 95%
+            padding 0 3%
+            margin-bottom 50px
+
+            &:last-child
+                margin-bottom 0
+
+            header
+                clearfix()
+
+                .span-half
+                    float left
+                    width 100%
+                    display block
+                    margin-bottom 10px
+
+                    &.exp-item-title
+                    &.exp-item-place
+                        margin-top -10px
+
+                    &.exp-item-place
+                        color grey-medium-dark
+
+                    @media tablet-large
+                        width 50%
+
+                        &:nth-of-type(2n)
+                            text-align right
+
+            p
+                margin-top 10px
+
+            @media tablet-small
+                width 100%
+                padding 0
+
+            &.subjob
+                border-left-colors()
+                width 100%
+                margin-left -8px
+                border-left-width 8px
+                padding 0 4%
+
+                &:before
+                    border-top-width 8px
+
+                @media tablet-small
+                    width auto
+                    margin-left auto
+                    border-left-width initial
+                    padding 0 3%
+
+                    &:before
+                        border-top-width initial
+
+        @media tablet-small
+            border-left-width 3px
+            padding-left 2%
+
+            &:before
+                border-top-width 3px
+
+.interests
+    wrapper()
+
+    h1
+        text-align center
+        margin-top 30px
+
+    h3
+        margin 30px 0 10px
+        text-align center
+
+    .img-box-wrap
+        display flex
+        flex-flow row wrap
+        justify-content space-around
+        width 100%
+
+        .no-flexbox &
+            display block
+            clearfix()
+
+        .img-box
+            width 80%
+            margin 30px auto
+
+            img
+                border 3px solid white
+                background-color white
+                display block
+                margin 0 auto 10px
+
+            p
+                text-align center
+
+            @media tablet-small
+                width 40%
+
+                .no-flexbox &
+                    float left
+                    margin 2%
+
+                    &:nth-of-type(2n+1)
+                        clear left
+
+            @media tablet-large
+                width 44%
+
+                .no-flexbox &
+                    float left
+                    margin 3%

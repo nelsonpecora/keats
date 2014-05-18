@@ -1,0 +1,40 @@
+// sections
+
+.dark
+.medium
+.light
+	width 100%
+	padding 70px 0
+	position relative
+
+.dark
+	background-color grey-darkest
+	color white
+
+.medium
+	background-color grey-light-offset
+	color grey-dark
+
+.light
+	background-color white
+	color grey-dark
+
+// section borders
+
+.triangle-up:before
+.triangle-down:after
+	left 50%
+	width 100px
+	height 100px
+	transform translateX(-50%) rotate(45deg)
+	position absolute
+	content ''
+	pointer-events none
+	z-index 10
+	background inherit
+
+.triangle-up:before
+	top -50px
+
+.triangle-down:after
+	bottom -50px

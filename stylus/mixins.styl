@@ -1,74 +1,78 @@
 /* This file contains LESS mixins and functions compiled from various sources */
 
 // new clearfix (adapted from http://nicolasgallagher.com/micro-clearfix-hack/)
-.clearfix() {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
+clearfix()
+    &:before
+    &:after
+        content " "
+        display table
+    &:after
+        clear both
 
 /* .border-radius(VALUE,VALUE,VALUE,VALUE); */
 
-.border-radius(@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
-    border-top-right-radius: @topright;
-    border-bottom-right-radius: @bottomright;
-    border-bottom-left-radius: @bottomleft;
-    border-top-left-radius: @topleft;
-    background-clip: padding-box;
-}
+border-radius()
+    border-radius arguments
+    background-clip padding-box
+
 
 /* circle */
-.circle(@diameter) {
-    border-radius: 50%;
-    width: @diameter;
-    height: @diameter;
-}
+circle(diameter)
+    border-radius 50%
+    width diameter
+    height diameter
 
 // truncate text with ellipses (requires containing element to be display: block or inline-block)
-.text-truncate() {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+text-truncate()
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
 
-.wrapper() {
-    width: 95%;
-    max-width: @txtwidth;
-    margin: 0 auto;
+// hover states
+hover()
+    .no-touchevents &:hover
+        {block}
 
-    @media @tablet_small    { width: 85%; }
-    @media @tablet_large    { width: 80%; }
-    @media @monitor_small   { width: 65%; }
-    @media @monitor_medium  { width: 70%; }
-    @media @monitor_large   { width: 60%; }
-}
+// active states
+active()
+    &:active
+    .no-touchevents &:active
+        {block}
 
-.border-left-colors() {
-    position: relative;
-    padding-left: 8px;
-    border-left: 8px solid @white;
+focus()
+    &:focus
+    .no-touchevents &:focus
+        {block}
 
-    &:nth-of-type(1) { border-color: @color_1_alt; &:before { border-color: @color_1_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_1_alt; } }
-    &:nth-of-type(2) { border-color: @color_2_alt; &:before { border-color: @color_2_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_2_alt; } }
-    &:nth-of-type(3) { border-color: @color_3_alt; &:before { border-color: @color_3_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_3_alt; } }
-    &:nth-of-type(4) { border-color: @color_4_alt; &:before { border-color: @color_4_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_4_alt; } }
-    &:nth-of-type(5) { border-color: @color_5_alt; &:before { border-color: @color_5_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_5_alt; } }
-    &:nth-of-type(6) { border-color: @color_1_alt; &:before { border-color: @color_1_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_1_alt; } }
-    &:nth-of-type(7) { border-color: @color_2_alt; &:before { border-color: @color_2_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_2_alt; } }
-    &:nth-of-type(8) { border-color: @color_3_alt; &:before { border-color: @color_3_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_3_alt; } }
-    &:nth-of-type(9) { border-color: @color_4_alt; &:before { border-color: @color_4_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_4_alt; } }
-    &:nth-of-type(10) { border-color: @color_5_alt; &:before { border-color: @color_5_alt; } &> .exp-item > header > .exp-item-title, &> header .exp-item-title { color: @color_5_alt; } }
-    &:before {
-        content: "";
-        width: 1%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-top: 8px solid @white;
-    }
-}
+wrapper()
+    width 95%
+    max-width txtwidth
+    margin 0 auto
+
+    @media tablet-small    { width 85% }
+    @media tablet-large    { width 80% }
+    @media monitor-small   { width 65% }
+    @media monitor-medium  { width 70% }
+    @media monitor-large   { width 60% }
+
+border-left-colors()
+    position relative
+    padding-left 8px
+    border-left 8px solid white
+
+    for key, val in experiencecolors
+        &:nth-of-type({key})
+            border-color: val
+            &:before
+                border-color: val
+            & > .exp-item > header > .exp-item-title
+            & > header .exp-item-title
+                color val
+
+    &:before
+        content ''
+        width 1%
+        position absolute
+        top 0
+        left 0
+        border-top 8px solid white

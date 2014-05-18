@@ -1,4 +1,4 @@
-include "head"
+@@include("../partials/head.html")
 	<body ng-controller="WorkPageCtrl">
 	    <header class="page-header sticky">
 	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
@@ -16,7 +16,7 @@ include "head"
 		    	</div>
 	    	</article>
 	    </section>
-	include "contact"
-	include "foot"
+		@@include("../partials/contact.html")
+	@@include("../partials/foot.html")
 	</body>
 </html>

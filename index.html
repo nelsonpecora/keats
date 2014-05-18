@@ -15,8 +15,7 @@
         <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon" />
 
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,600|Roboto+Slab:400,700">
-        <link rel="stylesheet" href="/webfonts/ss-social-regular.css" />
-        <link rel="stylesheet" href="/css/styles.min.css" />
+        <link rel="stylesheet" href="/dist/styles.min.css" />
 
         <!-- google analytics -->
         <script>
@@ -65,36 +64,34 @@
 		    </div>
 	    </section>
 	    <section class="dark triangle-up contact" id="Contact" ng-controller="ContactSectionCtrl">
-	    	<h1>Contact Me</h1>
-	    	<section class="around-town">
-	    		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
-	    			<a href="{{s.link}}" title="{{s.service}}"></a>
-	    			<div class="social-hover">
-	    				<p>{{s.service}}<br />{{s.name}}</p>
-	    			</div>
-	    		</article>
-	    	</section>
-	    	<section class="direct-line">
-	    		<div class="ss-mail"><a href="mailto:nelson@keats.me" title="Email Me">nelson@keats.me</a></div>
-	    		<div class="ss-phone"><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
-	    	</section>
-	    </section>
+	<h1>Contact Me</h1>
+	<section class="around-town">
+		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
+			<a href="{{s.link}}" title="{{s.service}}"></a>
+			<div class="social-hover">
+				<p>{{s.service}}<br />{{s.name}}</p>
+			</div>
+		</article>
+	</section>
+	<section class="direct-line">
+		<div class="ss-mail"><a href="mailto:nelson@keats.me" title="Email Me">nelson@keats.me</a></div>
+		<div class="ss-phone"><a href="tel:+12029052592" title="Call Me">(202) 905-2592</a></div>
+	</section>
+</section>
 	<footer class="dark page-footer">
-		<nav class="footer-nav"><ul>
-			<li><a href="/">home</a></li>
-			<li><a href="/work">work</a></li>
-			<li><a href="/resume">resume</a></li>
-			<li><a href="http://blog.keats.me">blog</a></li>
-		</ul></nav>
-		<p class="copyleft">&copy; Nelson Pecora, under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="Creative Commons licensing terms">(attribution noncommercial share-alike 3.0)</a> license</p>
+	<nav class="footer-nav"><ul>
+		<li><a href="/">home</a></li>
+		<li><a href="/work">work</a></li>
+		<li><a href="/resume">resume</a></li>
+		<li><a href="http://blog.keats.me">blog</a></li>
+	</ul></nav>
+	<p class="copyleft">&copy; Nelson Pecora, under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="Creative Commons licensing terms">(attribution noncommercial share-alike 3.0)</a> license</p>
 
-		<!-- external scripts -->
-		<script src="/js/external/modernizr-custom.min.js"></script>
-		<script src="/js/external/angular/angular.min.js"></script>
-		<script src="/iconic/iconic.min.js"></script>
+	<!-- external scripts -->
+	<script src="/dist/vendor.min.js"></script>
 
-		<!-- internal scripts -->
-		<script src="/js/scripts.min.js"></script>
-	</footer>
+	<!-- internal scripts -->
+	<script src="/dist/scripts.min.js"></script>
+</footer>
 	</body>
 </html>
