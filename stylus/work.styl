@@ -1,72 +1,89 @@
 /* Work Page */
 
+@keyframes fadeInDown
+    0%
+        opacity 0
+        transform translateY(-10px)
+    100%
+        opacity 1
+        transform translateY(0)
+
 .project
-	wrapper()
-	padding 30px 0
-	position relative
+    wrapper()
+    padding 30px 0
+    position relative
+    opacity 0
 
-	&:before
-		content ''
-		position absolute
-		top 11px
-		left -19px
-		height 40px
-		width 40px
-		background #fafafa
-		border-left 1px solid #111
-		z-index 1
-		transform rotate(-135deg)
+    animation-name fadeInDown
+    animation-delay 200ms
+    animation-duration 300ms
+    animation-timing-function ease-out
+    animation-direction normal
+    animation-fill-mode forwards
+    animation-iteration-count 1
 
-	&:after
-		content ''
-		position absolute
-		top 11px
-		right -19px
-		width 0
-		height 40px
-		width 40px
-		background #fafafa
-		border-left 1px solid #111
-		z-index 1
-		transform rotate(315deg)
+    &:before
+        content ''
+        position absolute
+        top 11px
+        left -19px
+        height 40px
+        width 40px
+        background #fafafa
+        border-left 1px solid #111
+        z-index 1
+        transform rotate(-135deg)
 
-	img
-		width 100%
-		border 1px solid grey-darkest
-		position relative
+    &:after
+        content ''
+        position absolute
+        top 11px
+        right -19px
+        width 0
+        height 40px
+        width 40px
+        background #fafafa
+        border-left 1px solid #111
+        z-index 1
+        transform rotate(315deg)
 
-	.project-box
-		width 100%
-		padding 20px 20px 30px
-		background-color grey-darkest
-		color white
-		position relative
+    img
+        width 100%
+        border 1px solid grey-darkest
+        position relative
 
-		&:before
-			content ''
-			position absolute
-			bottom 0
-			left 0
-			width 0
-			height 0
-			border-top 30px solid grey-darkest
-			border-left 30px solid white
-			z-index 0
+    .project-box
+        width 100%
+        padding 20px 20px 30px
+        background-color grey-darkest
+        color white
+        position relative
 
-		&:after
-			content ''
-			position absolute
-			bottom 0
-			right 0
-			width 0
-			height 0
-			border-top 30px solid grey-darkest
-			border-right 30px solid white
-			z-index 0
+        &:before
+            content ''
+            position absolute
+            bottom 0
+            left 0
+            width 0
+            height 0
+            border-top 30px solid grey-darkest
+            border-left 30px solid white
+            z-index 0
 
-		h1
-		p
-			z-index 1
+        &:after
+            content ''
+            position absolute
+            bottom 0
+            right 0
+            width 0
+            height 0
+            border-top 30px solid grey-darkest
+            border-right 30px solid white
+            z-index 0
 
-		a:visited
-			color link-color
+        h1
+        p
+            z-index 1
+
+        a:visited
+            color link-color
