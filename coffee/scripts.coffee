@@ -274,6 +274,6 @@ khi.controller 'ContactSectionCtrl', ['$scope', ($scope) ->
         icon: 'pinboard'
         service: 'Pinboard'
         name: 'Yoshokatana'
-        link: 'http://pinboard.in/yoshokatana'
+        link: 'https://pinboard.in/u:yoshokatana'
     ]
 ]
