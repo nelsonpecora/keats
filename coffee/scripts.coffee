@@ -20,8 +20,8 @@ khi.config ['$provide', ($provide) ->
 # services
 
 khi.factory 'Projects', ->
-    defaultImg = '/images/code.png'
-    portPath = '/images/portfolio/'
+    defaultImg = '/dist/images/code.png'
+    portPath = '/dist/images/portfolio/'
 
     [
         title: 'Bolster'
