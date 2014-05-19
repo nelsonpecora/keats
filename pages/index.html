@@ -29,8 +29,8 @@
 
 	    	<h2 class="homepage-press-headline"><a href="http://blog.keats.me" title="Blog">Hot off the Presses</a></h2>
 	    	<div class="gutter">
-		    	<article class="home-excerpt-item" ng-repeat="blogpost in blogposts">
-		    		<div ng-if="!blogpost.contentSnippet" class="blogpost-item">
+		    	<article class="home-excerpt-item blogpost-item" ng-repeat="blogpost in blogposts" ng-class="{'blogpost-item-hasimg': !blogpost.contentSnippet}">
+		    		<div ng-if="!blogpost.contentSnippet" class="blogpost-item-img">
 		    			<div class="home-excerpt-img" background-image="{{blogpost.content|backgroundimage}}"></div>
 		    		</div>
 		    		<div ng-if="blogpost.contentSnippet" class="home-excerpt-item-box blogpost-box">

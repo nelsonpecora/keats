@@ -70,23 +70,29 @@
     position relative
     margin 25px
 
+    &.blogpost-item
+        height auto
+
+        &.blogpost-item-hasimg
+            height 200px
+
     &:nth-of-type(3)
     &:nth-of-type(4)
     &:nth-of-type(5)
     &:nth-of-type(6)
         display none
 
-    @media tablet-small
-        width 300px
-        height 250px
+    @media tablet-large
+        width 300px !important
+        height 250px !important
 
         &:nth-of-type(3)
         &:nth-of-type(4)
             display block
 
-    @media monitor-small
-        width 400px
-        height 300px
+    @media monitor-medium
+        width 400px !important
+        height 300px !important
 
         &:nth-of-type(5)
         &:nth-of-type(6)
@@ -125,7 +131,7 @@
         z-index 1
         transform rotate(315deg)
 
-    .blogpost-item
+    .blogpost-item-img
         width 100%
         height 100%
 
@@ -184,6 +190,7 @@
 
         &.blogpost-box
             height 100%
+            position relative
 
             h3
                 margin-top 10px
@@ -191,6 +198,7 @@
 
             p
                 margin-left 10px
+                margin-right 10px
 
         &:before
             content ''
@@ -220,7 +228,7 @@
             z-index 1
 
             @media tablet-small
-                font-size 1.4em !important
+                font-size 1.3em !important
 
 .link-box
     display block
