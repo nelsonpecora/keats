@@ -47,9 +47,6 @@
         .no-flexbox &
             text-align left
 
-            @media tablet-large
-                text-align center
-
     .gutter
         width 90%
         margin 0 5%
@@ -58,17 +55,24 @@
         flex-flow row wrap
 
         .no-flexbox &
+            wrapper()
+            margin 0 auto
             display block
             clearfix()
-
-            @media tablet-large
-                display flex
 
 .home-excerpt-item
     width 250px
     height 200px
     position relative
     margin 25px
+
+    .no-flexbox &
+        display block
+        float left
+        clear left
+        margin 20px auto
+        left 50%
+        margin-left -125px
 
     &.blogpost-item
         height auto
@@ -86,6 +90,14 @@
         width 300px !important
         height 250px !important
 
+        .no-flexbox &
+            clear none
+            left 0
+            margin-left 30px
+
+            &:nth-of-type(2n-1)
+                margin-left 0
+
         &:nth-of-type(3)
         &:nth-of-type(4)
             display block
@@ -94,17 +106,14 @@
         width 400px !important
         height 300px !important
 
+        .no-flexbox &
+            width 350px !important
+            height 275px !important
+            margin-left 20px
+
         &:nth-of-type(5)
         &:nth-of-type(6)
             display block
-
-    .no-flexbox &
-        display block
-        float left
-        clear left
-        margin 20px auto
-        left 50%
-        margin-left -125px
 
     &:before
         content ''
