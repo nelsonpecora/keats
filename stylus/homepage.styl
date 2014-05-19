@@ -38,8 +38,11 @@
 
     h2
         wrapper()
-        margin 40px auto
+        margin 0 auto 20px
         text-align center
+
+        &.homepage-press-headline
+            padding-top 30px
 
         .no-flexbox &
             text-align left
@@ -64,11 +67,30 @@
 .home-excerpt-item
     width 250px
     height 200px
-    margin 0 10px
-    background-size cover !important
     position relative
-    flex 1 1 auto
-    margin-top 30px
+    margin 25px
+
+    &:nth-of-type(3)
+    &:nth-of-type(4)
+    &:nth-of-type(5)
+    &:nth-of-type(6)
+        display none
+
+    @media tablet-small
+        width 300px
+        height 250px
+
+        &:nth-of-type(3)
+        &:nth-of-type(4)
+            display block
+
+    @media monitor-small
+        width 400px
+        height 300px
+
+        &:nth-of-type(5)
+        &:nth-of-type(6)
+            display block
 
     .no-flexbox &
         display block
@@ -78,94 +100,119 @@
         left 50%
         margin-left -125px
 
-    &:first-child
-        margin-top 0
-
-    h3
-        text-align center
-        width 75%
-        line-height 1.4em
-
-    .no-touch &:hover
-        h3
-        h4
-        p
-            color link-hover
-
-    &.home-excerpt-item-project
-        display flex
-        justify-content center
-        align-items center
-        position relative
-
-        .no-flexbox &
-            display block
-
-            @media tablet-large
-                display flex
-
-        .home-excerpt-img
-            position absolute
-            top 0
-            left 0
-            width 100%
-            height 100%
-            overflow hidden
-
-        .project-img
-            position absolute
-            top 0
-            left 0
-            min-width 100%
-            min-height 100%
-
-    @media tablet-small
-        width 400px
-        height 300px
-        margin 0 20px 20px
-        flex 1 1 400px
-
-        .no-flexbox &
-            flex none
-            margin-left -200px
-
-    @media tablet-large
-        height 175px
-        &:last-child
-            display none !important
-
-        .no-flexbox &
-            display flex
-            clear none
-            float none
-            margin 20px auto
-            left 0
-
-    @media monitor-small    { height 150px }
-    @media monitor-medium   { height 300px }
-    @media monitor-large    { height 250px }
-
-    .home-excerpt-item-inner
+    &:before
+        content ''
         position absolute
+        top -13px
+        left -13px
+        height 27px
+        width 27px
+        background grey-light-offset
+        border-left 1px solid #111
+        z-index 1
+        transform rotate(-135deg)
+
+    &:after
+        content ''
+        position absolute
+        top -13px
+        right -13px
+        width 0
+        height 27px
+        width 27px
+        background grey-light-offset
+        border-left 1px solid #111
+        z-index 1
+        transform rotate(315deg)
+
+    .blogpost-item
+        &:before
+            content ''
+            position absolute
+            bottom -13px
+            left -13px
+            height 27px
+            width 27px
+            background grey-light-offset
+            border-left 1px solid #111
+            z-index 1
+            transform rotate(-215deg)
+
+        &:after
+            content ''
+            position absolute
+            bottom -13px
+            right -13px
+            width 0
+            height 27px
+            width 27px
+            background grey-light-offset
+            border-left 1px solid #111
+            z-index 1
+            transform rotate(45deg)
+
+    img
         width 100%
-        height 100%
-        display flex
-        justify-content center
-        align-content center
-        flex-flow row wrap
+        height auto
+        border 1px solid grey-darkest
+        position relative
+        overflow hidden
 
-        &.home-excerpt-item-img
-            background-size cover !important
+    .home-excerpt-item-box
+        width 100%
+        height 76px
+        padding 10px 10px 20px
+        background-color grey-darkest
+        color white
+        position absolute
+        left 0
+        bottom 0
 
-        &.home-excerpt-item-textpost
-            border 1px solid @grey_medium_light
-            padding 20px
-            clearfix()
+        @media tablet-small
+            height 96px
 
-            h4
+        @media monitor-small
+            height 115px
+
+        &.blogpost-box
+            height 100%
+
+            h3
+                margin-top 10px
+                margin-left 10px
+
             p
-                float left
-                transition color 200ms ease-out
+                margin-left 10px
+
+        &:before
+            content ''
+            position absolute
+            bottom 0
+            left 0
+            width 0
+            height 0
+            border-top 18px solid grey-darkest
+            border-left 18px solid grey-light-offset
+            z-index 0
+
+        &:after
+            content ''
+            position absolute
+            bottom 0
+            right 0
+            width 0
+            height 0
+            border-top 18px solid grey-darkest
+            border-right 18px solid grey-light-offset
+            z-index 0
+
+        h3
+            margin 0
+            margin-left 5px
+            z-index 1
+
+            @media tablet-small
+                font-size 1.4em !important
 
 .link-box
     display block

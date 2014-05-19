@@ -76,7 +76,7 @@ khi.factory 'FeedService', ['$http', '$rootScope', ($http, $rootScope) ->
         posts: null,
         get: ->
             me = this
-            $http.jsonp('https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=3&callback=JSON_CALLBACK&q=http://blog.keats.me/rss').then (res) ->
+            $http.jsonp('https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=6&callback=JSON_CALLBACK&q=http://blog.keats.me/rss').then (res) ->
                 me.posts = res.data.responseData.feed.entries
                 $rootScope.$emit 'posts.updated'
     }

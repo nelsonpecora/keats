@@ -18,24 +18,26 @@
 	    <section class="medium home-excerpts">
 	    	<h2><a href="/work" title="Latest Work">Latest Work</a></h2>
 	    	<div class="gutter">
-		    	<article class="home-excerpt-item home-excerpt-item-project" ng-repeat="project in projects|limitTo:3">
-		    		<div class="home-excerpt-img">
-		    			<img class="project-img" ng-src="{{project.img}}" />
+		    	<article class="home-excerpt-item" ng-repeat="project in projects|limitTo:6">
+		    		<img class="home-excerpt-img" ng-src="{{project.img}}" />
+		    		<div class="home-excerpt-item-box">
+		    			<h3>{{project.title}}</h3>
 		    		</div>
-		    		<h3>{{project.title}}</h3>
 		    		<a href="/work#{{project.title}}" title="{{project.title}}" class="link-box"></a>
 		    	</article>
 		    </div>
 
-	    	<h2><a href="http://blog.keats.me" title="Blog">Hot off the Presses</a></h2>
+	    	<h2 class="homepage-press-headline"><a href="http://blog.keats.me" title="Blog">Hot off the Presses</a></h2>
 	    	<div class="gutter">
 		    	<article class="home-excerpt-item" ng-repeat="blogpost in blogposts">
-		    		<div ng-if="!blogpost.contentSnippet" class="home-excerpt-item-inner home-excerpt-item-img" style="background: url('{{blogpost.content | backgroundimage }}') no-repeat center top">
+		    		<div ng-if="!blogpost.contentSnippet" class="blogpost-item">
+		    			<img class="home-excerpt-img" ng-src="{{blogpost.img}}" />
 		    		</div>
-		    		<div ng-if="blogpost.contentSnippet" class="home-excerpt-item-inner home-excerpt-item-textpost">
-		    			<h4>{{blogpost.title}}</h4>
+		    		<div ng-if="blogpost.contentSnippet" class="home-excerpt-item-box blogpost-box">
+		    			<h3>{{blogpost.title}}</h3>
+		    			<p ng-bind-html="blogpost.contentSnippet|trusthtml"></p>
 		    		</div>
-		    		<a href="{{blogpost.link}}" title="{{blogpost.title}}" class="link-box"></a>
+		    		<a href="{{blogpost.title}}" title="{{blogpost.title}}" class="link-box"></a>
 		    	</article>
 		    </div>
 	    </section>
