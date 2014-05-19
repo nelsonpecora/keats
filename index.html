@@ -61,7 +61,7 @@
 	    	<div class="gutter">
 		    	<article class="home-excerpt-item" ng-repeat="blogpost in blogposts">
 		    		<div ng-if="!blogpost.contentSnippet" class="blogpost-item">
-		    			<img class="home-excerpt-img" ng-src="{{blogpost.img}}" />
+		    			<img class="home-excerpt-img" ng-src="{{blogpost.img|backgroundimage}}" />
 		    		</div>
 		    		<div ng-if="blogpost.contentSnippet" class="home-excerpt-item-box blogpost-box">
 		    			<h3>{{blogpost.title}}</h3>
