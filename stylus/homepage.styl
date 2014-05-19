@@ -139,7 +139,7 @@
             background grey-light-offset
             border-left 1px solid #111
             z-index 1
-            transform rotate(-215deg)
+            transform rotate(-225deg)
 
         &:after
             content ''
@@ -154,12 +154,17 @@
             z-index 1
             transform rotate(45deg)
 
-    img
+        .home-excerpt-img
+            height 100%
+
+    .home-excerpt-img
         width 100%
         height auto
         border 1px solid grey-darkest
         position relative
-        overflow hidden
+        background-repeat no-repeat
+        background-position center top
+        background-size cover
 
     .home-excerpt-item-box
         width 100%

@@ -82,7 +82,7 @@ khi.factory 'FeedService', ['$http', '$rootScope', ($http, $rootScope) ->
     }
 ]
 
-# directives
+# filters
 
 khi.filter 'backgroundimage', ->
     (t) ->
@@ -93,6 +93,13 @@ khi.filter 'trusthtml', ['$sce', ($sce) ->
     (t) ->
         $sce.trustAsHtml t
 ]
+
+# directives
+
+khi.directive 'backgroundImage', ->
+    restrict: 'A'
+    link: (scope, elem, attrs) ->
+        elem.css 'background-image', 'url(' + attrs.backgroundImage + ')'
 
 # controllers
 
