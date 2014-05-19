@@ -106,35 +106,94 @@
                 position absolute
                 fill grey-darkest
 
-            visible-icon(iphone)
+            .android
+                visibility hidden
+            .tablet
+                visibility hidden
+            .laptop
+                visibility hidden
+            .desktop
+                visibility hidden
+            .print
+                visibility hidden
+            .windows
+                visibility hidden
+            .console
+                visibility hidden
 
             // android
             .android &
-                visible-icon(android)
+                .iphone
+                    visibility hidden
+                .android
+                    visibility visible
 
             // internet explorer
             .ie-old &
-                visible-icon(windows)
+                .iphone
+                    visibility hidden
+                .android
+                    visibility hidden
+                .tablet
+                    visibility hidden
+                .laptop
+                    visibility hidden
+                .desktop
+                    visibility hidden
+                .windows
+                    visibility visible
 
             // game consoles
             .game-console &
-                visible-icon(console)
+                .iphone
+                    visibility hidden
+                .android
+                    visibility hidden
+                .tablet
+                    visibility hidden
+                .laptop
+                    visibility hidden
+                .desktop
+                    visibility hidden
+                .console
+                    visibility visible
 
             // print
             @media only print
-                visible-icon(print)
+                .iphone
+                    visibility hidden
+                .android
+                    visibility hidden
+                .tablet
+                    visibility hidden
+                .laptop
+                    visibility hidden
+                .desktop
+                    visibility hidden
+                .windows
+                    visibility hidden
+                .console
+                    visibility hidden
+                .print
+                    visibility visible
 
             @media tablet-small
-                .iphone { visibility hidden }
-                .tablet { visibility visible }
+                .iphone
+                    visibility hidden
+                .tablet
+                    visibility visible
 
             @media monitor-small
-                .tablet { visibility hidden }
-                .laptop { visibility visible }
+                .tablet
+                    visibility hidden
+                .laptop
+                    visibility visible
 
             @media monitor-large
-                .laptop { visibility hidden }
-                .desktop { visibility visible }
+                .laptop
+                    visibility hidden
+                .desktop
+                    visibility visible
 
         @media tablet-small
             width 230px
