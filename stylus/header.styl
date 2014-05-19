@@ -41,6 +41,9 @@
 	.page-header-right
 		flex 1
 
+		&.homepage-header-right
+			flex 0 0 90px
+
 		a
 			float right
 
@@ -52,6 +55,15 @@
 			text-transform uppercase
 			font-size 14px
 			line-height 22px
+
+			+hover()
+				color grey-darker
+
+			+active()
+				color grey-darkest
+
+			+focus()
+				color grey-darkest
 
 			@media tablet-small
 				line-height 21px
@@ -79,6 +91,20 @@
 				width 40px
 				height 40px
 				fill grey-darkest
+
+	.home-logo
+		width 44px
+		height 44px
+		margin-left 10px
+
+		background-position 0 0
+		background-repeat no-repeat
+		background-size cover
+		background-image url('/dist/images/khi-logo@2x.png')
+
+		@media tablet-large
+			width 235px
+			background-image url('/dist/images/khi-full@2x.png')
 
 	@media tablet-large
 		width 80%
