@@ -250,7 +250,10 @@
 
                     &.exp-item-title
                     &.exp-item-place
-                        margin-top -14px
+                        margin-top -10px
+
+                        @media tablet-large
+                            margin-top -14px
 
                     &.exp-item-place
                         color grey-medium-dark
@@ -271,12 +274,12 @@
             &.subjob
                 border-left-colors()
                 width 100%
-                margin-left -8px
-                border-left-width 8px
+                margin-left -4px
+                border-left-width 4px
                 padding 0 4%
 
                 &:before
-                    border-top-width 8px
+                    border-top-width 4px
 
                 @media tablet-small
                     width auto
