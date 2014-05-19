@@ -1,5 +1,11 @@
+ua = (string) ->
+    true if navigator.userAgent.toLowerCase().indexOf(string) > -1 else false
+
 # android phone easter egg
-document.documentElement.className += " android" if navigator.userAgent.toLowerCase().indexOf('android') > -1
+document.documentElement.className += " android" if ua 'android'
+
+# game console easter egg
+document.documentElement.className += " game-console" if ua 'playstation' or ua 'nintendo wii' or ua 'nitro'
 
 khi = angular.module 'khi', []
 

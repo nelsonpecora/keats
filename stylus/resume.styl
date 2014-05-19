@@ -106,46 +106,35 @@
                 position absolute
                 fill grey-darkest
 
-            .android
-                visibility hidden
-
-            .tablet
-                visibility hidden
-
-            .laptop
-                visibility hidden
-
-            .desktop
-                visibility hidden
+            visible-icon(iphone)
 
             // android
             .android &
-                .iphone
-                    visibility hidden
+                visible-icon(android)
 
-                .android
-                    visibility visible
+            // internet explorer
+            .ie-old &
+                visible-icon(windows)
+
+            // game consoles
+            .game-console &
+                visible-icon(console)
+
+            // print
+            @media only print
+                visible-icon(print)
 
             @media tablet-small
-                .iphone
-                    visibility hidden
-
-                .tablet
-                    visibility visible
+                .iphone { visibility hidden }
+                .tablet { visibility visible }
 
             @media monitor-small
-                .tablet
-                    visibility hidden
-
-                .laptop
-                    visibility visible
+                .tablet { visibility hidden }
+                .laptop { visibility visible }
 
             @media monitor-large
-                .laptop
-                    visibility hidden
-
-                .desktop
-                    visibility visible
+                .laptop { visibility hidden }
+                .desktop { visibility visible }
 
         @media tablet-small
             width 230px
