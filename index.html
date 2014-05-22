@@ -29,7 +29,7 @@
 
         </script>
     </head>
-	<body ng-controller="HomePageCtrl">
+	<body ng-controller="HomePageCtrl as home">
 		<header class="page-header sticky">
 	    	<div class="page-header-left page-header-icon"><a href="/" title="Home" class="home-logo"></a></div>
 	    	<div class="page-header-right homepage-header-right page-header-link"><a href="/work" title="work">work</a></div>
@@ -48,7 +48,7 @@
 	    <section class="medium home-excerpts">
 	    	<h2><a href="/work" title="Latest Work">Latest Work</a></h2>
 	    	<div class="gutter">
-		    	<article class="home-excerpt-item" ng-repeat="project in projects|limitTo:6">
+		    	<article class="home-excerpt-item" ng-repeat="project in home.projects|limitTo:6">
 		    		<img class="home-excerpt-img" ng-src="{{project.img}}" />
 		    		<div class="home-excerpt-item-box">
 		    			<h3>{{project.title}}</h3>
@@ -59,7 +59,7 @@
 
 	    	<h2 class="homepage-press-headline"><a href="http://blog.keats.me" title="Blog">Hot off the Presses</a></h2>
 	    	<div class="gutter">
-		    	<article class="home-excerpt-item blogpost-item" ng-repeat="blogpost in blogposts" ng-class="{'blogpost-item-hasimg': !blogpost.contentSnippet}">
+		    	<article class="home-excerpt-item blogpost-item" ng-repeat="blogpost in home.blogposts" ng-class="{'blogpost-item-hasimg': !blogpost.contentSnippet}">
 		    		<div ng-if="!blogpost.contentSnippet" class="blogpost-item-img">
 		    			<div class="home-excerpt-img" background-image="{{blogpost.content|backgroundimage}}"></div>
 		    		</div>
@@ -71,10 +71,10 @@
 		    	</article>
 		    </div>
 	    </section>
-	    <section class="dark triangle-up contact" id="Contact" ng-controller="ContactSectionCtrl">
+	    <section class="dark triangle-up contact" id="Contact" ng-controller="ContactSectionCtrl as contact">
 	<h1>Contact Me</h1>
 	<section class="around-town">
-		<article ng-repeat="s in socialButtons" class="ss-{{s.icon}}">
+		<article ng-repeat="s in contact.socialButtons" class="ss-{{s.icon}}">
 			<a href="{{s.link}}" title="{{s.service}}"></a>
 			<div class="social-hover">
 				<p>{{s.service}}<br />{{s.name}}</p>
