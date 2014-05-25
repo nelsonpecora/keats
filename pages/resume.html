@@ -1,5 +1,5 @@
 @@include("../partials/head.html")
-	<body ng-controller="ResumePageCtrl">
+	<body ng-controller="ResumePageCtrl as resume">
 	    <header class="page-header sticky">
 	    	<div class="page-header-left page-header-link"><a href="/"><span class="angle">&lsaquo;</span> home</a></div>
 	    	<h1 class="page-header-center">R&eacute;sum&eacute;</h1>
@@ -98,7 +98,7 @@
 	    <section class="medium triangle-up triangle-down">
 	    	<div class="experience" id="Experience">
 		    	<h1>Experience</h1>
-		    	<div class="exp-1" ng-repeat="job in jobs">
+		    	<div class="exp-1" ng-repeat="job in resume.jobs">
 		    		<article class="exp-item">
 		    			<header>
 		    				<h4 class="span-half exp-item-title">{{job.start}} &mdash; {{job.end}}</h4>
@@ -125,7 +125,7 @@
 		    	<h1>Interests</h1>
 		    	<section>
 		    		<div class="img-box-wrap">
-			    		<article class="img-box" ng-repeat="interest in interests">
+			    		<article class="img-box" ng-repeat="interest in resume.interests">
 			    			<a href="{{interest.url}}" title="interest.imgAlt">
 			    				<img ng-src="/dist/images/{{interest.img}}" alt="{{interest.imgAlt}}" />
 			    			</a>
