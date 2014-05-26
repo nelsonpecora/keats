@@ -1,5 +1,8 @@
 ua = (string) ->
-    if navigator.userAgent.toLowerCase().indexOf string > -1 then true else false
+    if navigator.userAgent.toLowerCase().indexOf(string) > -1
+        true
+    else
+        false
 
 # android phone easter egg
 document.documentElement.className += " android" if ua 'android'
