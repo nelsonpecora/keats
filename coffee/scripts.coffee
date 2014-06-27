@@ -1,4 +1,4 @@
-ua = (string) ->z
+ua = (string) ->
     if navigator.userAgent.toLowerCase().indexOf(string) > -1
         true
     else
