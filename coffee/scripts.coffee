@@ -107,19 +107,26 @@ khi.controller 'WorkPageCtrl', (Projects) ->
 khi.controller 'ResumePageCtrl', ->
     new class ResumePage
         jobs: [
-            start: 'May 2010'
+            start: 'June 2014'
             end: 'Present'
+            place: 'New York, NY'
+            role: 'Front-End Web Developer'
+            company: 'New York Magazine'
+            desc: 'I recently joined NY Mag, and have been helping to build a nodejs-based CMS to host all of the magazine\'s various properties. I\'m also spearheading the adoption of gulp and Stylus in the web team.'
+        ,
+            start: 'May 2010'
+            end: 'July 2014'
             place: 'Brooklyn, NY'
             role: 'Freelance Web Designer'
             company: 'Self Employed'
             desc: 'I\'ve built websites and web apps for freelance clients in San Francisco, New York, and Tokyo. I\'m most comfortable with front-end design and development, but I\'ve done some full-stack work with Sinatra, Nodejs and CMS\'s like Drupal, Wordpress, and Shopify.'
             subjobs: [
                 start: 'July 2013'
-                end: 'Present'
+                end: 'June 2014'
                 place: 'New York, NY'
                 role: 'Front-End Web Developer'
                 company: 'Bolster'
-                desc: 'I joined Bolster (a remodeling startup) as the first front-end developer, and built web applications using AngularJS, LESS, and a gulp-based workflow.'
+                desc: 'I joined Bolster (a remodeling startup) as the first front-end developer, and built web applications using AngularJS, Stylus, and a gulp-based workflow.'
             ,
                 start: 'Dec. 2012'
                 end: 'July 2013'
