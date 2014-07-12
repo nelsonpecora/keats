@@ -115,7 +115,7 @@ khi.controller 'ResumePageCtrl', ->
             desc: 'I recently joined NY Mag, and have been helping to build a nodejs-based CMS to host all of the magazine\'s various properties. I\'m also spearheading the adoption of gulp and Stylus in the web team.'
         ,
             start: 'May 2010'
-            end: 'July 2014'
+            end: 'June 2014'
             place: 'Brooklyn, NY'
             role: 'Freelance Web Designer'
             company: 'Self Employed'
