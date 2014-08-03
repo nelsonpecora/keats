@@ -6,7 +6,7 @@ section.dark.triangle-up.contact#Contact
         a(href=s.link, title=s.service)
           +svg(s.icon)
         .social-hover
-          p= s.service + '<br />' + s.name
+          p!= s.service + '<br />' + s.name
   section.direct-line
     a(href='mailto:nelson@keats.me', title='Email Me')
       +svg('mail')

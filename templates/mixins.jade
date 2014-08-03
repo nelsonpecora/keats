@@ -1,6 +1,6 @@
 mixin svg(name)
   - var xml = fs.readFileSync('dist/icons/' + name +'.svg')
-  div!= xml
+  != xml
 
 mixin iconic(name, iconicClass)
   - var xml = fs.readFileSync('dist/iconic/' + name +'-lg.svg')
