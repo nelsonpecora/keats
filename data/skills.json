@@ -1,0 +1,41 @@
+[{
+  "category": "Responsive Design",
+  "skills": [
+    "composition &amp; layout",
+    "typography",
+    "responsive iconography",
+    "ui animation",
+    "mobile first",
+    "emerging interfaces"
+  ]
+}, {
+  "category": "Development",
+  "skills": [
+    "html5 &amp; css3",
+    "angularjs",
+    "javascript (es6)",
+    "nodejs",
+    "shopify",
+    "wordpress",
+    "css preprocessors"
+  ]
+}, {
+  "category": "UX",
+  "skills": [
+    "mechanism design",
+    "user workflows",
+    "information architecture",
+    "data visualization",
+    "accessibility"
+  ]
+}, {
+  "category": "DevOps",
+  "skills": [
+    "automated build workflows",
+    "grunt &amp; gulp",
+    "version control",
+    "agile development",
+    "unit &amp; end-to-end testing",
+    "software architecture"
+  ]
+}]

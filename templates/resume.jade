@@ -6,7 +6,8 @@ block content
       a(href='/')
         span.angle &lsaquo;
         |  home
-    h1.page-header-center R&eacute;sum&eacute;
+    h1.page-header-center
+      a(href='/resume.json', title='View this resume in JSON') R&eacute;sum&eacute;
     .page-header-right.page-header-icon
       a(href='resume.pdf', title!='Download R&eacute;sum&eacute; (pdf)')
         +iconic('file-pdf')
@@ -37,65 +38,30 @@ block content
   section.light
     .skills#Skills
       h1 Skills
-      .skill-left
-        .skill-icon
-          +iconic('iphone', 'mobile iphone')
-          +iconic('nexus', 'mobile android')
-          +iconic('tablet', 'tablet')
-          +iconic('laptop', 'laptop')
-          +iconic('monitor', 'desktop')
-          +iconic('print', 'print')
-          +iconic('calculator', 'windows')
-          +iconic('game-controller', 'console')
-        h3 Responsive Design
-      .skill-right
-        ul
-          li composition &amp; layout
-          li typography
-          li responsive iconography
-          li ui animation
-          li mobile first
-          li emerging interfaces
-
-      .skill-left
-        .skill-icon
-          +iconic('copywriting')
-        h3 Development
-      .skill-right
-        ul
-          li html5 &amp; css3
-          li angularjs
-          li javascript (es6)
-          li coffeescript
-          li nodejs
-          li shopify
-          li wordpress
-          li css preprocessors
-
-      .skill-left
-        .skill-icon
-          +iconic('people')
-        h3 UX
-      .skill-right
-        ul
-          li mechanism design
-          li user workflows
-          li information architecture
-          li data visualization
-          li accessibility
-
-      .skill-left
-        .skill-icon
-          +iconic('terminal')
-        h3 DevOps
-      .skill-right
-        ul
-          li automated build workflows
-          li grunt &amp; gulp
-          li version control
-          li agile development
-          li unit &amp; end-to-end testing
-          li software architecture
+      each cat in skills
+        .skill-left
+          .skill-icon
+            case cat.category
+              when 'Responsive Design'
+                +iconic('iphone', 'mobile iphone')
+                +iconic('nexus', 'mobile android')
+                +iconic('tablet', 'tablet')
+                +iconic('laptop', 'laptop')
+                +iconic('monitor', 'desktop')
+                +iconic('print', 'print')
+                +iconic('calculator', 'windows')
+                +iconic('game-controller', 'console')
+              when 'Development'
+                +iconic('copywriting')
+              when 'UX'
+                +iconic('people')
+              when 'DevOps'
+                +iconic('terminal')
+          h3= cat.category
+        .skill-right
+          ul
+            each skill in cat.skills
+              li!= skill
 
   section.medium.triangle-up.triangle-down.experience-wrapper
     .experience#Experience

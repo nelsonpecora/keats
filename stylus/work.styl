@@ -1,29 +1,9 @@
 /* Work Page */
 
-@keyframes fadeInDown
-    0%
-        opacity 0
-        transform translateY(-10px)
-    100%
-        opacity 1
-        transform translateY(0)
-
-.project-list
-    min-height 1000px
-
 .project
     wrapper()
     padding 30px 0
     position relative
-    opacity 0
-
-    animation-name fadeInDown
-    animation-delay 200ms
-    animation-duration 300ms
-    animation-timing-function ease-out
-    animation-direction normal
-    animation-fill-mode forwards
-    animation-iteration-count 1
 
     &:before
         content ''

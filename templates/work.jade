@@ -6,10 +6,11 @@ block content
       a(href='/')
         span.angle &lsaquo;
         |  home
-    h1.page-header-center Work
+    h1.page-header-center
+      a(href='/work.json', title='View this page as JSON') Work
     .page-header-right.page-header-link
       a(href='http://github.com/yoshokatana', title='Github')
-        | Github
+        | Github 
         span.angle &rsaquo;
   section.light.project-list
     each p in projects

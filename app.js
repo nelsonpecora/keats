@@ -71,8 +71,16 @@ app.use(function* (next) {
 // populate data when the server starts
 var projects = JSON.parse(fs.readFileSync('data/projects.json'));
 var socials = JSON.parse(fs.readFileSync('data/social.json'));
+var skills = JSON.parse(fs.readFileSync('data/skills.json'));
 var jobs = JSON.parse(fs.readFileSync('data/jobs.json'));
 var interests = JSON.parse(fs.readFileSync('data/interests.json'));
+
+// build resume json
+var resume = {
+  skills: skills,
+  experience: jobs,
+  interests: interests
+};
 
 // setup routes
 
@@ -98,6 +106,7 @@ app.use(route.get('/work.json', function *(){
 // resume page
 app.use(route.get('/resume', function *(){
   this.locals.pageName = 'Resume';
+  this.locals.skills = skills;
   this.locals.jobs = jobs;
   this.locals.interests = interests;
   this.locals.socials = socials;
@@ -106,7 +115,7 @@ app.use(route.get('/resume', function *(){
 
 // resume json
 app.use(route.get('/resume.json', function *(){
-  this.body = { resume: 'json' };
+  this.body = resume;
 }));
 
 app.listen(3000);
