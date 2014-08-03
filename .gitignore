@@ -2,9 +2,8 @@
 .DS_Store
 profile
 
-# svn & cvs
-.svn
-CVS
+# node crap
+npm-debug.log
 
 *.sublime-project
 *.sublime-workspace
