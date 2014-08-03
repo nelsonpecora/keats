@@ -1,0 +1,46 @@
+doctype html
+html(lang='en', class=uaClass)
+  head
+    title Keats Heavy Industries
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    meta(name='description', content='Keats Heavy Industries')
+    meta(name='author', content='Nelson Pecora')
+    meta(http-equiv='Content-Language', content='en')
+
+    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Raleway:400,600|Roboto+Slab:400,700')
+    link(rel='stylesheet', href='/css/styles.min.css')
+
+    // google analytics
+    script(type='text/javascript').
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104112-6', 'keats.me');
+      ga('send', 'pageview');
+
+  body(id='Page' + pageName)
+    block content
+    footer.dark.page-footer
+      nav.footer-nav
+        ul
+          li
+            a(href='/') home
+          li
+            a(href='/work') work
+          li
+            a(href='/resume') resume
+          li
+            a(href='http://blog.keats.me') blog
+      p.copyleft
+        | &copy; Nelson Pecora, under a Creative Commons 
+        a href=http://creativecommons.org/licenses/by-nc-sa/3.0/ rel=license title="Creative Commons licensing terms" (attribution noncommercial share-alike 3.0)
+        |  license
+
+      // external scripts
+      script(type='text/javascript', src='/js/modernizr.min.js')

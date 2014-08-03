@@ -1,0 +1,46 @@
+[{
+  "title": "Bolster",
+  "desc": "Worked with a designer and back-end developer on multiple revisions of the Bolster site and web app.",
+  "img": "/images/portfolio/bolster.png",
+  "link": "http://getbolster.com"
+}, {
+  "title": "Keats.me",
+  "desc": "My personal website is an ongoing project, where I get to try out cool new technologies without dealing with legacy browsers or client requirements.",
+  "img": "/images/code.png",
+  "github": "https://github.com/yoshokatana/keats"
+}, {
+  "title": "Github Postcommit Shinies",
+  "desc": "A little ruby/sinatra project I'm working on. This app gives you the ability to change labels, add milestones, and reassign github issues via commit message.",
+  "img": "/images/portfolio/postcommit.png",
+  "github": "https://github.com/yoshokatana/github-postcommit-shinies"
+}, {
+  "title": "Busker",
+  "desc": "Worked with a ruby developer on an independent music webapp. The frontend is built with SpineJS and some cool web audio tech.",
+  "img": "/images/portfolio/busker.png",
+  "link": "http://busker.fm"
+}, {
+  "title": "Ringadoc",
+  "desc": "Worked with a designer to redesign Ringadoc's homepage. Uses some cool css3 hacks on the buttons, and is 100% responsive.",
+  "img": "/images/portfolio/ringadoc.png",
+  "link": "http://www.ringadoc.com/"
+}, {
+  "title": "Armenian General Benevolent Union",
+  "desc": "Worked with a designer at Barrel to build this responsive wordpress-based website for AGBU. It makes use of multiple feeds, custom post types, and structured templates.",
+  "img": "/images/portfolio/agbu.png",
+  "link": "http://agbu.org/"
+}, {
+  "title": "LESS Framework",
+  "desc": "Adapted Joni Korpi's lessframework with reusable LESS mixins. A little out of date now, but still pretty cool.",
+  "img": "/images/portfolio/lessframework.png",
+  "github": "https://github.com/yoshokatana/LESS-Framework"
+}, {
+  "title": "jQuery Geolocation Plugin",
+  "desc": "A little plugin I developed to make native geolocation easier. Plugs into Google Maps' reverse-geocode API and falls back to IP-based lookup on unsupported browsers.",
+  "img": "/images/portfolio/geolocation.png",
+  "github": "https://github.com/yoshokatana/jquery.geolocation"
+}, {
+  "title": "Immupure",
+  "desc": "Updated the wordpress site of Immupure, redesigning elements and adding new functionality.",
+  "img": "/images/portfolio/immupure.png",
+  "link": "http://www.immupure.com/"
+}]

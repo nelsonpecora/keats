@@ -9,14 +9,10 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "external"
+    "bower_modules"
   ],
   "dependencies": {
-    "angular": "~1.2.16",
-    "fastclick": "~1.0.1",
     "modernizr": "~2.8.1",
-    "angular-animate": "~1.2.16",
-    "angular-touch": "~1.2.16",
     "normalize-css": "~3.0.1"
   }
 }

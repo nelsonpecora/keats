@@ -1,0 +1,16 @@
+section.dark.triangle-up.contact#Contact
+  h1 Contact Me
+  section.around-town
+    each s in socialIcons
+      article
+        a(href=s.link, title=s.service)
+          +svg(s.service)
+        .social-hover
+          p= s.service + '<br />' + s.name
+  section.direct-line
+    a(href='mailto:nelson@keats.me', title='Email Me')
+      +svg('mail')
+      span nelson@keats.me
+    a(href='tel:+12029052592', title='Call Me')
+      +svg('phone')
+      span (202) 905-2592
