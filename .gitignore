@@ -9,9 +9,10 @@ CVS
 *.sublime-project
 *.sublime-workspace
 
-# iconic source svgs
-iconic/smart
-
 # external dependencies
-external
+bower_modules
 node_modules
+
+# icons
+iconic
+dist/icons
