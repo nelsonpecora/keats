@@ -1,3 +1,5 @@
+include ./mixins.jade
+
 doctype html
 html(lang='en', class=uaClass)
   head
@@ -39,7 +41,7 @@ html(lang='en', class=uaClass)
             a(href='http://blog.keats.me') blog
       p.copyleft
         | &copy; Nelson Pecora, under a Creative Commons 
-        a href=http://creativecommons.org/licenses/by-nc-sa/3.0/ rel=license title="Creative Commons licensing terms" (attribution noncommercial share-alike 3.0)
+        a(href='http://creativecommons.org/licenses/by-nc-sa/3.0/', rel='license', title='Creative Commons licensing terms') (attribution noncommercial share-alike 3.0)
         |  license
 
       // external scripts

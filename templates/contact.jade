@@ -1,10 +1,10 @@
 section.dark.triangle-up.contact#Contact
   h1 Contact Me
   section.around-town
-    each s in socialIcons
+    each s in socials
       article
         a(href=s.link, title=s.service)
-          +svg(s.service)
+          +svg(s.icon)
         .social-hover
           p= s.service + '<br />' + s.name
   section.direct-line

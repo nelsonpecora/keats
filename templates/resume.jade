@@ -1,0 +1,137 @@
+extends ./base.jade
+
+block content
+  header.page-header.sticky
+    .page-header-left.page-header-link
+      a(href='/')
+        span.angle &lsaquo;
+        |  home
+    h1.page-header-center R&eacute;sum&eacute;
+    .page-header-right.page-header-icon
+      a(href='resume.pdf', title!='Download R&eacute;sum&eacute; (pdf)')
+        +iconic('file-pdf')
+  section.dark.triangle-down.resume-header#Mantra
+    h2
+      | BRILLIANCY
+      span.middot-break  &middot;
+      |  SPEED
+      span.middot-break  &middot;
+      span.flow-break: br
+      | LIGHTNESS
+      span.middot-break  &middot;
+      |  GLORY
+    p This is my mantra, what I&#8217;m all about. The phrase comes from Bruce Sterling&#8217;s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. In the book, those four words epitomize the ideals of startup culture.
+
+    .bslg
+      h3.bslg-left Brilliancy
+      p.bslg-right Wit, lateral thinking, and epiphanies. The ability to solve an intractable problem with an ingenious solution.
+
+      h3.bslg-left Speed
+      p.bslg-right Not just working quickly, but getting things done on time. Slow is smooth, smooth is fast.
+
+      h3.bslg-left Lightness
+      p.bslg-right Iteration, modular architecture, and legible code. If you can work on a project and hand it to another developer without them wanting to stab you, you&#8217;re doing it right.
+
+      h3.bslg-left Glory
+      p.bslg-right This is the transcendent quality that separates the good from the amazing, the little touches that change the way we think about UIs, and the reason we describe some products as &#8220;magical and revolutionary.&#8221;
+  section.light
+    .skills#Skills
+      h1 Skills
+      .skill-left
+        .skill-icon
+          +iconic('iphone', 'mobile iphone')
+          +iconic('nexus', 'mobile android')
+          +iconic('tablet', 'tablet')
+          +iconic('laptop', 'laptop')
+          +iconic('monitor', 'desktop')
+          +iconic('print', 'print')
+          +iconic('calculator', 'windows')
+          +iconic('game-controller', 'console')
+        h3 Responsive Design
+      .skill-right
+        ul
+          li composition &amp; layout
+          li typography
+          li responsive iconography
+          li ui animation
+          li mobile first
+          li emerging interfaces
+
+      .skill-left
+        .skill-icon
+          +iconic('copywriting')
+        h3 Development
+      .skill-right
+        ul
+          li html5 &amp; css3
+          li angularjs
+          li javascript (es6)
+          li coffeescript
+          li nodejs
+          li shopify
+          li wordpress
+          li css preprocessors
+
+      .skill-left
+        .skill-icon
+          +iconic('people')
+        h3 UX
+      .skill-right
+        ul
+          li mechanism design
+          li user workflows
+          li information architecture
+          li data visualization
+          li accessibility
+
+      .skill-left
+        .skill-icon
+          +iconic('terminal')
+        h3 DevOps
+      .skill-right
+        ul
+          li automated build workflows
+          li grunt &amp; gulp
+          li version control
+          li agile development
+          li unit &amp; end-to-end testing
+          li software architecture
+
+  section.medium.triangle-up.triangle-down.experience-wrapper
+    .experience#Experience
+      h1 Experience
+      each job in jobs
+        .exp-1
+          article.exp-item
+            header
+              h4.span-half.exp-item-title!= job.start + '&mdash;' + job.end
+              h4.span-half.exp-item-place= job.place
+              h4.span-half= job.role
+              h4.span-half= job.company
+            p= job.desc
+          if job.subjobs
+            each subjob in job.subjobs
+              article.exp-item.subjob
+                header
+                  h4.span-half.exp-item-title!= subjob.start + '&mdash;' + subjob.end
+                  h4.span-half.exp-item-place= subjob.place
+                  h4.span-half= subjob.role
+                  h4.span-half= subjob.company
+                p= subjob.desc
+  section.light
+    .interests#Interests
+      h1 Interests
+      section
+        .img-box-wrap
+          each interest in interests
+            article.img-box
+              a(href=interest.url, title=interest.imgAlt)
+                img(src='/images/' + interest.img, alt=interest.imgAlt)
+              if interest.title
+                p= interest.title
+              if interest.desc
+                p= interest.desc
+              if interest.time
+                p= interest.time
+
+  include ./contact.jade

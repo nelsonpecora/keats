@@ -1,15 +1,10 @@
 [{
-  "icon": "appdotnet",
-  "service": "App.net",
-  "name": "@keats",
-  "link": "http://alpha.app.net/keats"
-}, {
   "icon": "twitter",
   "service": "Twitter",
   "name": "@yoshokatana",
   "link": "http://twitter.com/yoshokatana"
 }, {
-  "icon": "googleplus",
+  "icon": "gplus",
   "service": "Google Plus",
   "name": "Nelson Pecora",
   "link": "https://plus.google.com/+NelsonPecora/about"
@@ -19,7 +14,7 @@
   "name": "Yoshokatana",
   "link": "http://facebook.com/yoshokatana"
 }, {
-  "icon": "octocat",
+  "icon": "github",
   "service": "Github",
   "name": "Yoshokatana",
   "link": "https://github.com/yoshokatana"

@@ -1,22 +1,25 @@
-header.page-header.sticky
-  .page-header-left.page-header-link
-    a(href='/')
-      span.angle &lsaquo;
-      |  home
-  h1.page-header-center Work
-  .page-header-right.page-header-link
-    a(href='http://github.com/yoshokatana', title='Github')
-      | Github
-      span.angle &rsaquo;
-section.light.project-list
-  each p in projects
-    article(id=s.title, class='project')
-      img(src=s.img, alt='Project Screenshot')
-      .project-box
-          h2= s.title
-          p= s.desc
-          if s.github
-            p: a(href=s.github, title='View this project on Github') View this project on Github &rsaquo;
-          else if s.link
-            p: a(href=s.link, title=s.title) View this project &rsaquo;
-include ./contact.jade
+extends ./base.jade
+
+block content
+  header.page-header.sticky
+    .page-header-left.page-header-link
+      a(href='/')
+        span.angle &lsaquo;
+        |  home
+    h1.page-header-center Work
+    .page-header-right.page-header-link
+      a(href='http://github.com/yoshokatana', title='Github')
+        | Github
+        span.angle &rsaquo;
+  section.light.project-list
+    each p in projects
+      article(id=p.title, class='project')
+        img(src=p.img, alt='Project Screenshot')
+        .project-box
+            h2= p.title
+            p= p.desc
+            if p.github
+              p: a(href=p.github, title='View this project on Github') View this project on Github &rsaquo;
+            else if p.link
+              p: a(href=p.link, title=p.title) View this project &rsaquo;
+  include ./contact.jade

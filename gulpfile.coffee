@@ -3,7 +3,6 @@ gulp         = require 'gulp'
 gutil        = require 'gulp-util'
 changed      = require 'gulp-changed'
 gfilter      = require 'gulp-filter'
-print        = require 'gulp-print'
 
 # load external tasks
 
