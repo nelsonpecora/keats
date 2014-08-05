@@ -6,10 +6,12 @@ var koa = require('koa')
   , json = require('koa-json')
   , cash = require('koa-cash')
   , cache = require('lru-cache')
+  , request = require('request')
   , fs = require('fs');
 
 var app = koa();
 var c = cache();
+var blogposts;
 
 app.use(compress());
 
@@ -106,15 +108,25 @@ var resume = {
   interests: interests
 };
 
+// get blogposts
+request('https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=6&callback=JSON_CALLBACK&q=http://blog.keats.me/rss', function(err, res, body) {
+  var data = JSON.parse(body.slice(28, body.length - 1));
+  blogposts = data.responseData.feed.entries;
+});
+
 // setup routes
 
 // homepage
-app.use(route.get('/', function *(){
-  this.body = 'homepage';
+app.use(route.get('/', function *() {
+  this.locals.pageName = 'Homepage';
+  this.locals.projects = projects;
+  this.locals.blogposts = blogposts;
+  this.locals.socials = socials;
+  yield this.render('homepage', this.locals);
 }));
 
 // work page
-app.use(route.get('/work', function *(){
+app.use(route.get('/work', function *() {
   this.locals.pageName = 'Work';
   this.locals.projects = projects;
   this.locals.socials = socials;
@@ -122,13 +134,13 @@ app.use(route.get('/work', function *(){
 }));
 
 // work json
-app.use(route.get('/work.json', function *(){
+app.use(route.get('/work.json', function *() {
   var workJson = projects;
   this.body = workJson;
 }));
 
 // resume page
-app.use(route.get('/resume', function *(){
+app.use(route.get('/resume', function *() {
   this.locals.pageName = 'Resume';
   this.locals.skills = skills;
   this.locals.jobs = jobs;
@@ -138,7 +150,7 @@ app.use(route.get('/resume', function *(){
 }));
 
 // resume json
-app.use(route.get('/resume.json', function *(){
+app.use(route.get('/resume.json', function *() {
   this.body = resume;
 }));
 

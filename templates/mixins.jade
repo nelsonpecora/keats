@@ -9,7 +9,6 @@ mixin iconic(name, iconicClass)
   else
     != xml
 
-mixin base64img(src)
-  - var xml = fs.readFileSync('dist/' + src)
-  - var base = new Buffer(xml).toString('base64')
-  img(src='data:image/png;base64,' + base, alt='Project Screenshot')
+mixin backgroundImage(content)
+  - var image = content.split('"')[1].replace(/http/g, 'https');
+  .home-excerpt-img(style='background-image: url(' + image + ');')
