@@ -29,7 +29,11 @@
     "koa-route": "^1.1.4",
     "koa-views": "^2.0.3",
     "jade": "^1.5.0",
-    "koa-static": "^1.4.6",
-    "koa-json": "^1.1.1"
+    "koa-json": "^1.1.1",
+    "koa-cash": "^1.0.0",
+    "bluebird": "^2.2.2",
+    "lru-cache": "^2.5.0",
+    "koa-compress": "^1.0.7",
+    "koa-static": "^1.4.6"
   }
 }

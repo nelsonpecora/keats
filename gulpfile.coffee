@@ -72,6 +72,8 @@ gulp.task 'styles', ->
             'font-sizes': false
             'floats': false
             'fallback-colors': false
+            'bulletproof-font-face': false
+            'display-property-grouping': false
         .pipe csslint.reporter()
         .pipe stylusFilter.restore()
         .pipe concat 'styles.min.css'

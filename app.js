@@ -2,13 +2,33 @@ var koa = require('koa')
   , route = require('koa-route')
   , views = require('koa-views')
   , serve = require('koa-static')
+  , compress = require('koa-compress')
   , json = require('koa-json')
+  , cash = require('koa-cash')
+  , cache = require('lru-cache')
   , fs = require('fs');
 
 var app = koa();
+var c = cache();
 
-// static file serving
-app.use(serve('dist'));
+app.use(compress());
+
+// snapshot
+app.use(cash({
+  get: function* (key) {
+    return c.get(key);
+  },
+  set: function* (key, value) {
+    return c.set(key, value);
+  }
+}));
+
+app.use(function* (next) {
+  if (yield* this.cashed()) {
+    return;
+  }
+  yield next;
+});
 
 // pretty json
 app.use(json());
@@ -18,20 +38,24 @@ app.use(views('templates', {
   default: 'jade'
 }));
 
-// x-response-time
-app.use(function *(next){
-  var start = new Date();
+// caching
+app.use(function* (next) {
+  if (yield* this.cashed()) {
+    return;
+  }
   yield next;
-  var ms = new Date() - start;
-  this.set('X-Response-Time', ms + 'ms');
 });
+
+// static files
+app.use(serve('dist'));
  
-// logger
-app.use(function *(next){
+// logger + x-response-time
+app.use(function* (next){
   var start = new Date();
   yield next;
   var ms = new Date() - start;
   console.log('%s %s in %sms', this.method, this.url, ms);
+  this.set('X-Response-Time', ms + 'ms');
 });
 
 // catch 404 errors

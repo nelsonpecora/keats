@@ -8,3 +8,8 @@ mixin iconic(name, iconicClass)
     div(class=iconicClass)!= xml
   else
     != xml
+
+mixin base64img(src)
+  - var xml = fs.readFileSync('dist/' + src)
+  - var base = new Buffer(xml).toString('base64')
+  img(src='data:image/png;base64,' + base, alt='Project Screenshot')
