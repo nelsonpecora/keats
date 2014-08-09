@@ -156,5 +156,7 @@ app.use(route.get('/resume.json', function *() {
   this.body = resume;
 }));
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+
+app.listen(port);
 console.log('listening on port 3000');
