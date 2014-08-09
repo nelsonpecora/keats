@@ -1,0 +1,3 @@
+[submodule "dist/iconic"]
+	path = dist/iconic
+	url = git@github.com:yoshokatana/iconic.git
