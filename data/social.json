@@ -1,0 +1,36 @@
+[{
+  "icon": "twitter",
+  "service": "Twitter",
+  "name": "@yoshokatana",
+  "link": "http://twitter.com/yoshokatana"
+}, {
+  "icon": "gplus",
+  "service": "Google Plus",
+  "name": "Nelson Pecora",
+  "link": "https://plus.google.com/+NelsonPecora/about"
+}, {
+  "icon": "facebook",
+  "service": "Facebook",
+  "name": "Yoshokatana",
+  "link": "http://facebook.com/yoshokatana"
+}, {
+  "icon": "github",
+  "service": "Github",
+  "name": "Yoshokatana",
+  "link": "https://github.com/yoshokatana"
+}, {
+  "icon": "stackoverflow",
+  "service": "Stack Overflow",
+  "name": "Yoshokatana",
+  "link": "http://stackoverflow.com/users/516719/yoshokatana"
+}, {
+  "icon": "tumblr",
+  "service": "Blog",
+  "name": "blog.keats.me",
+  "link": "http://blog.keats.me"
+}, {
+  "icon": "pinboard",
+  "service": "Pinboard",
+  "name": "Yoshokatana",
+  "link": "https://pinboard.in/u:yoshokatana"
+}]

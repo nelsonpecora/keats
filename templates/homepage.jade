@@ -1,0 +1,50 @@
+extends ./base.jade
+
+block content
+  header.page-header.sticky
+    .page-header-left.page-header-icon: a(href='/', title='Home', class='home-logo')
+    .page-header-right.homepage-header-right.page-header-link: a(href='/work', title='work') work
+    .page-header-right.homepage-header-right.page-header-link: a(href='/resume', title!='r&eacute;sum&eacute;') r&eacute;sum&eacute;
+    .page-header-right.homepage-header-right.page-header-link: a(href='http://blog.keats.me', title='Blog') 
+      | blog 
+      span.angle &rsaquo;
+  header.dark.triangle-down.home-header
+    h1 Good Design Needs a Strong Foundation
+  section.light.home-blurb
+    h2 At Keats Heavy Industries, our clipboards are made of pig iron
+    p More people can see your website than could ever wander past your storefront. Shouldn't it show your best side? I'm a web designer, programmer, and UI geek, and I like to build websites that withstand the test of time.
+    p 
+      | Right now I'm working with a great startup called 
+      a(href='http://getbolster.com/', title='Bolster') Bolster
+      | , but I'm always looking to talk shop and collaborate on interesting projects.
+    p.cta 
+      | Check out my 
+      a(href='resume') resume
+      |  or 
+      a(href='#Contact') get in touch
+      | !
+  section.medium.home-excerpts
+    h2: a(href='/work', title='Latest Work') Latest Work
+    .gutter
+      each project in projects
+        article.home-excerpt-item
+          img(class='home-excerpt-img', src=project.img, alt=project.title)
+          .home-excerpt-item-box
+            h3= project.title
+          a(href='/work#' + project.title, title=project.title, class='link-box')
+
+    h2.homepage-press-headline: a(href='http://blog.keats.me', title='Blog') Hot off the Presses
+    .gutter
+      each blogpost in blogposts
+        - var hasImgClass = !blogpost.contentSnippet ? ' blogpost-item-hasimg' : ''
+        article(class='home-excerpt-item blogpost-item' + hasImgClass)
+          if !blogpost.contentSnippet
+            .blogpost-item-img
+              +backgroundImage(blogpost.content)
+          else if blogpost.contentSnippet
+            .home-excerpt-item-box.blogpost-box
+              h3= blogpost.title
+              p!= blogpost.contentSnippet
+          a(href=blogpost.link, title=blogpost.title, class='link-box')
+
+  include ./contact.jade

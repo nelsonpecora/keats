@@ -1,6 +1,6 @@
 # The new Keats.me
 
-This is the repo for my redesigned website. I separated it from my [blog](http://blog.keats.me), and will mostly just have static content here. I'm building some cool stuff for it, and I'll be able to play around with some of the newest tech without worrying about compatability stuff (sorry IE users!).
+This is the repo for my website, refactored as a node/koa application. It's mostly static content, but I wanted to offload everything I could to the server side to bump up the performance (I also just wanted to play around with es6 and generators). This will allow me to add some cool stuff (json resume, etc) in the near future!
 
 ## Layout
 
@@ -12,6 +12,5 @@ This is the repo for my redesigned website. I separated it from my [blog](http:/
 
 ## Tech
 
-* Grunt is awesome, but Gulp is even more awesome! I'm auto-generating modernizr scripts, compiling and minifying coffeescript, concatenating and minifying Stylus, and even generating the html pages from separate partials.
+* I'm rewriting this site in [koa](http://koajs.com/) and keeping the data in json files. This should speed up pageloads and allow me to do neat things with my data. Templates use the fantastic [jade](http://jade-lang.com/) syntax, styles are in stylus, and any front-end stuff will be written in coffeescript.
 * A lot of the code on this site is experimental, and may not follow best practices. Excuse the mess. If you want to check out my actual (read: production-ready, not embarassing) angular code, [here are some open source plugins I've made.](https://github.com/getbolster/angular-utils)
-* All of my stylesheets are written in Stylus, and then processed through autoprefixer (a plugin that allows me to write css without worrying about vendor prefixes) and CMQ (it combines bubbled media queries, saving space and load-time).

@@ -1,0 +1,14 @@
+mixin svg(name)
+  - var xml = fs.readFileSync('dist/icons/' + name +'.svg')
+  != xml
+
+mixin iconic(name, iconicClass)
+  - var xml = fs.readFileSync('dist/iconic/' + name +'-lg.svg')
+  if iconicClass
+    div(class=iconicClass)!= xml
+  else
+    != xml
+
+mixin backgroundImage(content)
+  - var image = content.split('"')[1].replace(/http/g, 'https');
+  .home-excerpt-img(style='background-image: url(' + image + ');')

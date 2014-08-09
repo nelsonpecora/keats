@@ -1,97 +1,113 @@
 /* Contact Section */
 
 .contact
-    clearfix()
-    padding-bottom: 0
-    h1
-        wrapper()
-        margin 30px auto 20px
-        text-align center
+  clearfix()
+  padding-bottom: 0
+  h1
+    wrapper()
+    margin 30px auto 20px
+    text-align center
 
-    .around-town
-        width 90%
-        margin 0 5% 10px
-        display flex
-        flex-flow row wrap
-        justify-content center
+  .around-town
+    width 90%
+    margin 0 5% 10px
+    display flex
+    flex-flow row wrap
+    justify-content center
 
-        article
-            margin 10px
-            width 44px
-            height 44px
-            position relative
-            font-size 26px
-            padding 10px
-            background-color transparent
-            transition 150ms all
-            float left
-            flex 0 0 auto
+    article
+      clearfix()
 
-            @media tablet-small
-                margin 5px
+      margin 10px
+      width 44px
+      height 44px
+      position relative
+      font-size 26px
+      padding 10px
+      background-color transparent
+      transition 150ms all
+      float left
+      flex 0 0 auto
 
-            a
-                position absolute
-                width 100%
-                height 100%
-                display block
-                top 0
-                left 0
+      svg
+        margin 4px
+        width 36px
+        height 36px
+        fill white
 
-            .social-hover
-                display none
+      @media tablet-small
+        margin 5px
 
-            @media tablet-small
-                float right
-                flex none
+      a
+        position absolute
+        width 100%
+        height 100%
+        display block
+        top 0
+        left 0
 
-                .social-hover
-                    display block
-                    opacity 0
-                    top 44px
-                    left 0
-                    position absolute
-                    font-size 0.8rem
-                    line-height 1.2em
-                    padding 10px 20px
-                    background-color rgba(25,25,25,0.92)
-                    z-index 1
-                    width 140px
-                    pointer-events none
-                    border-radius 0 4px 4px 4px
-                    transition 150ms all
+      .social-hover
+        display none
 
-                    p
-                        margin 0
-                        color grey-medium-light
+      @media tablet-small
+        float right
+        flex none
 
-                +hover()
-                    background-color rgba(25,25,25,0.92)
-                    border-radius 4px 4px 0 0
-                    transition 250ms all
+        .social-hover
+          display block
+          opacity 0
+          top 44px
+          left 0
+          position absolute
+          font-size 0.8rem
+          line-height 1.2em
+          padding 10px 20px
+          background-color rgba(25,25,25,0.92)
+          z-index 1
+          width 140px
+          pointer-events none
+          border-radius 0 4px 4px 4px
+          transition 150ms all
 
-                    .social-hover
-                        opacity 1
-                        transition 250ms all
+          p
+            margin 0
+            color grey-medium-light
 
-    .direct-line
-        width 90%
-        margin 0 5%
-        display flex
-        flex-flow row wrap
-        justify-content center
+        +hover()
+          background-color rgba(25,25,25,0.92)
+          border-radius 4px 4px 0 0
+          transition 250ms all
 
-        div
-            float left
-            margin 10px 20px 0 20px
-            flex 0 0 auto
+          .social-hover
+            opacity 1
+            transition 250ms all
 
-            a
-                padding-left 10px
-                line-height 20px
-                vertical-align top
+  .direct-line
+    width 90%
+    margin 0 5%
+    display flex
+    flex-flow row wrap
+    justify-content center
 
-            @media tablet-small
-                margin 10px 20px
-                flex none
-                clear left
+    a
+      display block
+      float left
+      margin 10px 20px 0 20px
+      flex 0 0 auto
+      line-height 20px
+      vertical-align middle
+
+      svg
+        width 24px
+        height 24px
+        fill white
+        float left
+
+      span
+        float left
+        padding-left 6px
+
+    @media tablet-small
+      margin 10px 5%
+      flex none
+      clear left
