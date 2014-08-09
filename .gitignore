@@ -11,6 +11,3 @@ npm-debug.log
 # external dependencies
 bower_modules
 node_modules
-
-# icons
-dist/iconic
