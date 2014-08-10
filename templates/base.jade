@@ -25,6 +25,16 @@ html(lang='en', class=uaClass)
       ga('create', 'UA-104112-6', 'keats.me');
       ga('send', 'pageview');
 
+    // work page script
+    script(type='text/javascript').
+      window.addEventListener('load', function(){
+        var projectList = document.querySelector('.project-list');
+
+        if (projectList) {
+          projectList.classList.add('on');
+        }
+      });
+
   body(id='Page' + pageName)
     block content
     footer.dark.page-footer
@@ -45,13 +55,3 @@ html(lang='en', class=uaClass)
 
       // external scripts
       script(type='text/javascript', src='/js/modernizr.min.js')
-
-      // internal scripts
-      script(type='text/javascript').
-        window.addEventListener('load', function(){
-          var projectList = document.querySelector('.project-list');
-
-          if (projectList) {
-            projectList.classList.add('on');
-          }
-        });
