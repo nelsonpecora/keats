@@ -49,5 +49,9 @@ html(lang='en', class=uaClass)
       // internal scripts
       script(type='text/javascript').
         window.addEventListener('load', function(){
-          document.querySelector('.project-list').classList.add('on');;
+          var projectList = document.querySelector('.project-list');
+
+          if (projectList) {
+            projectList.classList.add('on');
+          }
         });
