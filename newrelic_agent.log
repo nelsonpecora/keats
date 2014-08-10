@@ -1,3 +1,0 @@
-{"name":"newrelic","hostname":"Batou.local","pid":39978,"level":30,"msg":"Starting New Relic for Node.js connection process.","time":"2014-08-10T00:58:58.795Z","v":0}
-{"name":"newrelic","hostname":"Batou.local","pid":39978,"component":"new_relic_response","level":30,"msg":"Reporting to: https://rpm.newrelic.com/accounts/737075/applications/3550619","time":"2014-08-10T00:58:59.795Z","v":0}
-{"name":"newrelic","hostname":"Batou.local","pid":39978,"component":"collector_api","level":30,"msg":"Connected to collector-140.newrelic.com:443 with agent run ID 877621091.","time":"2014-08-10T00:58:59.796Z","v":0}
