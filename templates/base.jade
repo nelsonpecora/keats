@@ -25,11 +25,6 @@ html(lang='en', class=uaClass)
       ga('create', 'UA-104112-6', 'keats.me');
       ga('send', 'pageview');
 
-    style(type='text/css').
-      .project {
-        opacity: 0;
-      }
-
   body(id='Page' + pageName)
     block content
     footer.dark.page-footer
@@ -54,5 +49,5 @@ html(lang='en', class=uaClass)
       // internal scripts
       script(type='text/javascript').
         window.addEventListener('load', function(){
-          document.querySelector('.project').style.opacity = '1';
+          document.querySelector('.project').classList.add('on');;
         });
