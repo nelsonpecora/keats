@@ -43,7 +43,6 @@
   },
   "main": "app.js",
   "scripts": {
-    "start": "node --harmony app.js",
-    "local": "nodemon --harmony app.js"
+    "start": "node --harmony app.js"
   }
 }
