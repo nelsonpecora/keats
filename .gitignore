@@ -4,6 +4,7 @@ profile
 
 # node crap
 npm-debug.log
+newrelic_agent.log
 
 *.sublime-project
 *.sublime-workspace
