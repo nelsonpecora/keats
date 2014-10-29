@@ -4,68 +4,74 @@ https://keybase.io/keats
 
 I hereby claim:
 
-  * I am an admin of https://keats.me
-    * I am keats (https://keybase.io/keats) on keybase.
-      * I have a public key with fingerprint F2DC F699 0E2A 86CC 44A0  71B1 C9E9 E903 5B37 0065
+  * I am an admin of http://keats.me
+  * I am keats (https://keybase.io/keats) on keybase.
+  * I have a public key with fingerprint F2DC F699 0E2A 86CC 44A0  71B1 C9E9 E903 5B37 0065
 
-      To claim this, I am signing this object:
+To claim this, I am signing this object:
 
-      {
-              "body": {
-                          "key": {
-                                          "fingerprint": "f2dcf6990e2a86cc44a071b1c9e9e9035b370065",
-                                                      "host": "keybase.io",
-                                                                  "key_id": "c9e9e9035b370065",
-                                                                              "uid": "c7a127bec90384ca34c08b6d05ad4f00",
-                                                                                          "username": "keats"
-                                                                                                  },
-                                                                                                          "service": {
-                                                                                                                          "hostname": "keats.me",
-                                                                                                                                      "protocol": "https:"
-                                                                                                                                              },
-                                                                                                                                                      "type": "web_service_binding",
-                                                                                                                                                              "version": 1
-                                                                                                                                                                  },
-                                                                                                                                                                      "ctime": 1396379729,
-                                                                                                                                                                          "expire_in": 157680000,
-                                                                                                                                                                              "prev": "ae85e9e97ade9367eaf6240cb7886e0c1f3e6e3f7a44dacfd73750a875679eb6",
-                                                                                                                                                                                  "seqno": 5,
-                                                                                                                                                                                      "tag": "signature"
-      }
+{
+    "body": {
+        "key": {
+            "fingerprint": "f2dcf6990e2a86cc44a071b1c9e9e9035b370065",
+            "host": "keybase.io",
+            "key_id": "c9e9e9035b370065",
+            "uid": "c7a127bec90384ca34c08b6d05ad4f00",
+            "username": "keats"
+        },
+        "revoke": {
+            "sig_ids": [
+                "3a94cb95bf28e7e5c79ff47debd65c95cb067eb9ccf98fc24991665ccf3ce1ac0f"
+            ]
+        },
+        "service": {
+            "hostname": "keats.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1414551122,
+    "expire_in": 157680000,
+    "prev": "a4b6c614bb028624b4a8b98904e347aac9d1c882dd9ecbbc68dca0be18b9b069",
+    "seqno": 8,
+    "tag": "signature"
+}
 
-      with the aforementioned key, yielding the PGP signature:
+with the aforementioned key, yielding the PGP signature:
 
-      -----BEGIN PGP MESSAGE-----
-      Version: Keybase OpenPGP v0.1.1
-      Comment: https://keybase.io/crypto
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.1.3
+Comment: https://keybase.io/crypto
 
-      yML7AnicbZFtUFRVGMcvryawhiATtCuTlxcnW+nevbv37F3cHUGsYGLCWAYWpPW+
-      nLveyfYu+0IKrSLDDFBYk5GJlaPMGsYYgwqjoyCwLZgYqaM1bpDiZjNgpNO0CEqm
-      d6lm+tA5H845/+f//J7zzOOTRSAxYRempyMqAALDLg7+6kKKs+M31aKMyO1AdbXo
-      m3Dx4AWrBdptdsHqRHUor+JYnqQoDKpoLcmyajWNAZzBWQpKGyM0DAEwjNSgSnSr
-      6AhlSBiGdsAsQZQ06WEWOEn9H7/r7wCgcRVgICsFtWqWJtQspmVIDtPQnJrHsJDR
-      Ae1W+i24CKedDtStRCWpWmAlqXax7n/DWdJVidrsolNkxW2SutXptDl0oSznDlvI
-      9jZkzP8AzIxg5aSOpYxqaHcIohXV4ZKTdQohIk5QJAEooKKUKNxuE+zQLIQcGkBq
-      MWmF6sBqCUlDrSbUIaA5SBEkgDRPqtQYywCtloQYi/MEJCHBA1qt5miW5wABNBit
-      BRoSUJAhpfoOWGUVUZ1G+iZtkZAOwWKlnS47RN3eoc2RSFgMEh0VHpoZErM0/t9J
-      Vg7HI7fPeMfWCy/vLFIerK17CTFdkxtRkHTB6hnd95MAvWnDnYdmbMaZqZzPMby+
-      8E6ar359Uk2TsuysCzkg23K/uWUqILvSddXT9VjedOf3d+Yrv1G0x1mOnp7feeuN
-      /MM/jJwaku3SZSd81jIRQHx/5PgbajL3p8+u23g3qzU4Wb3leCEVhZbrl14vXq5o
-      K76buvza+Re/NSW0vkZFFekXgkVrekYzdBPjSZmT8wNkafem/JPmrohHTSdzo/39
-      sdMvEAZFR+JKuTt17PzqFXuGc3t6T+/uutRZOLn5mKzhwN6S5oZXR72Gr0t+1Bsz
-      J05Rn5ZYOvKpJcePGAZGzvbZZEV1wav4F42ljUF3wJ/sGVQV1DxITykrKOgGTGO5
-      DCn3tF9/7r195yK/r/iOtM3dWLgoBwvetjFcH0juND8dyE/u/dBXlo1dqjq8n9/+
-      2+6U5hVi/8Nd3rxsU7g+2vTLvcZZwwnXUHg7vSqDi6vMmL3sKITWub2Dl0dKTWJ/
-      XN+X8b4+95K1qd1G1jW4LNb41fhEav2ZSDSrsqIk2Jz3+JPbxw4RHn/ER/Kk1xUn
-      VGBl2rO5DVV/ttR/nJew9uH7fVduvGvjn++4/0x9SuLPHxxsHUo09D76a2bPvae2
-      ldYoVjl7Wo88aDvXucZ/c0C1esNUzq2jy+RldemvxI7PbUC52Zsb1z0BFXeI3w==
-      =Onj/
-      -----END PGP MESSAGE-----
+yMM1AnicbVJ7UBVlFL+IkZciGMWA8pazaAzDY3b37vMm6lQQqfFoDHl22+/bby/r
+xbuX3QsJhIkzjg1qILfBR01i0mN4JAgykiMOrxq8fwjRhI1iMqFBOpSWFijcdqlm
++qPv++M73zm/8/udc+YMhASaggOGpqcD81gTCvD1ppSYtmZkvVaBAUUsw2wVmBMt
+PpLsciDVrcouD2bDJFKEEsPzOCIFjoGQogScJQABeaRf3EoDK4vjDI3FY4WKZmTo
+NEDQUKKs6D79Y5dF3fs/+JK/A6xAkCxAUA9yFBSsFMQ5wIg4LYiUhOMGUEOqS9iB
+FskFj4ZVxmMqKlWcyKhXkx26hIbZ8jCrwFMQ8DSQSA6xiIYsL0kUKyIgMjTkaQhw
+hkWAh1DiOQmSFM8TjB6BkhUiQoC4hBXo3LpcqQwXyY2e/iudqJvxmFtVPApUinRv
+ocfjthkFecrcBuotBOz/5NuB7BL1YeoJpUjVZMWF2QgdCT2yQUhQBEXTBEGS8Rja
+6ZZVZJcNBM0yHK4fQwaV6pQCBRjIEBQAOMkxJAUogQM8x+MUslKsIEBeJCDHkaLI
+IwgAZDgRCjhAhI7SG+Yxo6Nil4LZOL1MwaFT6jNzCZ4SFWGVfb35S00BwaagR5YY
+62AKNof9uyT5b4cuJBVEXrq0bvXOmImjMeNtr/z4U+z94oshDd2b/NdH4Vzd093J
+hxte16bTrwbyV7+7/a51y0JtxdhnI4d/+/MgzlYNZrUXdjWcz+yveebTa32XhyTi
+KX6Gb6N6ln7jmAzxkzGdR/h9HS2jvaGrNpxrb+7ZWHs6+kjNmao1D4a0XzKmUvpv
+OdPLN1KPetd9crQxS04LCl0fHHruDSbpTMubYwns2dlteb49Y13RrbWJ3uobFx94
+6TtDy3dHRS8RhyMH/dtF3wxuf64opM3ZbkqZevxm3abs/Qs3/S+X7fKsSk4WXy3R
+Isxb7x6wKsfCUqSciE5H7aDS+OyK9Wst495cLDxovBm8k2NZluFQzZn94ZnO3LZD
+YPOUe//IS/Ywc9Xvd70M3pDwfL2jMEfdMTlT8/DOlcCSyB6t6+QfFSMj+/KPFzcd
++nzDZMeWWG2v2XKWeNHNNTP12ZbRPWpcuXT+yW25czdq6tJ+OL0y3Bfw870Dl2c/
+Yq8UmUK++D784Ti/N6gl7InlrbPLon3bJ7KLs6TrCV9byqNj2hr987sGMj8+tfLE
+kMVkTf8g9cvV175Vh1MTBPyr2qpf1fmkDnQ/KvX4hdTqyvfN6Y/NL9wecL4Q1e3z
+xdXH3iL5grmc4LWlJ5gL7Q0Ru/0rZptSwYdM3HB62kJO9b2Jok5SjvCeovveO9Z6
+0t30F92jqNY=
+=jU/m
+-----END PGP MESSAGE-----
 
-      And finally, I am proving ownership of this host by posting or
-      appending to this document.
+And finally, I am proving ownership of this host by posting or
+appending to this document.
 
-      View my publicly-auditable identity here: https://keybase.io/keats
+View my publicly-auditable identity here: https://keybase.io/keats
 
-      ==================================================================
-
+==================================================================

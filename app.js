@@ -1,5 +1,3 @@
-require('newrelic');
-
 var koa = require('koa')
   , route = require('koa-route')
   , views = require('koa-views')
