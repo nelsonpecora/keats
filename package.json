@@ -38,7 +38,7 @@
     "request": "^2.39.0"
   },
   "engines": {
-    "node": "0.11.x"
+    "node": "0.12.x"
   },
   "main": "app.js",
   "scripts": {
