@@ -50,7 +50,7 @@ app.use(function* (next) {
 
 // static files
 app.use(serve('dist'));
- 
+
 // logger + x-response-time
 app.use(function* (next){
   var start = new Date();
@@ -111,7 +111,7 @@ var resume = {
 // get blogposts
 request('https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=6&callback=JSON_CALLBACK&q=http://blog.keats.me/rss', function(err, res, body) {
   var data = JSON.parse(body.slice(28, body.length - 1));
-  blogposts = data.responseData.feed.entries;
+  blogposts = data && data.responseData && data.responseData.feed && data.responseData.feed.entries;
 });
 
 // setup routes
