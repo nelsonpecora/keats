@@ -1,5 +1,7 @@
 # The new Keats.me
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nelsonpecora/keats.svg)](https://greenkeeper.io/)
+
 This is the repo for my website, refactored as a node/koa application. It's mostly static content, but I wanted to offload everything I could to the server side to bump up the performance (I also just wanted to play around with es6 and generators). This will allow me to add some cool stuff (json resume, etc) in the near future!
 
 ## Layout
