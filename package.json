@@ -22,10 +22,6 @@
     "gulp-stylus": "~1.0.1",
     "gulp-uglify": "~0.3.0",
     "gulp-util": "~2.2.19",
-    "imagemin-gifsicle": "^5.2.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-pngquant": "^5.0.1",
     "lodash": "~2.4.1"
   },
   "dependencies": {
