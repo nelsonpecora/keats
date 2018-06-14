@@ -35,50 +35,17 @@ gulp.task 'modernizr', ->
         # styles
         'stylus/*.styl'
     ]
-    .pipe modernizr
-        devFile: 'bower_modules/modernizr/modernizr.js'
-        extra:
-            shiv: true
-        uglify: true
-        parseFiles: true
-        matchCommunityTests: true
+    .pipe modernizr 'modernizr.min.js'
     .pipe uglify()
     .pipe rename 'modernizr.min.js'
     .pipe gulp.dest 'dist/js'
 
 # build stylesheet
 gulp.task 'styles', ->
-    stylusFilter = gfilter '*.styl'
-    gulp.src ['bower_modules/normalize-css/normalize.css', 'stylus/styles.styl']
-        .pipe stylusFilter
-        .pipe stylus()
-        .on 'error', gutil.log
-        .on 'error', gutil.beep
-        .pipe csslint
-            'box-sizing': false
-            'compatible-vendor-prefixes': false
-            'adjoining-classes': false
-            'universal-selector': false
-            'important': false
-            'unique-headings': false
-            'outline-none': false
-            'unqualified-attributes': false
-            'known-properties': false
-            'qualified-headings': false
-            'box-model': false
-            'duplicate-properties': false
-            'overqualified-elements': false
-            'ids': false
-            'font-sizes': false
-            'floats': false
-            'fallback-colors': false
-            'bulletproof-font-face': false
-            'display-property-grouping': false
-        .pipe csslint.reporter()
-        .pipe stylusFilter.restore()
+    gulp.src ['node_modules/normalize-css/normlize.css', 'stylus/styles.styl']
+        .pipe stylus { compress: true, 'include css': true }
         .pipe concat 'styles.min.css'
         .pipe prefix 'last 2 versions', 'ie 9'
-        .pipe cmq()
         .pipe cssmin()
         .pipe gulp.dest 'dist/css'
 
