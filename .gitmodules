@@ -1,3 +1,3 @@
 [submodule "dist/iconic"]
 	path = dist/iconic
-	url = https://95ae35cceb5d6d547fb367910c89c2a64afb8b0d:x-oauth-basic@github.com/yoshokatana/iconic
+	url = git@github.com:nelsonpecora/iconic.git
