@@ -1,4 +1,9 @@
 [{
+  "title": "Clay",
+  "desc": "New York Magazine's Content Management System",
+  "img": "/images/portfolio/clay.png",
+  "link": "http://nymag.com/press/2018/01/introducing-clay-new-york-medias-open-source-cms.html"
+}, {
   "title": "Bolster",
   "desc": "Worked with a designer and back-end developer on multiple revisions of the Bolster site and web app.",
   "img": "/images/portfolio/bolster.png",
